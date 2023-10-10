@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital@0;1&display=swap');
+
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+}
+
+/* Color and Styles default */
+:root{
+    --PrimaryColor: hsl(234, 39%, 37%); 
+    --HoverColor: hsl(234, 52%, 58%); 
+    --PixeledColor: hsl(325, 85%, 43%);
+    --paleBlue: rgb(169, 183, 239); 
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(0,0%,18%);
+    --textColor: hsl(240, 1%, 39%);
+    --bgColor: hsl(220, 42%, 87%);
+    --greyText: rgb(190,190,190);
+    --inputColor: hsl(330,12%,97%);
+
+    /*Font and Typography */
+    --bigFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+
+}
+
+html{
+    font-size: 80%
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.icon{
+    font-size: var(--h2FontSize);
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+.imagenPix{
+    width:100%;
+    height: auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: .8rem 1rem;
+}
+
+.btn .icon{
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    background: var(--paleBlue);
+    color: var(--PrimaryColor);
+    font-weight: 700 !important;
+}
+
+.app-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+} 
+
+.containerAdmin{
+    position: relative;
+    width: 97vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bgColor);
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 8px var(--greyText);
+
+}
+
+/*Hides the scroll thumb */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* MEDIA QUERIES =======================> */
+
+@media screen and (max-width: 990px){
+    .heading{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 918px){
+    .heading{
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .heading{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

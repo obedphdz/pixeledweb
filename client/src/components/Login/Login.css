@@ -1,0 +1,434 @@
+root {
+  --PrimaryColor: hsl(234, 39%, 37%);
+  --PixeledColor: hsl(325, 85%, 43%);
+  --HoverColor: hsl(234, 52%, 58%);
+  --paleBlue: hsl(236, 53%, 90%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /*Font and Typography */
+  --bigFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.myVideo {
+  width: 40rem;
+}
+
+.formLogin {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.formLogin .loginStatus {
+  font-weight: bold;
+  display: block;
+  margin-left: -10px;
+  text-align: center;
+}
+
+.label,
+.forgotPassword {
+  color: black;
+  font-weight: 700;
+}
+
+.clickHere {
+  font-size: 13px;
+}
+
+.loginPage,
+.registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.loginPage .container, .loginPage .containerRegi,
+.registerPage .container,
+.registerPage .containerRegi {
+  height: 80vh;
+  width: 70%;
+  margin: auto;
+  padding: 16px;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+.loginPage .container .videoDiv, .loginPage .containerRegi .videoDiv,
+.registerPage .container .videoDiv,
+.registerPage .containerRegi .videoDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.loginPage .container .videoDiv video,
+.loginPage .container .videoDiv .footerDiv, .loginPage .containerRegi .videoDiv video,
+.loginPage .containerRegi .videoDiv .footerDiv,
+.registerPage .container .videoDiv video,
+.registerPage .container .videoDiv .footerDiv,
+.registerPage .containerRegi .videoDiv video,
+.registerPage .containerRegi .videoDiv .footerDiv {
+  position: absolute;
+}
+.loginPage .container .videoDiv video, .loginPage .containerRegi .videoDiv video,
+.registerPage .container .videoDiv video,
+.registerPage .containerRegi .videoDiv video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.loginPage .container .videoDiv .textDivLogin,
+.loginPage .container .videoDiv .textDivRegister, .loginPage .containerRegi .videoDiv .textDivLogin,
+.loginPage .containerRegi .videoDiv .textDivRegister,
+.registerPage .container .videoDiv .textDivLogin,
+.registerPage .container .videoDiv .textDivRegister,
+.registerPage .containerRegi .videoDiv .textDivLogin,
+.registerPage .containerRegi .videoDiv .textDivRegister {
+  position: relative;
+}
+.loginPage .container .videoDiv .textDivLogin .title,
+.loginPage .container .videoDiv .textDivRegister .title, .loginPage .containerRegi .videoDiv .textDivLogin .title,
+.loginPage .containerRegi .videoDiv .textDivRegister .title,
+.registerPage .container .videoDiv .textDivLogin .title,
+.registerPage .container .videoDiv .textDivRegister .title,
+.registerPage .containerRegi .videoDiv .textDivLogin .title,
+.registerPage .containerRegi .videoDiv .textDivRegister .title {
+  color: var(--whiteColor);
+  font-size: 30px;
+  font-weight: 800;
+}
+.loginPage .container .videoDiv .textDivLogin p,
+.loginPage .container .videoDiv .textDivRegister p, .loginPage .containerRegi .videoDiv .textDivLogin p,
+.loginPage .containerRegi .videoDiv .textDivRegister p,
+.registerPage .container .videoDiv .textDivLogin p,
+.registerPage .container .videoDiv .textDivRegister p,
+.registerPage .containerRegi .videoDiv .textDivLogin p,
+.registerPage .containerRegi .videoDiv .textDivRegister p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+.loginPage .container .videoDiv .footerDiv, .loginPage .containerRegi .videoDiv .footerDiv,
+.registerPage .container .videoDiv .footerDiv,
+.registerPage .containerRegi .videoDiv .footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 20px;
+  right: 20px;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+.loginPage .container .videoDiv .footerDiv .text, .loginPage .containerRegi .videoDiv .footerDiv .text,
+.registerPage .container .videoDiv .footerDiv .text,
+.registerPage .containerRegi .videoDiv .footerDiv .text {
+  color: black;
+  font-weight: 900;
+}
+.loginPage .container .videoDiv .footerDiv .btnSignUp, .loginPage .containerRegi .videoDiv .footerDiv .btnSignUp,
+.registerPage .container .videoDiv .footerDiv .btnSignUp,
+.registerPage .containerRegi .videoDiv .footerDiv .btnSignUp {
+  background: var(--whiteColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-weight: 900;
+  border: none;
+}
+.loginPage .container .videoDiv .footerDiv .btnSignUp:hover, .loginPage .containerRegi .videoDiv .footerDiv .btnSignUp:hover,
+.registerPage .container .videoDiv .footerDiv .btnSignUp:hover,
+.registerPage .containerRegi .videoDiv .footerDiv .btnSignUp:hover {
+  background: var(--HoverColor);
+  color: var(--whiteColor);
+  font-weight: 400;
+  cursor: pointer;
+}
+.loginPage .container .formDivLogin, .loginPage .containerRegi .formDivLogin,
+.registerPage .container .formDivLogin,
+.registerPage .containerRegi .formDivLogin {
+  flex-basis: 50%;
+  flex-direction: column;
+  gap: -1.5rem;
+  margin-top: 9px;
+  transform: translateY(-1rem);
+  zoom: 1.3;
+  color: rgba(145, 20, 93, 0.9176470588);
+}
+.loginPage .container .formDivLogin .headerDiv, .loginPage .containerRegi .formDivLogin .headerDiv,
+.registerPage .container .formDivLogin .headerDiv,
+.registerPage .containerRegi .formDivLogin .headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-left: 12px;
+}
+.loginPage .container .formDivLogin .headerDiv img, .loginPage .containerRegi .formDivLogin .headerDiv img,
+.registerPage .container .formDivLogin .headerDiv img,
+.registerPage .containerRegi .formDivLogin .headerDiv img {
+  width: 80px;
+  margin-left: 19px;
+  padding-bottom: 0.5rem;
+}
+.loginPage .container .formDivLogin .headerDiv h3, .loginPage .containerRegi .formDivLogin .headerDiv h3,
+.registerPage .container .formDivLogin .headerDiv h3,
+.registerPage .containerRegi .formDivLogin .headerDiv h3 {
+  font-size: 20px;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.loginPage .container .formDivLogin .formLogin, .loginPage .containerRegi .formDivLogin .formLogin,
+.registerPage .container .formDivLogin .formLogin,
+.registerPage .containerRegi .formDivLogin .formLogin {
+  gap: 1rem;
+}
+.loginPage .container .formDivLogin .formLogin .inputDiv .icon, .loginPage .containerRegi .formDivLogin .formLogin .inputDiv .icon,
+.registerPage .container .formDivLogin .formLogin .inputDiv .icon,
+.registerPage .containerRegi .formDivLogin .formLogin .inputDiv .icon {
+  color: var(--greyText);
+}
+.loginPage .container .formDivLogin .formLogin .inputDiv input, .loginPage .containerRegi .formDivLogin .formLogin .inputDiv input,
+.registerPage .container .formDivLogin .formLogin .inputDiv input,
+.registerPage .containerRegi .formDivLogin .formLogin .inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 270px;
+  color: var(--blackColor);
+  font-size: 14px;
+}
+.loginPage .container .formDivLogin .formLogin .inputDiv label, .loginPage .containerRegi .formDivLogin .formLogin .inputDiv label,
+.registerPage .container .formDivLogin .formLogin .inputDiv label,
+.registerPage .containerRegi .formDivLogin .formLogin .inputDiv label {
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0.5rem 0;
+  display: block;
+}
+.loginPage .container .formDivLogin .formLogin .inputDiv .input, .loginPage .containerRegi .formDivLogin .formLogin .inputDiv .input,
+.registerPage .container .formDivLogin .formLogin .inputDiv .input,
+.registerPage .containerRegi .formDivLogin .formLogin .inputDiv .input {
+  gap: 0.7rem;
+  padding: 1rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+}
+.loginPage .container .formDivLogin .formLogin .btn, .loginPage .containerRegi .formDivLogin .formLogin .btn,
+.registerPage .container .formDivLogin .formLogin .btn,
+.registerPage .containerRegi .formDivLogin .formLogin .btn {
+  padding: 0.8rem;
+  border-radius: 10px;
+  align-items: center;
+  margin: auto;
+  margin-top: 8px;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+  background: rgba(229, 0, 84, 0.3490196078);
+}
+.loginPage .container .formDivLogin .formLogin .btn .icon, .loginPage .containerRegi .formDivLogin .formLogin .btn .icon,
+.registerPage .container .formDivLogin .formLogin .btn .icon,
+.registerPage .containerRegi .formDivLogin .formLogin .btn .icon {
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.loginPage .container .formDivLogin .formLogin .btn:hover, .loginPage .containerRegi .formDivLogin .formLogin .btn:hover,
+.registerPage .container .formDivLogin .formLogin .btn:hover,
+.registerPage .containerRegi .formDivLogin .formLogin .btn:hover {
+  background: #e50053;
+  color: var(--whiteColor);
+}
+.loginPage .container .formDivLogin .formLogin .btn:hover .icon, .loginPage .containerRegi .formDivLogin .formLogin .btn:hover .icon,
+.registerPage .container .formDivLogin .formLogin .btn:hover .icon,
+.registerPage .containerRegi .formDivLogin .formLogin .btn:hover .icon {
+  color: var(--whiteColor);
+  transition: translateX(5px);
+}
+.loginPage .container .formDivLogin .formLogin .forgotPassword, .loginPage .containerRegi .formDivLogin .formLogin .forgotPassword,
+.registerPage .container .formDivLogin .formLogin .forgotPassword,
+.registerPage .containerRegi .formDivLogin .formLogin .forgotPassword {
+  font-size: 13px;
+  color: var(--blackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+.loginPage .container .formDivLogin .formLogin .forgotPassword a, .loginPage .containerRegi .formDivLogin .formLogin .forgotPassword a,
+.registerPage .container .formDivLogin .formLogin .forgotPassword a,
+.registerPage .containerRegi .formDivLogin .formLogin .forgotPassword a {
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Queries for Login And Register page.  --------  */
+@media screen and (max-width: 602px) {
+  .loginPage .container,
+  .registerPage .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .container .videoDiv,
+  .registerPage .container .videoDiv {
+    width: 100%;
+  }
+  .loginPage .container .videoDiv .textDivLogin .title,
+  .loginPage .container .videoDiv .textDivRegister .title,
+  .registerPage .container .videoDiv .textDivLogin .title,
+  .registerPage .container .videoDiv .textDivRegister .title {
+    font-size: 20px;
+  }
+  .loginPage .container .videoDiv .textDivLogin p,
+  .loginPage .container .videoDiv .textDivRegister p,
+  .registerPage .container .videoDiv .textDivLogin p,
+  .registerPage .container .videoDiv .textDivRegister p {
+    padding: 1rem;
+  }
+  .loginPage .container .videoDiv .footerDiv .text,
+  .registerPage .container .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container .videoDiv .footerDiv .btn,
+  .registerPage .container .videoDiv .footerDiv .btn {
+    padding: 0.4rem 1.5rem;
+  }
+  .loginPage .container .formDivLogin, .loginPage .container .formDivRegister,
+  .registerPage .container .formDivLogin,
+  .registerPage .container .formDivRegister {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+  .loginPage .container .formDivLogin .headerDiv, .loginPage .container .formDivLogin .headerDivRegi, .loginPage .container .formDivRegister .headerDiv, .loginPage .container .formDivRegister .headerDivRegi,
+  .registerPage .container .formDivLogin .headerDiv,
+  .registerPage .container .formDivLogin .headerDivRegi,
+  .registerPage .container .formDivRegister .headerDiv,
+  .registerPage .container .formDivRegister .headerDivRegi {
+    padding: 1rem 0;
+  }
+  .loginPage .container .formDivLogin .headerDiv img, .loginPage .container .formDivLogin .headerDivRegi img, .loginPage .container .formDivRegister .headerDiv img, .loginPage .container .formDivRegister .headerDivRegi img,
+  .registerPage .container .formDivLogin .headerDiv img,
+  .registerPage .container .formDivLogin .headerDivRegi img,
+  .registerPage .container .formDivRegister .headerDiv img,
+  .registerPage .container .formDivRegister .headerDivRegi img {
+    width: 40px;
+  }
+  .loginPage .container .formDivLogin .headerDiv h3, .loginPage .container .formDivLogin .headerDivRegi h3, .loginPage .container .formDivRegister .headerDiv h3, .loginPage .container .formDivRegister .headerDivRegi h3,
+  .registerPage .container .formDivLogin .headerDiv h3,
+  .registerPage .container .formDivLogin .headerDivRegi h3,
+  .registerPage .container .formDivRegister .headerDiv h3,
+  .registerPage .container .formDivRegister .headerDivRegi h3 {
+    font-size: 20px;
+  }
+  .loginPage .container .formDivLogin form, .loginPage .container .formDivRegister form,
+  .registerPage .container .formDivLogin form,
+  .registerPage .container .formDivRegister form {
+    gap: 0.5rem;
+  }
+  .loginPage .container .formDivLogin form .inputDiv input, .loginPage .container .formDivLogin form .inpdiv input, .loginPage .container .formDivRegister form .inputDiv input, .loginPage .container .formDivRegister form .inpdiv input,
+  .registerPage .container .formDivLogin form .inputDiv input,
+  .registerPage .container .formDivLogin form .inpdiv input,
+  .registerPage .container .formDivRegister form .inputDiv input,
+  .registerPage .container .formDivRegister form .inpdiv input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 678px) {
+  .loginPage .container .videoDiv .textDivLogin .title,
+  .loginPage .container .videoDiv .textDivRegister .title, .loginPage .containerRegi .videoDiv .textDivLogin .title,
+  .loginPage .containerRegi .videoDiv .textDivRegister .title,
+  .registerPage .container .videoDiv .textDivLogin .title,
+  .registerPage .container .videoDiv .textDivRegister .title,
+  .registerPage .containerRegi .videoDiv .textDivLogin .title,
+  .registerPage .containerRegi .videoDiv .textDivRegister .title {
+    font-size: 20px;
+  }
+  .loginPage .container .videoDiv .textDivLogin p,
+  .loginPage .container .videoDiv .textDivRegister p, .loginPage .containerRegi .videoDiv .textDivLogin p,
+  .loginPage .containerRegi .videoDiv .textDivRegister p,
+  .registerPage .container .videoDiv .textDivLogin p,
+  .registerPage .container .videoDiv .textDivRegister p,
+  .registerPage .containerRegi .videoDiv .textDivLogin p,
+  .registerPage .containerRegi .videoDiv .textDivRegister p {
+    padding: 1rem;
+  }
+  .loginPage .container .videoDiv .footerDiv .text, .loginPage .containerRegi .videoDiv .footerDiv .text,
+  .registerPage .container .videoDiv .footerDiv .text,
+  .registerPage .containerRegi .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container .videoDiv .footerDiv .btn, .loginPage .containerRegi .videoDiv .footerDiv .btn,
+  .registerPage .container .videoDiv .footerDiv .btn,
+  .registerPage .containerRegi .videoDiv .footerDiv .btn {
+    padding: 0.8rem 1.5rem;
+  }
+  .loginPage .container .formDivLogin .headerDiv, .loginPage .container .formDivLogin .headerDivRegi, .loginPage .container .formDivRegister .headerDiv, .loginPage .container .formDivRegister .headerDivRegi, .loginPage .containerRegi .formDivLogin .headerDiv, .loginPage .containerRegi .formDivLogin .headerDivRegi, .loginPage .containerRegi .formDivRegister .headerDiv, .loginPage .containerRegi .formDivRegister .headerDivRegi,
+  .registerPage .container .formDivLogin .headerDiv,
+  .registerPage .container .formDivLogin .headerDivRegi,
+  .registerPage .container .formDivRegister .headerDiv,
+  .registerPage .container .formDivRegister .headerDivRegi,
+  .registerPage .containerRegi .formDivLogin .headerDiv,
+  .registerPage .containerRegi .formDivLogin .headerDivRegi,
+  .registerPage .containerRegi .formDivRegister .headerDiv,
+  .registerPage .containerRegi .formDivRegister .headerDivRegi {
+    padding: 1rem 0;
+  }
+  .loginPage .container .formDivLogin .headerDiv h3, .loginPage .container .formDivLogin .headerDivRegi h3, .loginPage .container .formDivRegister .headerDiv h3, .loginPage .container .formDivRegister .headerDivRegi h3, .loginPage .containerRegi .formDivLogin .headerDiv h3, .loginPage .containerRegi .formDivLogin .headerDivRegi h3, .loginPage .containerRegi .formDivRegister .headerDiv h3, .loginPage .containerRegi .formDivRegister .headerDivRegi h3,
+  .registerPage .container .formDivLogin .headerDiv h3,
+  .registerPage .container .formDivLogin .headerDivRegi h3,
+  .registerPage .container .formDivRegister .headerDiv h3,
+  .registerPage .container .formDivRegister .headerDivRegi h3,
+  .registerPage .containerRegi .formDivLogin .headerDiv h3,
+  .registerPage .containerRegi .formDivLogin .headerDivRegi h3,
+  .registerPage .containerRegi .formDivRegister .headerDiv h3,
+  .registerPage .containerRegi .formDivRegister .headerDivRegi h3 {
+    font-size: 20px;
+  }
+  .loginPage .container .formDivLogin .form .inputDiv input, .loginPage .container .formDivLogin .form .inpdiv input, .loginPage .container .formDivRegister .form .inputDiv input, .loginPage .container .formDivRegister .form .inpdiv input, .loginPage .containerRegi .formDivLogin .form .inputDiv input, .loginPage .containerRegi .formDivLogin .form .inpdiv input, .loginPage .containerRegi .formDivRegister .form .inputDiv input, .loginPage .containerRegi .formDivRegister .form .inpdiv input,
+  .registerPage .container .formDivLogin .form .inputDiv input,
+  .registerPage .container .formDivLogin .form .inpdiv input,
+  .registerPage .container .formDivRegister .form .inputDiv input,
+  .registerPage .container .formDivRegister .form .inpdiv input,
+  .registerPage .containerRegi .formDivLogin .form .inputDiv input,
+  .registerPage .containerRegi .formDivLogin .form .inpdiv input,
+  .registerPage .containerRegi .formDivRegister .form .inputDiv input,
+  .registerPage .containerRegi .formDivRegister .form .inpdiv input {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 927px) {
+  .loginPage .container, .loginPage .containerRegi,
+  .registerPage .container,
+  .registerPage .containerRegi {
+    width: 85%;
+  }
+}/*# sourceMappingURL=Login.css.map */

@@ -1,0 +1,149 @@
+root {
+  --PrimaryColor: hsl(234, 39%, 37%);
+  --PixeledColor: hsl(325, 85%, 43%);
+  --HoverColor: hsl(234, 52%, 58%);
+  --paleBlue: hsl(236, 53%, 90%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /*Font and Typography */
+  --bigFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.formDivRegister {
+  flex-basis: 50%;
+  flex-direction: column;
+  gap: -1.5rem;
+  margin-top: -17px;
+  transform: translateY(-1rem);
+}
+.formDivRegister .headerDivRegi {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 15px 0px -35px 0px;
+}
+.formDivRegister .headerDivRegi img {
+  width: 75px;
+  margin-left: 22px;
+  padding-bottom: 0.2rem;
+}
+.formDivRegister .headerDivRegi h3 {
+  font-size: 17px;
+  color: var(--blackColor);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.formDivRegister .regiBtn {
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 19px;
+  width: 80%;
+  margin-top: 35px;
+  border: none;
+  margin-left: 50px;
+  transition: 0.3s ease;
+  color: var(--blackColor);
+  font-weight: 700;
+  background: rgba(229, 0, 84, 0.3490196078);
+}
+.formDivRegister .regiBtn span {
+  margin-left: -10px;
+}
+.formDivRegister .regiBtn .icon {
+  font-size: 24px;
+  transition: 0.3s ease;
+  margin-left: 19rem;
+  margin-top: -27px;
+}
+.formDivRegister .regiBtn:hover {
+  background: #e50053;
+  color: var(--whiteColor);
+}
+.formDivRegister .regiBtn:hover .icon {
+  color: var(--whiteColor);
+  transition: translateX(5px);
+  margin-left: 21rem;
+}
+.formDivRegister .mensaje {
+  margin-left: 30px;
+  margin-top: 10px;
+  background-color: antiquewhite;
+}
+.formDivRegister .mensaje .text-danger {
+  color: black;
+  font-weight: 700;
+}
+
+form {
+  zoom: 0.7;
+  margin-top: 0px;
+}
+form .inpdiv {
+  position: relative;
+  width: 550px;
+  font-size: 16pt;
+  margin: auto;
+}
+form .inpdiv input {
+  width: calc(100% - 20px);
+  margin-top: 36px;
+  margin-bottom: -30px;
+  border: 1px solid rgba(77, 77, 77, 0.3568627451);
+  outline: none;
+  gap: 0.7rem;
+  padding: 1rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+form .inpdiv input:focus, form .inpdiv input:valid {
+  border: 1px solid #e50054;
+  font-size: 1.5rem;
+}
+form .inpdiv input:focus ~ label, form .inpdiv input:valid ~ label {
+  top: 50%;
+  color: #fff;
+  transform: translateX(10px) translateY(-13px);
+  font-size: 1.4rem;
+  padding: 0 10px;
+  background: #e50054;
+  letter-spacing: 0.2rem;
+}
+form .inpdiv .etiqueta {
+  position: absolute;
+  top: 85%;
+  transform: translateY(-50%);
+  left: 12px;
+  padding: 1px;
+  pointer-events: none;
+  color: var(--textColor);
+  text-transform: initial;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+form .inpdiv .etiqueta .iconRegi {
+  font-size: 19px;
+  margin-right: 8px;
+}
+form .inpdiv .password-icon {
+  position: absolute;
+  top: 85%;
+  right: 32px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 25px;
+}
+form button {
+  margin-top: -5px;
+  margin-left: 150px;
+}/*# sourceMappingURL=Register.css.map */

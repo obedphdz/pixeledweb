@@ -1,0 +1,175 @@
+.mainContentBodyNueva {
+  width: 82%;
+  height: 100%;
+  padding: 3rem;
+  /* PARA ACTIVAR EL SCROLL */
+  overflow: auto;
+  margin-top: -90px;
+}
+.mainContentBodyNueva .bottomBodyNueva {
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.mainContentBodyNueva .bottomBodyNueva .tituloSeccion {
+  top: 50px;
+  left: 700px;
+  font-size: 2rem;
+  text-align: center;
+}
+.mainContentBodyNueva .bottomBodyNueva .tituloSeccion h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+.mainContentBodyNueva .bottomBodyNueva .tituloSeccion p {
+  font-size: 1.5rem;
+}
+.mainContentBodyNueva .bottomBodyNueva form {
+  border-collapse: collapse;
+  max-height: 10pt;
+  margin-left: -25px;
+  font-size: 15pt;
+  /*-------------------------------------------------------------------------------*/
+  /* Shutter Out Horizontal */
+}
+.mainContentBodyNueva .bottomBodyNueva form .inputBox {
+  position: relative;
+  width: 550px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .inputBox input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 40px;
+  border: 1px solid #4d4d4d;
+  background: rgba(77, 77, 77, 0);
+  border-radius: 5px;
+  outline: none;
+  color: #4d4d4d;
+  font-size: 15pt;
+}
+.mainContentBodyNueva .bottomBodyNueva form .archivo {
+  width: 220px;
+  margin-top: 5pt;
+  margin-left: -22px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .input_chico {
+  width: 70px !important;
+}
+.mainContentBodyNueva .bottomBodyNueva form .material {
+  width: 250px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .acabados {
+  width: 180px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .etiqueta {
+  position: absolute;
+  left: 0px;
+  margin-top: 40px;
+  padding: 10px;
+  pointer-events: none;
+  color: rgba(77, 77, 77, 0.5254901961);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.mainContentBodyNueva .bottomBodyNueva form .textCont {
+  width: 450px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .inputBox input:valid ~ label,
+.mainContentBodyNueva .bottomBodyNueva form input:focus ~ label {
+  color: #fff;
+  transform: translateX(10px) translateY(-20px);
+  font-size: 15pt;
+  padding: 0 10px;
+  background: #e50054;
+  letter-spacing: 0.2rem;
+  border-radius: 5px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .inputBox input:valid,
+.mainContentBodyNueva .bottomBodyNueva form input:focus {
+  border: 1px solid #e50054;
+}
+.mainContentBodyNueva .bottomBodyNueva form table {
+  margin-top: 50px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  width: 100%;
+}
+.mainContentBodyNueva .bottomBodyNueva form table input {
+  width: 150px;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid #4d4d4d;
+  background: white;
+  border-radius: 5px;
+  outline: none;
+  color: #4d4d4d;
+}
+.mainContentBodyNueva .bottomBodyNueva form table select {
+  border: 1px solid #4d4d4d;
+  width: auto;
+  height: 35px;
+  border-radius: 5px;
+}
+.mainContentBodyNueva .bottomBodyNueva form table select:hover,
+.mainContentBodyNueva .bottomBodyNueva form table input:hover,
+.mainContentBodyNueva .bottomBodyNueva form table textarea:hover {
+  border: 1px solid #e50054;
+}
+.mainContentBodyNueva .bottomBodyNueva form .contBotones {
+  text-align: right;
+}
+.mainContentBodyNueva .bottomBodyNueva form button {
+  background: none;
+  color: #4d4d4d;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  border: 2px solid #4d4d4d;
+  margin: 25px 15px;
+}
+.mainContentBodyNueva .bottomBodyNueva form .grow {
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
+}
+.mainContentBodyNueva .bottomBodyNueva form .grow:hover {
+  transform: scale3d(1.5, 1.5, 0.3);
+  -webkit-transform: scale3d(1.5, 1.5, 0.3);
+  -moz-transform: scale3d(1.5, 1.5, 0.3);
+}
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #e1e1e1;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e50054;
+  border-radius: 20px;
+  border: none;
+  transform: scaleX(0);
+  transform-origin: 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:hover,
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:focus,
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:active {
+  color: white;
+  border: none;
+}
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:hover:before,
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:focus:before,
+.mainContentBodyNueva .bottomBodyNueva form .hvr-shutter-out-horizontal:active:before {
+  transform: scaleX(1);
+}/*# sourceMappingURL=BodyNueva.css.map */

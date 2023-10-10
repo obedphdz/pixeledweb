@@ -1,0 +1,25 @@
+.mainContent {
+  width: 82%;
+  height: 100%;
+  padding: 3rem;
+  overflow: auto;
+  margin-top: 18px;
+}
+.mainContent .bottom {
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.mainContent .miDiv {
+  background-color: rgba(0, 0, 0, 0.308);
+  width: 50%;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 918px) {
+  .bottom {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Body.css.map */

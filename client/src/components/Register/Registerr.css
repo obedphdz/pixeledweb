@@ -1,0 +1,306 @@
+root {
+  --PrimaryColor: hsl(234, 39%, 37%);
+  --PixeledColor: hsl(325, 85%, 43%);
+  --HoverColor: hsl(234, 52%, 58%);
+  --paleBlue: hsl(236, 53%, 90%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /*Font and Typography */
+  --bigFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.registerPage .containerRegi {
+  height: 96vh;
+  width: 90%;
+  margin: auto;
+  padding: 16px;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+.registerPage .containerRegi .videoDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.registerPage .containerRegi .videoDiv video,
+.registerPage .containerRegi .videoDiv .footerDiv {
+  position: absolute;
+}
+.registerPage .containerRegi .videoDiv video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.registerPage .containerRegi .videoDiv .textDivRegister {
+  position: relative;
+}
+.registerPage .containerRegi .videoDiv .textDivRegister .title {
+  color: var(--whiteColor);
+  font-size: 30px;
+  font-weight: 800;
+}
+.registerPage .containerRegi .videoDiv .textDivRegister p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+.registerPage .containerRegi .videoDiv .footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 20px;
+  right: 20px;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
+.registerPage .containerRegi .videoDiv .footerDiv .text {
+  color: black;
+  font-weight: 900;
+}
+.registerPage .containerRegi .videoDiv .footerDiv .btnSignUp {
+  background: var(--whiteColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-weight: 900;
+  border: none;
+}
+.registerPage .containerRegi .videoDiv .footerDiv .btnSignUp:hover {
+  background: var(--HoverColor);
+  color: var(--whiteColor);
+  font-weight: 400;
+  cursor: pointer;
+}
+.registerPage .containerRegi .formDivRegister {
+  flex-basis: 60%;
+  flex-direction: column;
+  gap: -1.5rem;
+  margin-top: -17px;
+  transform: translateY(-1rem);
+}
+.registerPage .containerRegi .formDivRegister .headerDivRegi {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 15px 0px -40px 0px;
+}
+.registerPage .containerRegi .formDivRegister .headerDivRegi img {
+  width: 85px;
+  padding-bottom: 0.2rem;
+}
+.registerPage .containerRegi .formDivRegister .headerDivRegi h3 {
+  font-size: 20px;
+  color: var(--blackColor);
+  font-weight: 600;
+  margin-left: -25px;
+  margin-bottom: 15px;
+}
+.registerPage .containerRegi .formDivRegister .regiBtn {
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 19px;
+  width: 90%;
+  margin-top: 35px;
+  border: none;
+  margin-left: 25px;
+  transition: 0.3s ease;
+  color: var(--blackColor);
+  font-weight: 700;
+  background: rgba(229, 0, 84, 0.3490196078);
+}
+.registerPage .containerRegi .formDivRegister .regiBtn span {
+  margin-left: -10px;
+}
+.registerPage .containerRegi .formDivRegister .regiBtn .icon {
+  font-size: 24px;
+  transition: 0.3s ease;
+  margin-left: 27rem;
+  margin-top: -27px;
+}
+.registerPage .containerRegi .formDivRegister .regiBtn:hover {
+  background: #e50053;
+  color: var(--whiteColor);
+}
+.registerPage .containerRegi .formDivRegister .regiBtn:hover .icon {
+  color: var(--whiteColor);
+  transition: translateX(5px);
+  margin-left: 29rem;
+}
+.registerPage .containerRegi .formDivRegister .mensaje {
+  margin-left: 30px;
+  margin-top: 10px;
+  background-color: antiquewhite;
+}
+.registerPage .containerRegi .formDivRegister .mensaje .text-danger {
+  color: black;
+  font-weight: 700;
+}
+.registerPage .containerRegi form {
+  zoom: 0.7;
+  margin-top: 0px;
+}
+.registerPage .containerRegi form .inpdiv {
+  position: relative;
+  width: 680px;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+.registerPage .containerRegi form .inpdiv input {
+  width: calc(100% - 20px);
+  margin-top: 36px;
+  margin-bottom: -30px;
+  border: 1px solid rgba(77, 77, 77, 0.3568627451);
+  outline: none;
+  color: var(--blackColor);
+  gap: 0.7rem;
+  padding: 1rem;
+  background: var(--inputColor);
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+.registerPage .containerRegi form .inpdiv input:focus, .registerPage .containerRegi form .inpdiv input:valid {
+  border: 1px solid #e50054;
+  font-size: 1.5rem;
+}
+.registerPage .containerRegi form .inpdiv input:focus ~ label, .registerPage .containerRegi form .inpdiv input:valid ~ label {
+  top: 50%;
+  color: #fff;
+  transform: translateX(10px) translateY(-13px);
+  font-size: 1.4rem;
+  padding: 0 10px;
+  background: #e50054;
+  letter-spacing: 0.2rem;
+}
+.registerPage .containerRegi form .inpdiv .etiqueta {
+  position: absolute;
+  top: 85%;
+  transform: translateY(-50%);
+  left: 12px;
+  padding: 1px;
+  pointer-events: none;
+  color: var(--textColor);
+  text-transform: initial;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+}
+.registerPage .containerRegi form .inpdiv .etiqueta .iconRegi {
+  font-size: 19px;
+  margin-right: 8px;
+}
+.registerPage .containerRegi form .inpdiv .password-icon {
+  position: absolute;
+  top: 85%;
+  right: 32px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Queries for Login And Register page.  --------  */
+@media screen and (max-width: 602px) {
+  .registerPage .containerRegi {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .registerPage .containerRegi .videoDiv {
+    width: 100%;
+  }
+  .registerPage .containerRegi .videoDiv .textDivRegister .title {
+    font-size: 20px;
+  }
+  .registerPage .containerRegi .videoDiv .textDivRegister p {
+    padding: 1rem;
+  }
+  .registerPage .containerRegi .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .registerPage .containerRegi .videoDiv .footerDiv .btn {
+    padding: 0.4rem 1.5rem;
+  }
+  .registerPage .containerRegi .formDivRegister {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+  .registerPage .containerRegi .formDivRegister .headerDivRegi {
+    padding: 1rem 0;
+  }
+  .registerPage .containerRegi .formDivRegister .headerDivRegi img {
+    width: 40px;
+  }
+  .registerPage .containerRegi .formDivRegister .headerDivRegi h3 {
+    font-size: 20px;
+  }
+  .registerPage .containerRegi .formDivRegister form {
+    gap: 0.5rem;
+  }
+  .registerPage .containerRegi .formDivRegister form .inpdiv input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 678px) {
+  .registerPage .containerRegi .videoDiv .textDivRegister .title {
+    font-size: 20px;
+  }
+  .registerPage .containerRegi .videoDiv .textDivRegister p {
+    padding: 1rem;
+  }
+  .registerPage .containerRegi .videoDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .registerPage .containerRegi .videoDiv .footerDiv .btn {
+    padding: 0.8rem 1.5rem;
+  }
+  .registerPage .containerRegi .formDivRegister .headerDivRegi {
+    padding: 1rem 0;
+  }
+  .registerPage .containerRegi .formDivRegister .headerDivRegi h3 {
+    font-size: 20px;
+  }
+  .registerPage .containerRegi .formDivRegister form .inpdiv input {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 927px) {
+  .registerPage .containerRegi {
+    width: 85%;
+  }
+}/*# sourceMappingURL=Registerr.css.map */

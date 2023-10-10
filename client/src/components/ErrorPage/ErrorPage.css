@@ -1,0 +1,16 @@
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .h1Error{
+      color: black;
+      text-align: center;
+      margin-top: 180px;
+  }
+  .h3Error{
+      color: black;
+      text-align: center;
+      margin-top: 20px;
+  }

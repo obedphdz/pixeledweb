@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    font-weight: bold !important;
+}
+
+a {
+    text-decoration: none;
+    color: #e50054a4;
+    font-size: 1rem;
+
+}
+
+a:hover {
+    color: #E50053;
+}
+
+/*HEADER*/
+
+.navbar {
+    position: relative;
+    padding: 0 2 rem;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #E50053;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo {
+    width: 200px;
+}
+
+.navbar-text button {
+    font-weight: 700;
+    color: #E50053;
+    border: 1px solid #E50053;
+    padding: 10px 25px;
+    font-size: 18px;
+    margin: 15px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-text button span {
+    z-index: 1;
+}
+
+.navbar-text button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: #E50053;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-text button:hover {
+    color: #FFF;
+}
+
+.navbar-text button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.social-icon a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.192);
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #FFF;
+}
+
+.social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #E50053;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+
+.social-icon a img {
+    width: 60%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+.vvd{
+    cursor: pointer;
+}
+
+/* Dispositivos móviles */
+@media (min-width: 320px) and (max-width: 768px) {
+
+
+    .navbar-text button {
+        padding: 8px 10px;
+        font-size: 18px;
+        background-color: #E50053;
+        color: #FFF;
+        display: none;
+    }
+
+    .navbar .links,
+    .social-icon {
+        display: none;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar .links,
+    .social-icon {
+        display: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-text button {
+        display: none;
+    }
+}
+
+/* Laptops y monitores */
+@media (min-width: 1025px) {
+    .navbar {
+        padding: 0rem 0rem;
+        margin: 15px 15px;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .navbar-text button {
+        padding: 20px 35px;
+        font-size: 18px;
+    }
+
+}

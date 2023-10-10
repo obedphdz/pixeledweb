@@ -1,0 +1,6 @@
+.cont-fondo {
+    background-image: url('../assets/svg/circ_rosa2.svg');
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: 70px 20px;
+}
