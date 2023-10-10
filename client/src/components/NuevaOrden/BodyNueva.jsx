@@ -1,8 +1,8 @@
-import './BodyNueva.css';
+import '../NuevaOrden/BodyNueva.css';
 import { useState } from 'react';
 
 const BodyNueva = (props) => {
-	const [clientes, setClientes] = useState([{ nombre: '', telefono: '' }]);
+    const [clientes, setClientes] = useState([{ nombre: '', telefono: '' }]);
 	const [filas, setFilas] = useState([
 		{
 			cantidad: '',
@@ -46,19 +46,41 @@ const BodyNueva = (props) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		// Aquí debes enviar la información a la base de datos MongoDB
-		console.log('Enviar a MongoDB:', clientes, filas);
+		
+	/* 	try {
+			const validationErrors = await Validation(values);
+			setErrors(validationErrors);
+	
+			if (validationErrors.cuentaRegi === "Incorrecto") {
+				alert(
+					"Registro falló con los parámetros deseados, vuelve a intentar."
+				);
+				navigate('/register');
+			} else {
+				alert(
+					"Usuario registrado exitosamente! Puedes regresar a Login."
+				);
+				axios.post('http://localhost:5000/signup', values).then(() => {
+					navigate('/login');
+				});
+			}
+		} catch (err) {
+			console.error(err);
+			alert("Error en la validación. Por favor, inténtalo de nuevo.");
+		} */
+		console.log('Enviar a MySQL:', clientes, filas);
 	};
 
-	window.addEventListener('scroll', () => {
-		const table = document.getElementById('tabla-cont');
+
+	window.addEventListener("scroll",() => {
+		const table = document.getElementById("tabla-cont");
 		const scrollTop = document.body.scrollTop;
-		if (scrollTop > table.scrollHeight) {
+		if(scrollTop>table.scrollHeight){
 			table.scrollTo(0, table.scrollHeight);
 		}
 	});
 
-	return (
+  return (
 		<div className='mainContentBodyNueva'>
 			<div className='bottomBodyNueva'>
 				<div className='tituloSeccion'>
@@ -284,6 +306,6 @@ const BodyNueva = (props) => {
 			</div>
 		</div>
 	);
-};
+}
 
-export default BodyNueva;
+export default BodyNueva

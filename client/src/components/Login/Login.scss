@@ -256,8 +256,7 @@ root {
 /* Queries for Login And Register page.  --------  */
 
 @media screen and (max-width: 602px) {
-	.loginPage,
-	.registerPage {
+	.loginPage {
 		.container {
 			height: 100%;
 			width: 100%;
@@ -266,8 +265,7 @@ root {
 
 			.videoDiv {
 				width: 100%;
-				.textDivLogin,
-				.textDivRegister {
+				.textDivLogin {
 					.title {
 						font-size: 20px;
 					}
@@ -288,11 +286,11 @@ root {
 				}
 			}
 
-			.formDivLogin, .formDivRegister {
+			.formDivLogin {
 				gap: 1rem;
 				transform: translateY(-0.5rem);
 
-				.headerDiv, .headerDivRegi {
+				.headerDiv {
 					padding: 1rem 0;
 
 					img {
@@ -307,7 +305,7 @@ root {
 				form {
 					gap: 0.5rem;
 
-					.inputDiv, .inpdiv {
+					.inputDiv {
 						input {
 							width: 100%;
 						}
@@ -319,12 +317,10 @@ root {
 }
 
 @media screen and (max-width: 678px) {
-	.loginPage,
-	.registerPage {
-		.container, .containerRegi {
+	.loginPage {
+		.container {
 			.videoDiv {
-				.textDivLogin,
-				.textDivRegister {
+				.textDivLogin{
 					.title {
 						font-size: 20px;
 					}
@@ -345,8 +341,8 @@ root {
 				}
 			}
 
-			.formDivLogin, .formDivRegister {
-				.headerDiv, .headerDivRegi {
+			.formDivLogin{
+				.headerDiv {
 					padding: 1rem 0;
 
 					h3 {
@@ -355,7 +351,7 @@ root {
 				}
 
 				.form {
-					.inputDiv, .inpdiv {
+					.inputDiv {
 						input {
 							width: 100%;
 							max-width: 200px;
@@ -368,9 +364,8 @@ root {
 }
 
 @media screen and (max-width: 927px) {
-	.loginPage,
-	.registerPage {
-		.container, .containerRegi {
+	.loginPage{
+		.container {
 			width: 85%;
 		}
 	}

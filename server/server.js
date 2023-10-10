@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 4000;
+const PORT = 5000;
 
 const connection = mysql2.createConnection({
-    host: "192.168.0.17",
+    host: "192.168.0.13",
     database: "pixeledsys",
     user: "obed",
     password: "pixeled1",
@@ -72,6 +72,7 @@ app.post('/signup', (req, res) => {
           return connection.rollback(() => res.json("Error al registrar el cliente."));
         }
   
+        /* Insercion a tabla cliente  */
         const idCliente = resultCliente.insertId;
         const valuesContacto = [idCliente, req.body.num_telefono || null];
   

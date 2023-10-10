@@ -1,6 +1,6 @@
-import styles from '../../../style';
-import { arrowUp } from '../../assets';
-import { Link } from 'react-router-dom';
+import styles from '../../../style'
+import { arrowUp } from '../../assets'
+import {Link} from 'react-router-dom';
 
 const GetStarted = () => (
 	<Link to='/login'>
@@ -29,4 +29,4 @@ const GetStarted = () => (
 	</Link>
 );
 
-export default GetStarted;
+export default GetStarted 

@@ -170,3 +170,62 @@ form {
   }
   
   
+  @media screen and (max-width: 927px) {
+	.containerRegi {
+		.formDivRegister {
+			flex-direction: column;
+
+			.headerDivRegi {
+				margin-top: 0px;
+			}
+
+			.regiBtn {
+				width: 100%;
+				margin-left: 0;
+			}
+
+			.mensaje {
+				margin-left: 0;
+			}
+		}
+
+		form {
+			.inpdiv {
+				width: 100%;
+
+				input {
+					width: 100%;
+				}
+
+				button {
+					margin-top: 10px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 678px) {
+	.containerRegi {
+		.formDivRegister {
+			.regiBtn {
+				.icon {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 602px) {
+	.containerRegi {
+		.formDivRegister {
+			.regiBtn {
+				.icon {
+					display: none;
+				}
+			}
+		}
+	}
+}

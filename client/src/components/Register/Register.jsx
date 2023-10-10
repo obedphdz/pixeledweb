@@ -5,17 +5,19 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import video from '../../assets/img/imgPixeled/videoImp3.mp4';
 import logo from '../../assets/img/imgPixeled/logoblack.svg';
-import './Register.css';
+import '../Register/Register.css';
 import Validation from './SignUpValidation';
-import axios from 'axios';
+import axios from 'axios'
 
 /* Imported icons */
-import { MdOutlineLogin, MdMarkEmailRead } from 'react-icons/md';
-import { FaEye, FaEyeSlash, FaUserShield } from 'react-icons/fa';
-import { BsFillTelephoneInboundFill } from 'react-icons/bs';
-import { RiLockPasswordLine } from 'react-icons/ri';
+import {MdOutlineLogin, MdMarkEmailRead} from 'react-icons/md'
+import {FaEye, FaEyeSlash, FaUserShield} from 'react-icons/fa';
+import {BsFillTelephoneInboundFill} from 'react-icons/bs'
+import {RiLockPasswordLine} from 'react-icons/ri'
+
 
 const Register = () => {
+
 	// Reproduce video en cualquier navegador
 	useEffect(() => {
 		const handleVideoEnded = () => {
@@ -41,11 +43,11 @@ const Register = () => {
 		num_telefono: '',
 		email: '',
 		password: '',
-	});
+    })
 
 	const navigate = useNavigate();
 
-	const [errors, setErrors] = useState({});
+	const [errors, setErrors] = useState({})
 
 	const [isRegistered, setIsRegistered] = useState(false);
 
@@ -54,25 +56,30 @@ const Register = () => {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		setIsRegistered(true);
-
+		
 		try {
 			const validationErrors = await Validation(values);
 			setErrors(validationErrors);
-
-			if (validationErrors.cuentaRegi === 'Incorrecto') {
-				alert('Registro falló con los parámetros deseados, vuelve a intentar.');
+	
+			if (validationErrors.cuentaRegi === "Incorrecto") {
+				alert(
+					"Registro falló con los parámetros deseados, vuelve a intentar."
+				);
 				navigate('/register');
 			} else {
-				alert('Usuario registrado exitosamente! Puedes regresar a Login.');
+				alert(
+					"Usuario registrado exitosamente! Puedes regresar a Login."
+				);
 				axios.post('http://localhost:5000/signup', values).then(() => {
 					navigate('/login');
 				});
 			}
 		} catch (err) {
 			console.error(err);
-			alert('Error en la validación. Por favor, inténtalo de nuevo.');
+			alert("Error en la validación. Por favor, inténtalo de nuevo.");
 		}
 	};
+
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -80,7 +87,8 @@ const Register = () => {
 			...prevData,
 			[name]: value,
 		}));
-		console.log('Valores actualizados:', values);
+		console.log("Valores actualizados:", values);
+
 	};
 
 	const handleTogglePasswordVisibility = () => {
@@ -112,7 +120,7 @@ const Register = () => {
 						<h3>Crear cuenta.</h3>
 					</div>
 
-					<form action='' onSubmit={handleSubmit} className=''>
+					<form action="" onSubmit={handleSubmit} className=''>
 						<div>
 							<div className='inpdiv'>
 								<input
@@ -124,7 +132,7 @@ const Register = () => {
 								/>
 								<label className='etiqueta'>
 									<FaUserShield className='iconRegi' />
-									Nombre
+									 Nombre 
 								</label>
 							</div>
 							<div className='inpdiv'>
@@ -135,9 +143,7 @@ const Register = () => {
 									onChange={handleInputChange}
 									required
 								/>
-								<label className='etiqueta'>
-									<FaUserShield className='iconRegi' /> Apellido Paterno
-								</label>
+								<label className='etiqueta'><FaUserShield className='iconRegi' /> Apellido Paterno</label>
 							</div>
 							<div className='inpdiv'>
 								<input
@@ -147,57 +153,45 @@ const Register = () => {
 									onChange={handleInputChange}
 									required
 								/>
-								<label className='etiqueta'>
-									<FaUserShield className='iconRegi' />
-									Apellido Materno
-								</label>
+								<label className='etiqueta'><FaUserShield className='iconRegi' />Apellido Materno</label>
 							</div>
 							<div className='inpdiv'>
-								<input
-									type='tel'
-									name='num_telefono'
-									value={values.num_telefono}
-									onChange={handleInputChange}
-									required
-								/>
-								<label className='etiqueta'>
-									<BsFillTelephoneInboundFill className='iconRegi' />
-									Celular
-								</label>
-							</div>
-							<div className='inpdiv'>
-								<input
-									type='email'
-									name='email'
-									value={values.email}
-									onChange={handleInputChange}
-									required
-								/>
-								<label className='etiqueta'>
-									<MdMarkEmailRead className='iconRegi' />
-									Correo Electrónico
-								</label>
-							</div>
+							<input
+								type='tel'
+								name='num_telefono'
+								value={values.num_telefono}
+								onChange={handleInputChange}
+								required
+							/>
+							<label className='etiqueta'><BsFillTelephoneInboundFill className='iconRegi'/>Celular</label>
+						</div>
+						<div className='inpdiv'>
+							<input
+								type='email'
+								name='email'
+								value={values.email}
+								onChange={handleInputChange}
+								required
+							/>
+							<label className='etiqueta'><MdMarkEmailRead className='iconRegi'/>Correo Electrónico</label>
+						</div>
 
-							<div className='inpdiv'>
-								<input
-									type={showPassword ? 'text' : 'password'}
-									name='password'
-									value={values.password}
-									onChange={handleInputChange}
-									required
-								/>
-								<label className='etiqueta'>
-									<RiLockPasswordLine className='iconRegi' />
-									Contraseña
-								</label>
+						<div className='inpdiv'>
+							<input
+								type={showPassword ? 'text' : 'password'}
+								name='password'
+								value={values.password}
+								onChange={handleInputChange}
+								required
+							/>
+							<label className='etiqueta'><RiLockPasswordLine className='iconRegi'/>Contraseña</label>
 								<div
 									className='password-icon'
 									onClick={handleTogglePasswordVisibility}
 								>
 									{showPassword ? <FaEyeSlash /> : <FaEye />}
 								</div>
-							</div>
+						</div>
 
 							<button type='submit' className='regiBtn'>
 								<span>Registrar</span>
@@ -205,15 +199,16 @@ const Register = () => {
 							</button>
 						</div>
 					</form>
-					<div className='mensaje'>
-						{errors.password && (
-							<span className='text-danger'>{errors.password}</span>
-						)}
+					<div className="mensaje">
+						{ (errors.password && <span className='text-danger'>{errors.password}</span>) }
 					</div>
 				</div>
 			</div>
 		</div>
 	);
 };
+
+
+
 
 export default Register;

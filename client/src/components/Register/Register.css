@@ -146,4 +146,40 @@ form .inpdiv .password-icon {
 form button {
   margin-top: -5px;
   margin-left: 150px;
+}
+
+@media screen and (max-width: 927px) {
+  .containerRegi .formDivRegister {
+    flex-direction: column;
+  }
+  .containerRegi .formDivRegister .headerDivRegi {
+    margin-top: 0px;
+  }
+  .containerRegi .formDivRegister .regiBtn {
+    width: 100%;
+    margin-left: 0;
+  }
+  .containerRegi .formDivRegister .mensaje {
+    margin-left: 0;
+  }
+  .containerRegi form .inpdiv {
+    width: 100%;
+  }
+  .containerRegi form .inpdiv input {
+    width: 100%;
+  }
+  .containerRegi form .inpdiv button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .containerRegi .formDivRegister .regiBtn .icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 602px) {
+  .containerRegi .formDivRegister .regiBtn .icon {
+    display: none;
+  }
 }/*# sourceMappingURL=Register.css.map */
