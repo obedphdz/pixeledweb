@@ -118,3 +118,11 @@ app.post('/login', (req, res) => {
         }
     });
 });
+
+app.post('/orders', (req, res) => {
+
+  const sqlCliente = `
+      INSERT INTO cliente (precio_total, fecha_solicitud, fecha_entrega, estatus, fecha_instala, firma_cliente)
+      VALUES (?, ?, ?, ?, ?, ?)
+    `; 
+});

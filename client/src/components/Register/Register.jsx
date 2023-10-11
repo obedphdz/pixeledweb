@@ -116,7 +116,9 @@ const Register = () => {
 
 				<div className='formDivRegister flexH'>
 					<div className='headerDivRegi'>
+					<Link to='/'>
 						<img src={logo} alt='' />
+					</Link>
 						<h3>Crear cuenta.</h3>
 					</div>
 

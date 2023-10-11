@@ -95,7 +95,9 @@ return (
 
 			<div className='formDivLogin flexH'>
 				<div className='headerDiv'>
+				<Link to='/'>
 					<img src={logo} alt='' />
+				</Link>
 					<h3>Bienvenido.</h3>
 				</div>
 
