@@ -1,4 +1,4 @@
-import '../AppAdmin/Admin.css'
+import '../Admin.css'
 import Slidebar from "../Slidebar Section/Slidebar"
 import BodyNueva from './BodyNueva'
 

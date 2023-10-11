@@ -3,12 +3,12 @@ import Admin  from '../AppAdmin/Admin'
 import ErrorPage from '../ErrorPage/ErrorPage'
 import Login from '../Login/Login';
 import Register from '../Register/Register'
-import NuevaOrden from '../NuevaOrden/NuevaOrden'
+import NuevaOrden from '../AppAdmin/NuevaOrden/NuevaOrden'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import App from '../App/App';
-import CrearCotizaciones from '../CrearCotizaciones/CrearCotizaciones';
-import VerCotizaciones from '../VerCotizaciones/VerCotizaciones';
-import Precios from '../PreciosLista/Precios';
+import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
+import VerCotizaciones from '../AppAdmin/VerCotizaciones/VerCotizaciones';
+import Precios from '../AppAdmin/PreciosLista/Precios';
 
 
 function PixHome() {
