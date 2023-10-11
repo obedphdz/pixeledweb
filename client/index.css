@@ -4,7 +4,7 @@
 @import './node_modules/tailwindcss/utilities.css';
 :root {
   --PrimaryColor: hsl(234, 39%, 37%);
-  --PixeledColor:#E50053;
+  --PixeledColor:#e50053;
   --black-gradient: linear-gradient(
     144.39deg,
     #ffffff -278.56%,
@@ -122,7 +122,7 @@ li {
 }
 
 .text-gradient3 {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #ffffff 0.89%, #ffffff 17.23%, hsl(322, 31%, 93%) 42.04%, #f58cb2 55.12%, hsl(321, 56%, 77%) 71.54%, hsl(322, 31%, 93%) 100%);
+  background: #FFFFFF;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -130,7 +130,7 @@ li {
 }
 
 .bg-blue-gradient {
-  background: linear-gradient(157.81deg, rgba(136, 7, 82, 0.9176470588) -43.27%, #aa0a67 -21.24%, #db6ddb 12.19%, #b4341d 29.82%, rgba(206, 29, 132, 0.9176470588) 51.94%, rgba(143, 23, 93, 0.9176470588) 90.29%);
+  background: linear-gradient(157.81deg, rgba(136, 7, 82, 0.9176470588) -43.27%, #aa0a67 -21.24%, #db6ddb 12.19%, #e50053 51.94%, #e50053 90.29%);
 }
 
 .bg-black-gradient {
@@ -138,7 +138,7 @@ li {
 }
 
 .bg-black-gradient-2 {
-  background: linear-gradient(-168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #636fe2 91.61%);
+  background: linear-gradient(-168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #000000 91.61%);
 }
 
 .bg-gray-gradient {

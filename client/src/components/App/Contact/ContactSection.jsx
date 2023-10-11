@@ -9,10 +9,10 @@ const ContactSectionStyle = styled.div`
     display: flex;
     gap: 5rem;
     margin-top: -9rem;
-    color: hsl(0,0%,18%);
+    color: #FFFFFF;
     border-radius: 20px;
     justify-content: space-between;
-    background-color: hsl(220, 42%, 87%);
+    background: linear-gradient(to right, #e62657, #280028);
     position: relative;
   }
   .contactSection__wrapper::after {
@@ -58,9 +58,9 @@ export default function ContactSection() {
     <ContactSectionStyle>
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="449 476 7315" />
-            <ContactInfoItem icon={<MdEmail />} text="pixeledmx@gmail.com" />
             <ContactInfoItem text="Av. Guadalupe Gonzalez 818-A, Primo Verdad, 20130 Aguascalientes, Ags." />
+            <ContactInfoItem icon={<MdEmail />} text="pixeledmx@gmail.com" />
+            <ContactInfoItem icon={<MdLocalPhone />} text="449 476 7315" />
           </div>
           <div className="right">
             <ContactForm />

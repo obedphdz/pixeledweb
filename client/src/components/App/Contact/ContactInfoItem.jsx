@@ -11,11 +11,12 @@ const ItemStyles = styled.div`
   border-radius: 8px;
   margin-bottom: 2rem;
   .icon {
-    color: black;
+    color: white;
     padding: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 2.3rem;
   }
   svg {
     width: 3.5rem;
