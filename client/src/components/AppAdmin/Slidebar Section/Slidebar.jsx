@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 /* Imported images */
-import logo1 from '../../assets/svg/pixecol.svg';
-import logoResp from '../../assets/svg/logoPixBco.svg'
+import logo1 from '../../../assets/svg/pixecol.svg';
+import logoResp from '../../../assets/svg/logoPixBco.svg'
 
 /* Imported icons */
 import { HiOutlineClipboardList } from 'react-icons/hi';

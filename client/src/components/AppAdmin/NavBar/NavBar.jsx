@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { navLinks } from "../../constantes";
-import logoPix from "../../assets/svg/logpixcol.svg"
+import { navLinks } from "../../../constantes";
+import logoPix from "../../../assets/svg/logpixcol.svg"
 
 /* Imported icons */
 import {TiThMenu} from 'react-icons/ti'

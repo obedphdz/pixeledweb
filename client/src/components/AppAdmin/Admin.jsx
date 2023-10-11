@@ -1,5 +1,5 @@
 import './Admin.css'
-import Slidebar from "../Slidebar Section/Slidebar"
+import Slidebar from "./Slidebar Section/Slidebar"
 import Body from '../Body Section/Body'
 
 
