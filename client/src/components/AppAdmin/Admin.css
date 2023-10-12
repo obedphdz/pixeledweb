@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital@0;1&display=swap');
 
 
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Color and Styles default */
-:root{
-    --PrimaryColor: hsl(234, 39%, 37%); 
-    --HoverColor: hsl(234, 52%, 58%); 
+:root {
+    --PrimaryColor: #E50053;
+    ;
+    --HoverColor: hsl(234, 52%, 58%);
     --PixeledColor: hsl(325, 85%, 43%);
-    --paleBlue: rgb(169, 183, 239); 
-    --whiteColor: hsl(0,0%,100%);
-    --blackColor: hsl(0,0%,18%);
+    --paleBlue: rgb(169, 183, 239);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
     --textColor: hsl(240, 1%, 39%);
     --bgColor: hsl(220, 42%, 87%);
-    --greyText: rgb(190,190,190);
-    --inputColor: hsl(330,12%,97%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
 
     /*Font and Typography */
     --bigFontSize: 2.5rem;
@@ -32,43 +33,43 @@
 
 }
 
-html{
+html {
     font-size: 80%
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-.icon{
+.icon {
     font-size: var(--h2FontSize);
 }
 
-.icon:hover{
+.icon:hover {
     cursor: pointer;
 }
 
-.imagenPix{
-    width:100%;
+.imagenPix {
+    width: 100%;
     height: auto;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
-.grid{
+.grid {
     display: grid;
     align-items: center;
     gap: 1.5rem;
 }
 
-.btn{
+.btn {
     border: none;
     outline: none;
     cursor: pointer;
@@ -77,25 +78,25 @@ li{
     padding: .8rem 1rem;
 }
 
-.btn .icon{
+.btn .icon {
     margin-left: .5rem;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--paleBlue);
     color: var(--PrimaryColor);
     font-weight: 700 !important;
 }
 
-.app-body{
+.app-body {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     padding: 1rem;
-} 
+}
 
-.containerAdmin{
+.containerAdmin {
     position: relative;
     width: 97vw;
     height: 95vh;
@@ -111,31 +112,31 @@ li{
 
 /*Hides the scroll thumb */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
 
 /* MEDIA QUERIES =======================> */
 
-@media screen and (max-width: 990px){
-    .heading{
+@media screen and (max-width: 990px) {
+    .heading {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
 }
 
-@media screen and (max-width: 918px){
-    .heading{
+@media screen and (max-width: 918px) {
+    .heading {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
     }
 }
 
-@media screen and (max-width: 500px){
-    .heading{
+@media screen and (max-width: 500px) {
+    .heading {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;

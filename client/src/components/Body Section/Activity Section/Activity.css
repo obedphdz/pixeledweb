@@ -1,14 +1,14 @@
 root {
-  --PrimaryColor: hsl(234, 39%, 37%);
+  --PrimaryColor: #e50053;
   --PixeledColor: hsl(325, 85%, 43%);
   --HoverColor: hsl(234, 52%, 58%);
   --paleBlue: rgba(173, 197, 230, 0.514);
-  --whiteColor: hsl(0,0%,100%);
-  --blackColor: hsl(0,0%,18%);
-  --textColor: hsl(240,1%,48%);
-  --bgColor: hsl(220,10%,94%);
-  --greyText: rgb(190,190,190);
-  --inputColor: hsl(330,12%,97%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
   --itemCardColor: hsl(120, 5%, 88%);
   --itemCardHover: hsl(120, 27%, 87%);
   /*Font and Typography */
@@ -16,9 +16,9 @@ root {
   --h1FontSize: 1.5rem;
   --h2FontSize: 1.25rem;
   --h3FontSize: 1rem;
-  --normalFontSize: .938rem;
-  --smallFontSize: .813rem;
-  --smallestFontSize: .75rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
 }
 
 .activitySection {

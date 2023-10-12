@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-@import './node_modules/tailwindcss/base.css';
-@import './node_modules/tailwindcss/components.css';
-@import './node_modules/tailwindcss/utilities.css';
+@import "./node_modules/tailwindcss/base.css";
+@import "./node_modules/tailwindcss/components.css";
+@import "./node_modules/tailwindcss/utilities.css";
 :root {
-  --PrimaryColor: hsl(234, 39%, 37%);
-  --PixeledColor:#e50053;
+  --PrimaryColor: #e50053;
+  --PixeledColor: #e50053;
   --black-gradient: linear-gradient(
     144.39deg,
     #ffffff -278.56%,
@@ -106,7 +106,7 @@ li {
 }
 
 .text-gradient {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #ee0a88 0.89%, #af0462 17.23%, #ad0252 42.04%, #E50053 55.12%, hsl(240, 52%, 5%) 71.54%, hsl(320, 96%, 10%) 100%);
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #ee0a88 0.89%, #af0462 17.23%, #ad0252 42.04%, #e50053 55.12%, hsl(240, 52%, 5%) 71.54%, hsl(320, 96%, 10%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -114,7 +114,7 @@ li {
 }
 
 .text-gradient2 {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #14101d 0.89%, #14101d 17.23%, #14101d 42.04%, #E50053 55.12%, hsl(240, 52%, 5%) 71.54%, hsl(320, 96%, 10%) 100%);
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #14101d 0.89%, #14101d 17.23%, #14101d 42.04%, #e50053 55.12%, hsl(240, 52%, 5%) 71.54%, hsl(320, 96%, 10%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -122,7 +122,7 @@ li {
 }
 
 .text-gradient3 {
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

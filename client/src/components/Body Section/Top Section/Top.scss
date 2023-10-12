@@ -1,5 +1,5 @@
 root{ 
-    --PrimaryColor: hsl(234, 39%, 37%);
+    --PrimaryColor: #E50053;
     --HoverColor: #E50053; 
     --PixeledColor: hsl(325, 85%, 43%);
     --paleBlue: hsl(236, 53%, 90%); 
@@ -157,12 +157,13 @@ root{
 
                 .transparent{
                     background: none;
-                    border: 2px solid var(--PrimaryColor);
+                    border: 2px solid #E50053;
                     color: white;
 
                     &:hover{
-                        background: var(--PrimaryColor);   
-                        border: 2px solid var(--blackColor);                 }
+                        background:linear-gradient(to left, #e62657, #280028); 
+                        border: none  
+                    }
 
                 }
             }
@@ -170,14 +171,13 @@ root{
 
         .leftCard{
             flex-basis: 50%;
-
             .main{
                 position: relative;
                 padding: 1rem;
                 height: 200px;
                 border-radius: 1rem;
                 justify-content: space-between;
-
+                
                 &::before{
                     content: '';
                     position: absolute;
@@ -186,7 +186,7 @@ root{
                     left: 0;
                     bottom: 0;
                     border-radius: 1rem;
-                    background: rgb(126, 126, 223);
+                    background: linear-gradient(to left, #e62657, #280028); 
                 }
 
                 .textDiv{

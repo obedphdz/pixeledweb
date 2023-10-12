@@ -1,5 +1,5 @@
 root {
-	--PrimaryColor: hsl(234, 39%, 37%);
+	--PrimaryColor: #e50053;
 	--PixeledColor: hsl(325, 85%, 43%);
 	--HoverColor: hsl(234, 52%, 58%);
 	--paleBlue: hsl(236, 53%, 90%);
@@ -32,7 +32,6 @@ root {
 		padding: 1.5rem 0;
 		margin: 15px 0px -35px 0px;
 
-
 		img {
 			width: 75px;
 			margin-left: 22px;
@@ -47,7 +46,7 @@ root {
 		}
 	}
 
-	.regiBtn{
+	.regiBtn {
 		padding: 0.6rem;
 		border-radius: 10px;
 		font-size: 19px;
@@ -60,7 +59,7 @@ root {
 		font-weight: 700;
 		background: #e5005459;
 
-		span{
+		span {
 			margin-left: -10px;
 		}
 
@@ -83,11 +82,11 @@ root {
 		}
 	}
 
-	.mensaje{
+	.mensaje {
 		margin-left: 30px;
 		margin-top: 10px;
 		background-color: antiquewhite;
-		.text-danger{
+		.text-danger {
 			color: black;
 			font-weight: 700;
 		}
@@ -97,80 +96,79 @@ root {
 form {
 	zoom: 0.7;
 	margin-top: 0px;
-  
+
 	.inpdiv {
-	  position: relative;
-	  width: 550px;
-	  font-size: 16pt;
-	  margin: auto;
-  
-	  input {
-		width: calc(100% - 20px);
-		margin-top: 36px;
-		margin-bottom: -30px;
-		border: 1px solid #4d4d4d5b;
-		outline: none;
-		gap: 0.7rem;
-		padding: 1rem;
-		background: var(--inputColor);
-		border-radius: 10px;
-		font-size: 1.4rem;
-  
-		&:focus,
-		&:valid {
-		  border: 1px solid #e50054;
-		  font-size: 1.5rem;
+		position: relative;
+		width: 550px;
+		font-size: 16pt;
+		margin: auto;
+
+		input {
+			width: calc(100% - 20px);
+			margin-top: 36px;
+			margin-bottom: -30px;
+			border: 1px solid #4d4d4d5b;
+			outline: none;
+			gap: 0.7rem;
+			padding: 1rem;
+			background: var(--inputColor);
+			border-radius: 10px;
+			font-size: 1.4rem;
+
+			&:focus,
+			&:valid {
+				border: 1px solid #e50054;
+				font-size: 1.5rem;
+			}
+
+			&:focus ~ label,
+			&:valid ~ label {
+				top: 50%;
+				color: #fff;
+				transform: translateX(10px) translateY(-13px);
+				font-size: 1.4rem;
+				padding: 0 10px;
+				background: #e50054;
+				letter-spacing: 0.2rem;
+			}
 		}
-  
-		&:focus ~ label,
-		&:valid ~ label {
-		  top: 50%;
-		  color: #fff;
-		  transform: translateX(10px) translateY(-13px);
-		  font-size: 1.4rem;
-		  padding: 0 10px;
-		  background: #e50054;
-		  letter-spacing: 0.2rem;
+
+		.etiqueta {
+			position: absolute;
+			top: 85%;
+			transform: translateY(-50%);
+			left: 12px;
+			padding: 1px;
+			pointer-events: none;
+			color: var(--textColor);
+			text-transform: initial;
+			transition: 0.5s;
+			display: flex;
+			align-items: center;
+
+			.iconRegi {
+				font-size: 19px;
+				margin-right: 8px;
+			}
 		}
-	  }
-  
-	  .etiqueta {
-		position: absolute;
-		top: 85%;
-		transform: translateY(-50%);
-		left: 12px;
-		padding: 1px;
-		pointer-events: none;
-		color: var(--textColor);
-		text-transform: initial;
-		transition: 0.5s;
-		display: flex;
-		align-items: center;
-  
-		.iconRegi {
-		  font-size: 19px;
-		  margin-right: 8px;
+
+		.password-icon {
+			position: absolute;
+			top: 85%;
+			right: 32px;
+			transform: translateY(-50%);
+			cursor: pointer;
+			font-size: 25px;
 		}
-	  }
-  
-	  .password-icon {
-		position: absolute;
-		top: 85%;
-		right: 32px;
-		transform: translateY(-50%);
-		cursor: pointer;
-		font-size: 25px;
-	  }
 	}
-  
+
 	button {
-	  margin-top: -5px;
-	  margin-left: 150px;
+		margin-top: -5px;
+		margin-left: 150px;
 	}
-  }
-  
-  
-  @media screen and (max-width: 927px) {
+}
+
+@media screen and (max-width: 927px) {
 	.containerRegi {
 		.formDivRegister {
 			flex-direction: column;

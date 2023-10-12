@@ -1,97 +1,97 @@
 root {
-    --PrimaryColor: hsl(234, 39%, 37%);
-    --PixeledColor: hsl(325, 85%, 43%);
-    --HoverColor: hsl(234, 52%, 58%);
-    --paleBlue: rgba(173, 197, 230, 0.514);
-    --whiteColor: hsl(0,0%,100%);
-    --blackColor: hsl(0,0%,18%);
-    --textColor: hsl(240,1%,48%);
-    --bgColor: hsl(220,10%,94%);
-    --greyText: rgb(190,190,190);
-    --inputColor: hsl(330,12%,97%);
-    --itemCardColor: hsl(120, 5%, 88%);
-    --itemCardHover: hsl(120, 27%, 87%);
+	--PrimaryColor: #e50053;
+	--PixeledColor: hsl(325, 85%, 43%);
+	--HoverColor: hsl(234, 52%, 58%);
+	--paleBlue: rgba(173, 197, 230, 0.514);
+	--whiteColor: hsl(0, 0%, 100%);
+	--blackColor: hsl(0, 0%, 18%);
+	--textColor: hsl(240, 1%, 48%);
+	--bgColor: hsl(220, 10%, 94%);
+	--greyText: rgb(190, 190, 190);
+	--inputColor: hsl(330, 12%, 97%);
+	--itemCardColor: hsl(120, 5%, 88%);
+	--itemCardHover: hsl(120, 27%, 87%);
 
-    /*Font and Typography */
-    --bigFontSize: 2.5rem;
-    --h1FontSize: 1.5rem;
-    --h2FontSize: 1.25rem;
-    --h3FontSize: 1rem;
-    --normalFontSize: .938rem;
-    --smallFontSize: .813rem;
-    --smallestFontSize: .75rem;
-  }
+	/*Font and Typography */
+	--bigFontSize: 2.5rem;
+	--h1FontSize: 1.5rem;
+	--h2FontSize: 1.25rem;
+	--h3FontSize: 1rem;
+	--normalFontSize: 0.938rem;
+	--smallFontSize: 0.813rem;
+	--smallestFontSize: 0.75rem;
+}
 
-  .activitySection{
-    flex-basis: 50%;
+.activitySection {
+	flex-basis: 50%;
 
-    .heading{
-        width: 100%;
-        justify-content: space-between;
+	.heading {
+		width: 100%;
+		justify-content: space-between;
 
-        h1{
-            font-size: var(--h2FontSize);
-            color: var(--blackColor);
-            font-weight: 700;
-        }
+		h1 {
+			font-size: var(--h2FontSize);
+			color: var(--blackColor);
+			font-weight: 700;
+		}
 
-        .btn{
-            border: 1px solid transparent;
-            color: var(--blackColor);
-            font-weight:400;
-        }
+		.btn {
+			border: 1px solid transparent;
+			color: var(--blackColor);
+			font-weight: 400;
+		}
 
-        .btn:hover{
-            background-color: rgba(173, 197, 230, 0.514);
-            border: 1px solid rgba(173, 197, 230, 0.514);
-            font-weight: 700;
-        }
-    }
+		.btn:hover {
+			background-color: rgba(173, 197, 230, 0.514);
+			border: 1px solid rgba(173, 197, 230, 0.514);
+			font-weight: 700;
+		}
+	}
 
-    .secContainer{
-        margin-top: 2rem;
+	.secContainer {
+		margin-top: 2rem;
 
-        .singleCustomer{
-            align-items: flex-start;
-            justify-content: space-between;
-        }
+		.singleCustomer {
+			align-items: flex-start;
+			justify-content: space-between;
+		}
 
-        img{
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px var(--itemCardColor);
-            margin-right: 1rem;
-        }
+		img {
+			width: 40px;
+			height: 40px;
+			object-fit: cover;
+			border-radius: 50%;
+			box-shadow: 0 2px 4px var(--itemCardColor);
+			margin-right: 1rem;
+		}
 
-        .customerDetails{
-            flex: 1;
+		.customerDetails {
+			flex: 1;
 
-            .name{
-                font-size: var(--h3FontSize);
-                color: var(--PrimaryColor);
-                display: block;
-                font-weight: 900;
-            }
+			.name {
+				font-size: var(--h3FontSize);
+				color: var(--PrimaryColor);
+				display: block;
+				font-weight: 900;
+			}
 
-            small{
-                color: var(--textColor);
-                font-size: var(--smallFontSize);
-                font-weight: 600;
-            }
-        }
+			small {
+				color: var(--textColor);
+				font-size: var(--smallFontSize);
+				font-weight: 600;
+			}
+		}
 
-        .duration{
-            font-weight: 500;
-        }
-    }
-  }
+		.duration {
+			font-weight: 500;
+		}
+	}
+}
 
-  // MEDIA QUERIES =======================>
+// MEDIA QUERIES =======================>
 
-  @media screen and (max-width: 918px){
-    .activitySection{
-        width: 100%;
-    }
+@media screen and (max-width: 918px) {
+	.activitySection {
+		width: 100%;
+	}
 }

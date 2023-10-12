@@ -1,53 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-
-@import './node_modules/tailwindcss/base.css';
-@import './node_modules/tailwindcss/components.css';
-@import './node_modules/tailwindcss/utilities.css';
+@import "./node_modules/tailwindcss/base.css";
+@import "./node_modules/tailwindcss/components.css";
+@import "./node_modules/tailwindcss/utilities.css";
 
 :root {
-  --PrimaryColor: hsl(234, 39%, 37%); 
-  --PixeledColor:#e50053;
+  --PrimaryColor: #e50053;
+  --PixeledColor: #e50053;
 
---black-gradient: linear-gradient(
-  144.39deg,
-  #ffffff -278.56%,
-  #6d6d6d -78.47%, 
-  --PixeledColor 91.61%
-);
---card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
-
-
-@font-face {
-    font-family: Crossten;
-    src: url('./src/assets/fonts/CrosstenBook.otf');
-    font-weight: 400;
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    --PixeledColor 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
 @font-face {
-    font-family: Crossten;
-    src: url('./src/assets/fonts/CrosstenMedium.otf');
-    font-weight: 500;
+  font-family: Crossten;
+  src: url("./src/assets/fonts/CrosstenBook.otf");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: Crossten;
-    src: url('./src/assets/fonts/CrosstenBlack.otf');
-    font-weight: 700;
+  font-family: Crossten;
+  src: url("./src/assets/fonts/CrosstenMedium.otf");
+  font-weight: 500;
 }
 
+@font-face {
+  font-family: Crossten;
+  src: url("./src/assets/fonts/CrosstenBlack.otf");
+  font-weight: 700;
+}
 
 body {
-    font-family: 'Crossten', sans-serif !important;
+  font-family: "Crossten", sans-serif !important;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .flexH {
@@ -61,58 +57,58 @@ body {
   gap: 1.5rem;
 }
 
-.principal{
+.principal {
   margin-top: 50px;
 }
 html {
-    font-size: 80%;
-    scroll-behavior: smooth;
-    color:#6d6d6d
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  li {
-    list-style: none;
-  }
+  font-size: 80%;
+  scroll-behavior: smooth;
+  color: #6d6d6d;
+}
 
-  .icon {
-    font-size: var(--h2FontSize);
-    cursor: pointer;
-  }
-  
-  .message {
-    display: none;
-  } 
+a {
+  text-decoration: none;
+}
 
-  .showMessage{
-    display: block;
-    color: var(--whiteColor);
-    color: rgb(148, 20, 80);
-    border-radius: 15px;
-    text-align: center;
-  }
+li {
+  list-style: none;
+}
 
-  .btn{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: .8rem 1rem;
-    color: black;
-  }
+.icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
 
-  .btn .icon{
-    margin-left: .5rem;
-  }
+.message {
+  display: none;
+}
 
-  .btn:hover{
-    color: black;
-    background: var(--paleBlue);
-    transition: .3s ease;
-  }
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  color: rgb(148, 20, 80);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: black;
+}
+
+.btn .icon {
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  color: black;
+  background: var(--paleBlue);
+  transition: 0.3s ease;
+}
 
 .text-gradient {
   background: radial-gradient(
@@ -120,7 +116,7 @@ html {
     #ee0a88 0.89%,
     #af0462 17.23%,
     #ad0252 42.04%,
-    #E50053 55.12%,
+    #e50053 55.12%,
     hsl(240, 52%, 5%) 71.54%,
     hsl(320, 96%, 10%) 100%
   );
@@ -131,32 +127,31 @@ html {
   color: transparent;
 }
 
-.text-gradient2{
+.text-gradient2 {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
     #14101d 0.89%,
     #14101d 17.23%,
     #14101d 42.04%,
-    #E50053 55.12%,
+    #e50053 55.12%,
     hsl(240, 52%, 5%) 71.54%,
     hsl(320, 96%, 10%) 100%
   );
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 
-.text-gradient3{
-  background: #FFFFFF;
-  
+.text-gradient3 {
+  background: #ffffff;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
-  
 
 .bg-blue-gradient {
   background: linear-gradient(
@@ -164,7 +159,7 @@ html {
     #880752ea -43.27%,
     #aa0a67 -21.24%,
     #db6ddb 12.19%,
-    
+
     #e50053 51.94%,
     #e50053 90.29%
   );
@@ -263,12 +258,6 @@ html {
   filter: blur(750px);
 }
 
-.nosotros:hover{
+.nosotros:hover {
   color: rgb(207, 21, 21);
 }
-
-
-
-
-
-

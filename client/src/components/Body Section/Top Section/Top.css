@@ -1,5 +1,5 @@
 root {
-  --PrimaryColor: hsl(234, 39%, 37%);
+  --PrimaryColor: #E50053;
   --HoverColor: #E50053;
   --PixeledColor: hsl(325, 85%, 43%);
   --paleBlue: hsl(236, 53%, 90%);
@@ -135,12 +135,12 @@ root {
 }
 .topSection .cardSection .rightCard .buttons .transparent {
   background: none;
-  border: 2px solid var(--PrimaryColor);
+  border: 2px solid #E50053;
   color: white;
 }
 .topSection .cardSection .rightCard .buttons .transparent:hover {
-  background: var(--PrimaryColor);
-  border: 2px solid var(--blackColor);
+  background: linear-gradient(to left, #e62657, #280028);
+  border: none;
 }
 .topSection .cardSection .leftCard {
   flex-basis: 50%;
@@ -160,7 +160,7 @@ root {
   left: 0;
   bottom: 0;
   border-radius: 1rem;
-  background: rgb(126, 126, 223);
+  background: linear-gradient(to left, #e62657, #280028);
 }
 .topSection .cardSection .leftCard .main .textDiv {
   z-index: 100;
