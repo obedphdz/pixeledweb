@@ -66,6 +66,7 @@
   padding: 1rem;
   margin-right: 2rem;
   margin-left: 2rem;
+  margin-bottom: 3rem;
   color: black;
 }
 .sideBar .menuDiv .btnLogOut .icon, .sideBar .settingsDiv .btnLogOut .icon {
@@ -73,7 +74,8 @@
   margin-bottom: -3px;
 }
 .sideBar .menuDiv .btnLogOut:hover, .sideBar .settingsDiv .btnLogOut:hover {
-  background: var(--paleBlue);
+  background: #E50053;
+  color: white;
 }
 .sideBar .menuDiv .menuLists .listItem, .sideBar .settingsDiv .menuLists .listItem {
   padding: 0.2rem 1.5rem;

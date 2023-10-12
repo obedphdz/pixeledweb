@@ -11,7 +11,6 @@ import { HiOutlineClipboardList } from 'react-icons/hi';
 import { MdOutlinePriceChange, MdPriceCheck } from 'react-icons/md';
 import {
 	BsPersonBoundingBox,
-	BsQuestionCircle,
 	BsFillClipboardPlusFill,
 	BsClockHistory,
 } from 'react-icons/bs';
@@ -158,20 +157,6 @@ const Slidebar = () => {
 						</button>
 					</Link>
 				</ul>
-			</div>
-
-			<div className='sideBarCard'>
-				<BsQuestionCircle className='icon' />
-				<div className='cardContent'>
-					<div className='circle1'></div>
-					<div className='circle2'></div>
-
-					<h3>Help Center</h3>
-					<p>
-						Having trouble in Pixeled, please contact us for more questions.
-					</p>
-					<button className='btn'>Go to help center</button>
-				</div>
 			</div>
 		</div>
 	);
