@@ -12,7 +12,7 @@
 :root {
     --PrimaryColor: #E50053;
     ;
-    --HoverColor: hsl(234, 52%, 58%);
+    --HoverColor: hsl(240, 1%, 48%);
     --PixeledColor: hsl(325, 85%, 43%);
     --paleBlue: rgb(169, 183, 239);
     --whiteColor: hsl(0, 0%, 100%);
