@@ -125,15 +125,15 @@ export const footerLinks = [
     links: [
       {
         name: "Inicio",
-        link: "https://www.hoobank.com/content/",
+        link: '#home',
       },
       {
         name: "Nosotros",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "#nosotros",
       },
       {
         name: "Inicia Pedido",
-        link: "https://www.hoobank.com/partners/",
+        link: "/login",
       },
     ],
   },
@@ -142,15 +142,15 @@ export const footerLinks = [
     links: [
       {
         name: "Servicios",
-        link: "https://www.hoobank.com/help-center/",
+        link: "#servicios",
       },
       {
         name: "Contactanos",
-        link: "https://www.hoobank.com/partners/",
+        link: "#contactanos",
       },
       {
         name: "Iniciar Sesion ",
-        link: "https://www.hoobank.com/partners/",
+        link: "/login",
       },
     ],
   },

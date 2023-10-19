@@ -16,7 +16,7 @@ import {
 } from 'react-icons/bs';
  import { BiSpreadsheet, BiLogOut } from 'react-icons/bi';
 import { FiUsers } from 'react-icons/fi';
-import { TbStatusChange, TbChartInfographic } from 'react-icons/tb';
+import { TbChartInfographic } from 'react-icons/tb';
 
 const Slidebar = () => {
 
@@ -71,15 +71,6 @@ const Slidebar = () => {
 							<HiOutlineClipboardList className='icon' />
 							<span className='smallText'>Ordenes en Producción</span>
 						</Link>
-					</li>
-
-					<li className='listItem'>
-						<a href='#settings' className='menuLink flex'>
-							<Link to=''>
-								<TbStatusChange className='icon' />
-								<span className='smallText'>Estatus de Pedidos</span>
-							</Link>
-						</a>
 					</li>
 
 					<li className='listItem'>

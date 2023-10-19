@@ -135,7 +135,7 @@ root {
 }
 .topSection .cardSection .rightCard .buttons .transparent {
   background: none;
-  border: 2px solid #E50053;
+  border: 2px solid rgb(128, 13, 76);
   color: white;
 }
 .topSection .cardSection .rightCard .buttons .transparent:hover {

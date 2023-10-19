@@ -1,13 +1,13 @@
-import '../Admin.css'
-import Slidebar from "../Slidebar Section/Slidebar"
+import '../MainBody/MainBody.css'
+import Slidenew from '../Slidebar Section/Slidenew';
 import BodyNueva from './BodyNueva'
 
 
 const NuevaOrden = () => {
   return (
-		<div className='app-body'>
-			<div className='containerAdmin'>
-				<Slidebar />
+	<div className='body-app'>
+		<div className="mainContainer">
+				<Slidenew />
 				<BodyNueva
 					h1texto='Crear Orden de Producción'
 					ptexto='Ingresa los datos de tu pedido'

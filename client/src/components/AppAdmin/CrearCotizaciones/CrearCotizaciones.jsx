@@ -1,13 +1,13 @@
-import '../Admin.css';
+import '../MainBody/MainBody.css'
 import BodyNueva from "../NuevaOrden/BodyNueva";
-import Slidebar from "../Slidebar Section/Slidebar";
+import Slidenew from '../Slidebar Section/Slidenew';
 
 export default function Cotizaciones() {
   return (
 		<>
-			<div className='app-body'>
-				<div className='containerAdmin'>
-					<Slidebar />
+		<div className='body-app'>
+			<div className="mainContainer">
+					<Slidenew />
 					<BodyNueva
 						h1texto='Crear Cotizacion'
 						ptexto='Ingresa los datos a Cotizar'
