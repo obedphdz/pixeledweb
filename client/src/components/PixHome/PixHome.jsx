@@ -7,8 +7,10 @@ import NuevaOrden from '../AppAdmin/NuevaOrden/NuevaOrden'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import App from '../App/App';
 import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
-import VerCotizaciones from '../AppAdmin/VerCotizaciones/VerCotizaciones';
 import Precios from '../AppAdmin/PreciosLista/Precios';
+import Cliente from '../AppCliente/Cliente';
+import JefeDise from '../AppAdmin/VistaDise/JefeDise';
+import Diseñador from '../AppAdmin/VistaDise/Diseñador';
 
 
 function PixHome() {
@@ -25,7 +27,9 @@ function PixHome() {
             <Route path='/nueva' element={<NuevaOrden/>}/>
             <Route path='/precios' element={<Precios/>}/>
             <Route path='/nuevaCotiza' element={<CrearCotizaciones/>}/>
-            <Route path='/verCotiza' element={<VerCotizaciones/>}/>
+            <Route path='/cliente' element={<Cliente/>}/>
+            <Route path='/jefeDise' element={<JefeDise/>}/>
+            <Route path='/diseñador' element={<Diseñador/>}/>
             <Route path='*' element={<ErrorPage/>}/>
           </Routes>
         </Router> 

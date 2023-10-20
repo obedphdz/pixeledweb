@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = 5000;
 
 const connection = mysql2.createConnection({
-    host: "192.168.0.13",
+    host: "192.168.1.115",
     database: "pixeledsys",
     user: "obed",
     password: "pixeled1",
@@ -101,23 +101,39 @@ app.post('/signup', (req, res) => {
 
 
 app.post('/login', (req, res) => {
-    const sql = "SELECT * FROM cliente WHERE email = ? AND password = ?";
-    const values = [req.body.email, req.body.password]; // Valores para los parámetros de la consulta
+    const email = req.body.email;
+    const password = req.body.password;
 
-    connection.query(sql, values, (err, data) => {
+    // Primero, verifica si las credenciales coinciden con un "Cliente"
+    const sqlCliente = "SELECT * FROM cliente WHERE email = ? AND password = ?";
+    connection.query(sqlCliente, [email, password], (err, dataCliente) => {
         if (err) {
             console.error("Error:", err);
             return res.json("Error");
         }
-        if (data.length > 0) {
-            // Si se encontraron resultados, el inicio de sesión es exitoso
-            return res.json("Success");
+        if (dataCliente.length > 0) {
+            // Si se encontraron resultados en la tabla "Cliente", el inicio de sesión es exitoso
+            return res.json({ status: "Success", user: dataCliente[0], userType: "Cliente" });
         } else {
-            // Si no se encontraron resultados, el inicio de sesión falló
-            return res.json("Failed");
+            // Si no se encontraron resultados en la tabla "Cliente", verifica en la tabla "Empleado"
+            const sqlEmpleado = "SELECT * FROM empleado WHERE correo_emp = ? AND password_emp = ?";
+            connection.query(sqlEmpleado, [email, password], (err, dataEmpleado) => {
+                if (err) {
+                    console.error("Error:", err);
+                    return res.json("Error");
+                }
+                if (dataEmpleado.length > 0) {
+                    // Si se encontraron resultados en la tabla "Empleado", el inicio de sesión es exitoso
+                    return res.json({ status: "Success", user: dataEmpleado[0], userType: "Empleado" });
+                } else {
+                    // Si no se encontraron resultados en ninguna de las tablas, el inicio de sesión falló
+                    return res.json("Failed");
+                }
+            });
         }
     });
 });
+
 
 app.post('/orders', (req, res) => {
 

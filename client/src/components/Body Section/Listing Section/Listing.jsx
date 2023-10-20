@@ -2,7 +2,6 @@ import './Listing.css'
 
 // Imported Icons ==============> 
 import {BsArrowRightShort} from 'react-icons/bs'
-import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai'
 
 // Imported img   ==============> 
 import img from '../../../assets/img/imgPixeled/img (1).png'
@@ -28,37 +27,31 @@ const Listing = () => {
       <div className="secContainer flex">
 
         <div className="singleItem">
-          <AiFillHeart className="icon"/>
           <img src={img} alt="ImageName" />
           <h3>Lona</h3>
         </div>
 
         <div className="singleItem">
-          <AiOutlineHeart className="icon"/>
           <img src={img2} alt="ImageName" />
           <h3>Lona mate</h3>
         </div>
       
         <div className="singleItem">
-          <AiFillHeart className="icon"/>
           <img src={img3} alt="ImageName" />
           <h3>Lona Traslucida</h3>
         </div>
       
         <div className="singleItem">
-          <AiOutlineHeart className="icon"/>
           <img src={img4} alt="ImageName" />
           <h3>Vinil brillante</h3>
         </div>
 
         <div className="singleItem">
-          <AiFillHeart className="icon"/>
           <img src={img3} alt="ImageName" />
           <h3>Vinil Mate</h3>
         </div>
 
         <div className="singleItem">
-          <AiOutlineHeart className="icon"/>
           <img src={img2} alt="ImageName" />
           <h3>Microperforado</h3>
         </div>

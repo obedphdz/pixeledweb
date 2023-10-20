@@ -64,14 +64,31 @@ const Login = () => {
 		}
 		setErrors(validationErrors);
 
-			axios.post('http://localhost:5000/login',values).then(res =>{
-				if(res.data === "Success"){
-					navigate('/admin');
-				}else if(res.data === "Failed"){
-					alert("Inicio de sesion Inorrecta.")
+		axios.post('http://localhost:5000/login', values).then((res) => {
+			if (res.data.status === "Success") {
+			  if (res.data.userType === "Cliente") {
+				navigate('/cliente'); // Redirige al dashboard del cliente
+			} else if (res.data.userType === "Empleado") {
+				// Aquí puedes verificar el correo del empleado y redirigir a vistas específicas
+				if (res.data.user.correo_emp === 'admin@pixeled.com') {
+				  navigate('/admin');
+				} else if (res.data.user.correo_emp === 'diseno@pixeled.com') {
+				  navigate('/diseñador');
+				} else if (res.data.user.correo_emp === 'admin.diseno@pixeled.com') {
+					navigate('/jefeDise');
+				} else if (res.data.user.correo_emp === 'impresion@pixeled.com') {
+					navigate('/diseñador');
+				} else {
+				  navigate('/login');
 				}
-			}).catch(err => console.log(err));
-    } 
+			  } else {
+				alert("Inicio de sesión incorrecto.");
+			  }
+			} else if (res.data === "Failed") {
+			  alert("Inicio de sesión incorrecto.");
+			}
+		  }).catch((err) => console.log(err));
+	};
 	
 
 return (

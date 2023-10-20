@@ -1,6 +1,9 @@
 import './Activity.css'
 import {BsArrowRightShort} from 'react-icons/bs'
-import user from '../../../assets/img/imgPixeled/user3.jpeg'
+import user1 from '../../../assets/img/users/user2.png'
+import user2 from '../../../assets/img/users/user6.png'
+import user3 from '../../../assets/img/users/user4.png'
+import user4 from '../../../assets/img/users/user5.png'
 
 const Activity = () => {
   return (
@@ -17,7 +20,7 @@ const Activity = () => {
       <div className="secContainer grid">
 
         <div className="singleCustomer flex">
-          <img src={user} alt="CustomerImage" />
+          <img src={user1} alt="CustomerImage" />
           <div className="customerDetails">
             <span className='name'>Cristobal Diseño</span>
             <small>Orderno un nuevo vinil.</small>
@@ -28,7 +31,7 @@ const Activity = () => {
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user} alt="CustomerImage" />
+          <img src={user2} alt="CustomerImage" />
           <div className="customerDetails">
             <span className='name'>Liss Diseño</span>
             <small>Ordeno material tabloides</small>
@@ -39,7 +42,7 @@ const Activity = () => {
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user} alt="CustomerImage" />
+          <img src={user3} alt="CustomerImage" />
           <div className="customerDetails">
             <span className='name'>Vero</span>
             <small>Orderno material papel impresion</small>
@@ -50,7 +53,7 @@ const Activity = () => {
         </div>
 
         <div className="singleCustomer flex">
-          <img src={user} alt="CustomerImage" />
+          <img src={user4} alt="CustomerImage" />
           <div className="customerDetails">
             <span className='name'>Montserrat</span>
             <small>Ordeno un nuevo vinil</small>
