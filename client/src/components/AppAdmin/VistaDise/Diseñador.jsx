@@ -1,7 +1,7 @@
 
 const Diseñador = () => {
   return (
-    <div>Diseñador</div>
+    <div>Diseñador hola hola hola</div> 
   )
 }
 

@@ -1,7 +1,12 @@
+import Slidenew from "../Slidebar Section/Slidenew"
 
 const JefeDise = () => {
   return (
-    <div>JefeDise</div>
+    <div className='body-app'>
+		<div className="mainContainer">
+				<Slidenew />
+			</div>
+		</div>
   )
 }
 
