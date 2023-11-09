@@ -9,8 +9,11 @@ import App from '../App/App';
 import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
 import Precios from '../AppAdmin/PreciosLista/Precios';
 import Cliente from '../AppCliente/Cliente';
-import JefeDise from '../AppAdmin/VistaDise/JefeDise';
-import Diseñador from '../AppAdmin/VistaDise/Diseñador';
+import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
+import Diseñador from '../AppAdmin/AppDiseñador/Diseñador';
+import OrdersInProduction from '../AppAdmin/Orders/OrdersInProduction';
+import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrden/CrearOrdenDi';
+
 
 
 function PixHome() {
@@ -24,12 +27,15 @@ function PixHome() {
             <Route path="/admin" element={<Admin/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/nueva' element={<NuevaOrden/>}/>
+            <Route path='/nueva-orden' element={<NuevaOrden/>}/>
             <Route path='/precios' element={<Precios/>}/>
-            <Route path='/nuevaCotiza' element={<CrearCotizaciones/>}/>
+            <Route path='/crear-cotiza' element={<CrearCotizaciones/>}/>
             <Route path='/cliente' element={<Cliente/>}/>
-            <Route path='/jefeDise' element={<JefeDise/>}/>
+            <Route path='/jefe-dise' element={<JefeDise/>}/>
             <Route path='/diseñador' element={<Diseñador/>}/>
+            <Route path='/ordenes' element={<OrdersInProduction/>}/>
+            <Route path='/crear-orden-dise' element={<CrearOrdenDi/>}/>
+
             <Route path='*' element={<ErrorPage/>}/>
           </Routes>
         </Router> 

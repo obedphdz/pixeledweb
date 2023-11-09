@@ -53,21 +53,21 @@ const Slidebar = () => {
 
 				<ul className='menuLists grid'>
 					<li className='listItem'>
-						<Link to='/nuevaCotiza' className='menuLink flex'>
+						<Link to='/crear-cotiza' className='menuLink flex'>
 							<MdOutlinePriceChange className='icon' />
 							<span className='smallText'>Crear Cotización</span>
 						</Link>
 					</li>
 
 					<li className='listItem'>
-						<Link to='/nueva' className='menuLink flex'>
+						<Link to='/nueva-orden' className='menuLink flex'>
 							<BsFillClipboardPlusFill className='icon' />
 							<span className='smallText'>Nueva Orden</span>
 						</Link>
 					</li>
 
 					<li className='listItem'>
-						<Link to='' className='menuLink flex'>
+						<Link to='/ordenes' className='menuLink flex'>
 							<HiOutlineClipboardList className='icon' />
 							<span className='smallText'>Ordenes en Producción</span>
 						</Link>
