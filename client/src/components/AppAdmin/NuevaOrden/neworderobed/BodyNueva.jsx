@@ -1,4 +1,4 @@
-import '../NuevaOrden/BodyNueva.css';
+import './BodyNueva.css';
 import { useState } from 'react';
 
 const BodyNueva = (props) => {
@@ -46,28 +46,7 @@ const BodyNueva = (props) => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		
-	/* 	try {
-			const validationErrors = await Validation(values);
-			setErrors(validationErrors);
-	
-			if (validationErrors.cuentaRegi === "Incorrecto") {
-				alert(
-					"Registro falló con los parámetros deseados, vuelve a intentar."
-				);
-				navigate('/register');
-			} else {
-				alert(
-					"Usuario registrado exitosamente! Puedes regresar a Login."
-				);
-				axios.post('http://localhost:5000/signup', values).then(() => {
-					navigate('/login');
-				});
-			}
-		} catch (err) {
-			console.error(err);
-			alert("Error en la validación. Por favor, inténtalo de nuevo.");
-		} */
+
 		console.log('Enviar a MySQL:', clientes, filas);
 	};
 

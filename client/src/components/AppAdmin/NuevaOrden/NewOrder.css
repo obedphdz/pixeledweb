@@ -1,0 +1,101 @@
+.tituloSeccion {
+    margin-top: -4rem;
+    left: 700px;
+    font-size: 2rem;
+    text-align: start !important;
+    margin-bottom: 2rem;
+  }
+  .tituloSeccion h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+    color: hsl(0, 0%, 18%);
+    font-weight: 500;
+  }
+  .tituloSeccion p {
+    font-size: 1.5rem;
+  }
+
+  .inputOrdersContainer {
+    flex: 1; 
+    padding: 8.8rem;
+    overflow: auto;
+    margin-top: 10rem;
+    height: 64rem;
+  } 
+  
+  .input-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .row {
+    margin-bottom: 50px;
+  }
+  
+  .col-xs-6,
+  .col-sm-6,
+  .col-lg-6,
+  .col-md-6 {
+    flex: 0 0 48%; /* Establece el ancho de cada columna al 48% para que dos columnas quepan en una fila */
+  }
+  
+  .b-DatosPersonalesCliente {
+    font-weight: bold;
+  }
+  
+  .custom-padding-5 {
+    padding: 5px;
+  }
+
+  .col-xs-12, .col-sm-6, .col-lg-6, .col-md-6{
+    padding: 6px;
+  }
+
+  .contBotones{
+    text-align: right;
+  }
+
+  .hvr-shutter-out-horizontal {
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #4d4d4d;
+    margin: 25px 15px;
+    margin-top: -12rem;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    color: #4d4d4d;
+    background: #e1e1e1;
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e50054;
+    border-radius: 20px;
+    border: none;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus,
+  .hvr-shutter-out-horizontal:active {
+  color: white;
+  border: none;
+}
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before,
+.hvr-shutter-out-horizontal:active:before {
+  transform: scaleX(1);
+}

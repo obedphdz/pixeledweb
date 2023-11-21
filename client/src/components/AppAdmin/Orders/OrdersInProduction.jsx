@@ -2,7 +2,7 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { ordersData, contextMenuItems, ordersGrid } from '../../../data/dummy';
 import './Orders.css';
-import Header from '../../Header/Header';
+import Header from './Header/Header';
 
 const OrdersInProduction = () => {
   const editing = { allowDeleting: true, allowEditing: true };

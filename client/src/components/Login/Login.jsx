@@ -75,7 +75,7 @@ const Login = () => {
 				} else if (res.data.user.correo_emp === 'diseno@pixeled.com') {
 				  navigate('/diseñador');
 				} else if (res.data.user.correo_emp === 'admin.diseno@pixeled.com') {
-					navigate('/jefeDise');
+					navigate('/jefe-dise');
 				} else if (res.data.user.correo_emp === 'impresion@pixeled.com') {
 					navigate('/diseñador');
 				} else {

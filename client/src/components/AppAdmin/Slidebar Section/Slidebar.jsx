@@ -60,7 +60,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-						<Link to='/nueva-orden' className='menuLink flex'>
+						<Link to='/crear-orden' className='menuLink flex'>
 							<BsFillClipboardPlusFill className='icon' />
 							<span className='smallText'>Nueva Orden</span>
 						</Link>
@@ -74,12 +74,10 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-						<a href='#products' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<BsClockHistory className='icon' />
 								<span className='smallText'>Historial Pedidos</span>
 							</Link>
-						</a>
 					</li>
 				</ul>
 			</div>
@@ -89,56 +87,44 @@ const Slidebar = () => {
 
 				<ul className='menuLists grid'>
 					<li className='listItem'>
-						<a href='#acabados' className='menuLink flex'>
-							<Link to='/precios'>
+							<Link to='/precios' className='menuLink flex'>
 								<MdPriceCheck className='icon' />
 								<span className='smallText'>Precios</span>
 							</Link>
-						</a>
 					</li>
 					<li className='listItem'>
-						<a href='#users' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<MdPriceCheck className='icon' />
 								<span className='smallText'>Proveedores</span>
 							</Link>
-						</a>
 					</li>
 
 					<li className='listItem'>
-						<a href='#design' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<FiUsers className='icon' />
 								<span className='smallText'>Clientes</span>
 							</Link>
-						</a>
 					</li>
 
 					<li className='listItem'>
-						<a href='#print' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<BiSpreadsheet className='icon' />
 								<span className='smallText'>Solicitud de Material</span>
 							</Link>
-						</a>
 					</li>
 
 					<li className='listItem'>
-						<a href='#materi' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<TbChartInfographic className='icon' />
 								<span className='smallText'>Comisiones</span>
 							</Link>
-						</a>
 					</li>
 
 					<li className='listItem'>
-						<a href='#users' className='menuLink flex'>
-							<Link to=''>
+							<Link to='' className='menuLink flex'>
 								<BsPersonBoundingBox className='icon' />
 								<span className='smallText'>Empleados</span>
 							</Link>
-						</a>
 					</li>
 
 					<Link to={'/'}>

@@ -3,14 +3,13 @@ import './Top.css'
 
 // Imported Icons ==============> 
 import {BiSearchAlt} from 'react-icons/bi'
-import {TbMessageCircle} from 'react-icons/tb'
-import {MdCircleNotifications} from 'react-icons/md'
 import {BsArrowRightShort} from 'react-icons/bs'
 
 // Imported img/videos ==============> 
 import adminImg2 from '../../../assets/img/imgPixeled/admin1.png'
 import img1 from '../../../assets/img/imgPixeled/img (12).png'
 import video3 from '../../../assets/img/imgPixeled/video4.mp4'
+import { Link } from 'react-router-dom'
 
 const Top = () => {
      
@@ -44,8 +43,6 @@ return (
       </div>
 
       <div className="adminDiv flex">
-        <TbMessageCircle className='icon'/>
-        <MdCircleNotifications className='icon'/>
         <div className="adminImage">
           <img src={adminImg2} alt=''></img>
         </div>
@@ -75,13 +72,13 @@ return (
         <div className="main flex">
 
           <div className="textDiv">
-            <h1>Pago a Proveedores</h1>
+            <h1>Crear un pedido</h1>
            
-            <a href="#myOrders">
+            <Link to='/crear-orden'>
               <span className="flex link">
-                Ir a Proveedores <BsArrowRightShort className='icon'/>
+                Ir a Ordenes <BsArrowRightShort className='icon'/>
               </span>
-            </a>
+            </Link>
           </div>
 
          <div className="imgDivTop">

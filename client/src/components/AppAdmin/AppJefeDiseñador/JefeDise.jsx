@@ -2,41 +2,49 @@
 /* JefeDise.jsx */
 
 import Slidenew from "../Slidebar Section/Slidenew"
-import {MdOutlinePriceChange } from 'react-icons/md'
-import {BsFillClipboardPlusFill, BsClockHistory} from 'react-icons/bs'
-import {HiOutlineClipboardList} from 'react-icons/hi'
+import { DropDownButtonComponent } from '@syncfusion/ej2-react-splitbuttons'
 import OrdersInProduction from "../Orders/OrdersInProduction"
+import { sectionsForJefeDi} from "../Slidebar Section/sectionsForSlide/sections"
 import '../Orders/Orders.css'
- 
-export const sectionsForJefeDi = [
+
+export const items = [
 	{
-	  title: 'Pedidos',
-	  items: [
-		{ name: 'Crear Pedido', icon: <MdOutlinePriceChange />, link: '/crear-orden-dise' },
-		{ name: 'Asignacion de Pedidos', icon: <BsFillClipboardPlusFill />, link: '/admin' },
-		{ name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/admin' },
-		{ name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/admin' },
-		{ name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/admin' },
-	  ],
+		text: 'Dashboard',
+		iconCss: 'e-ddb-icons e-dashboard'
 	},
-	/* {
-	  title: 'Admin',
-	  items: [
-		{ name: 'Precios', icon: <MdPriceCheck />, link: '/precios' },
-	  ],
-	}, */
-  ];
+	{
+		text: 'Notifications',
+		iconCss: 'e-ddb-icons e-notifications',
+	},
+	{
+		text: 'User Settings',
+		iconCss: 'e-ddb-icons e-settings',
+	},
+	{
+		text: 'Log Out',
+		iconCss: 'e-ddb-icons e-logout'
+	}
+];
 
 const JefeDise = () => {
   return (
 	<div className="body-app">
-	<div className="mainContainer">
-		<Slidenew sections={sectionsForJefeDi} />
-	  <div className="ordersContainer">
-		<OrdersInProduction />
-	  </div>
-	</div>
-  </div>
+		<div className="mainContainer">
+			{/* DropDownButton */}
+		<div id='dropdownbutton-control'>
+            <div className='row'>
+                <div className="col-xs-12 col-sm-12 col-lg-6 col-md-6">
+                    <DropDownButtonComponent items={items}>Profile</DropDownButtonComponent>
+                </div>
+            </div>
+        </div>
+			<Slidenew sections={sectionsForJefeDi} />
+			<div className="ordersContainer">
+				<OrdersInProduction />
+			</div>
+		</div>
+  	</div>
+  
   )
 }
 

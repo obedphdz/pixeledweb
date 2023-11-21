@@ -11,8 +11,8 @@ import Precios from '../AppAdmin/PreciosLista/Precios';
 import Cliente from '../AppCliente/Cliente';
 import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
 import Diseñador from '../AppAdmin/AppDiseñador/Diseñador';
-import OrdersInProduction from '../AppAdmin/Orders/OrdersInProduction';
-import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrden/CrearOrdenDi';
+import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
+import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
 
 
 
@@ -33,7 +33,8 @@ function PixHome() {
             <Route path='/cliente' element={<Cliente/>}/>
             <Route path='/jefe-dise' element={<JefeDise/>}/>
             <Route path='/diseñador' element={<Diseñador/>}/>
-            <Route path='/ordenes' element={<OrdersInProduction/>}/>
+            <Route path='/ordenes' element={<VistaOrdenes/>}/>
+            <Route path='/crear-orden' element={<NuevaOrden/>}/>
             <Route path='/crear-orden-dise' element={<CrearOrdenDi/>}/>
 
             <Route path='*' element={<ErrorPage/>}/>

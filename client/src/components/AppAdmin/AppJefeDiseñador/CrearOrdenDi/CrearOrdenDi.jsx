@@ -1,7 +1,8 @@
 
 import Slidenew from "../../Slidebar Section/Slidenew"
-import {sectionsForJefeDi} from '../JefeDise'
-import BodyNueva from '../../NuevaOrden/BodyNueva'
+import { sectionsForJefeDi } from "../../Slidebar Section/sectionsForSlide/sections"
+import NewOrder from "../../NuevaOrden/NewOrder"
+import '../../Orders/Orders.css'
 
 
 const CrearOrdenDi = () => {
@@ -9,11 +10,12 @@ const CrearOrdenDi = () => {
     <div className='body-app'>
 		<div className="mainContainer">
 				<Slidenew sections={sectionsForJefeDi}  />
-				<BodyNueva
+			<div className="inputOrdersContainer">
+				<NewOrder 
 					h1texto='Crear Orden de Producción'
 					ptexto='Ingresa los datos de tu pedido'
-					btnaccion='Pedido'
-				/>
+					btnaccion='Pedido'/>
+			</div>
 		</div>
 	</div>
   )

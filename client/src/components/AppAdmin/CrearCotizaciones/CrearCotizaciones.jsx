@@ -1,5 +1,5 @@
 import '../MainBody/MainBody.css'
-import BodyNueva from "../NuevaOrden/BodyNueva";
+import BodyNueva from "../NuevaOrden/neworderobed/BodyNueva";
 import Slidenew from '../Slidebar Section/Slidenew';
 import {MdOutlinePriceChange } from 'react-icons/md'
 import {BsFillClipboardPlusFill, BsClockHistory} from 'react-icons/bs'

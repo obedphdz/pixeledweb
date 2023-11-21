@@ -1,5 +1,5 @@
 import styles from '../../../style';
-import NavBar from '../AppAdmin/NavBar/NavBar'
+import NavBar from './NavBar/NavBar'
 import Stats from './Stats';
 import Business from './Business';
 import Billing from './Billing';
