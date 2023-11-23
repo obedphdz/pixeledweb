@@ -1,0 +1,23 @@
+
+/* Orders.css */
+
+.ordersContainer {
+  flex: 1; 
+  padding: 5.5rem;
+  overflow: auto;
+  margin-top: 0rem;
+  height: 64rem;
+}
+
+.inputOrdersContainer {
+  flex: 1; 
+  overflow: auto;
+  margin-top: 10rem;
+  height: 64rem;
+} 
+
+#dropdownbutton-control {
+  position: absolute;
+  top: 10px; /* Ajusta la posición superior según sea necesario */
+  right: 10px; /* Ajusta la posición derecha según sea necesario */
+}

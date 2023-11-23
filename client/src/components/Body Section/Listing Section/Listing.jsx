@@ -1,4 +1,6 @@
 import './Listing.css'
+import { Link } from 'react-router-dom';
+
 
 // Imported Icons ==============> 
 import {BsArrowRightShort} from 'react-icons/bs'
@@ -19,9 +21,11 @@ const Listing = () => {
 
       <div className="heading flex">
         <h1> Ordenes </h1>
-        <button className='btn flex'>
-          See All <BsArrowRightShort className="icon"/>
-        </button>
+        <Link to='/ordenes'>
+          <button className='btn flex'>
+              See All <BsArrowRightShort className="icon"/>
+          </button>
+        </Link>
       </div>
 
       <div className="secContainer flex">

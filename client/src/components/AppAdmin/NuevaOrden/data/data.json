@@ -1,0 +1,31 @@
+{
+    "defaultData": [
+    
+        { "id": "01-02-01", "name": "Lona Opaca 13oz" },
+        { "id": "01-02-02", "name": "Lona Traslucida" },
+        { "id": "01-02-03", "name": "Lona Mesh" },
+        { "id": "01-02-01", "name": "Canvas" },
+        { "id": "01-02-02", "name": "Vinil Reflejante Impreso" },
+        { "id": "01-02-03", "name": "Vinil Impreso", "value": "Vinil Impreso"},
+        { "id": "01-02-01", "name": "Vinil Wallgraphic" },
+        { "id": "01-02-02", "name": "Lona Traslucida" },
+        { "id": "01-02-03", "name": "Vinil Microperforado" },
+        { "id": "01-02-01", "name": "Vinil Estático" },
+        { "id": "01-02-02", "name": "Vinil Mate" },
+        { "id": "01-02-01", "name": "Vinil Transparente Brillante" },
+        { "id": "01-02-02", "name": "Vinil Transparente Mate" },
+        { "id": "01-02-03", "name": "Vinil Imantado" },
+        { "id": "01-02-01", "name": "Vinil Floorgraphic" },
+        { "id": "01-02-02", "name": "Recorte de Vinil Opaco" },
+        { "id": "01-02-01", "name": "Recorte de Vinil Brillante" },
+        { "id": "01-02-02", "name": "Recorte de Vinil Traslúcido" },
+        { "id": "01-02-03", "name": "Recorte de Vinil Esmerilado" },
+        { "id": "01-02-01", "name": "Trovicel 3mm con impresion o recorte" },
+        { "id": "01-02-02", "name": "Trovicel 6mm con impresion o recorte" },
+        { "id": "01-02-01", "name": "Acrilico 3mm con impresion o recorte" },
+        { "id": "01-02-02", "name": "Coroplast con impresion o recorte" },
+        { "id": "01-02-01", "name": "Estireno con impresion o recorte" },
+        { "id": "01-02-02", "name": "Foamboard" },
+        { "id": "01-02-03", "name": "Trovicel con cara de aluminio" }
+    ]
+}

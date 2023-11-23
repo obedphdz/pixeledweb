@@ -25,7 +25,7 @@ import {FaBars} from 'react-icons/fa'
 import { TbStatusChange, TbChartInfographic, TbArrowBarLeft } from 'react-icons/tb';
 
 
-const Slidenew = () => {
+const Slidenew  = ({ sections }) => {
     const [open, setOpen] = useState(true);
   
     const handleToggle = () => {
@@ -56,7 +56,7 @@ const Slidenew = () => {
         variants={sideBarVariants}
     >
       <div className='logoDiv flex'>
-      <Link to='/admin'>
+        <Link to='/admin'>
           <img
             src={logo1}
             alt='pixeledImage'
@@ -82,7 +82,7 @@ const Slidenew = () => {
         </motion.div>
       </div>
   
-      <div className='menuDiv'>
+    {/*   <div className='menuDiv'>
         <h3 className='divTile'>Pedidos</h3>
         <ul className='menuLists grid' data-variants={menuListsVariants}>
           <li>
@@ -107,38 +107,54 @@ const Slidenew = () => {
           </li>
         </ul>
       </div>
-
+ */}
+      <div className='menuDiv'>
+        {sections.map((section, sectionIndex) => (
+          <div key={sectionIndex}>
+            <h3 className='divTile'>{section.title}</h3>
+            <ul className='menuLists grid' data-variants={menuListsVariants}>
+              {section.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <Link to={item.link}>
+                    <ItemSlide icon={item.icon} showName={open} name={item.name} />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
   
       <div className='settingsDiv'>
             <h3 className='divTile'>Admin</h3>
             <ul className='menuLists grid'>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<MdPriceCheck />} showName={open} name='Precios' />
                 </Link>
               </li>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<MdPriceCheck />} showName={open} name='Proveedores' />
                 </Link>
               </li>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<FiUsers />} showName={open} name='Clientes' />
                 </Link>
               </li>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<BiSpreadsheet />} showName={open} name='Solicitud de Material' />
                 </Link>
               </li>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<TbChartInfographic />} showName={open} name='Comisiones' />
                 </Link>
               </li>
               <li>
-                <Link to=''>
+                <Link to='/'>
                   <ItemSlide icon={<BsPersonBoundingBox />} showName={open} name='Empleados' />
                 </Link>
               </li>
@@ -153,7 +169,7 @@ const Slidenew = () => {
               </li>
 
             </ul>
-          </div>
+      </div>
 
 
       </motion.div>

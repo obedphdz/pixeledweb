@@ -91,7 +91,7 @@
   bottom: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: var(--PrimaryColor);
+  background: var(--PixeledColor);
 }
 .sideBar .menuDiv .menuLists .listItem .menuLink, .sideBar .settingsDiv .menuLists .listItem .menuLink {
   color: var(--textColor);
