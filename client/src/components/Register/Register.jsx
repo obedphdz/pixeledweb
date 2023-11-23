@@ -1,22 +1,31 @@
 /* eslint-disable no-unused-vars */
 
 /* Register.jsx */
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import video from '../../assets/img/imgPixeled/videoImp3.mp4';
 import logo from '../../assets/img/imgPixeled/logoblack.svg';
 import '../Register/Register.css';
-import Validation from './SignUpValidation';
-import axios from 'axios'
+import axios from 'axios';
 
 /* Imported icons */
-import {MdOutlineLogin, MdMarkEmailRead} from 'react-icons/md'
-import {FaEye, FaEyeSlash, FaUserShield} from 'react-icons/fa';
-import {BsFillTelephoneInboundFill} from 'react-icons/bs'
-import {RiLockPasswordLine} from 'react-icons/ri'
+import { MdOutlineLogin, MdMarkEmailRead } from 'react-icons/md';
+import { FaEye, FaEyeSlash, FaUserShield } from 'react-icons/fa';
+import { BsFillTelephoneInboundFill } from 'react-icons/bs';
+import { RiLockPasswordLine } from 'react-icons/ri';
 
-
+const URI = 'http://localhost:8000/register';
 const Register = () => {
+	const [nombre, setNombre] = useState('');
+	const [apat, setApat] = useState('');
+	const [amat, setAmat] = useState('');
+	const [numtel, setNumtel] = useState('');
+	const [email, setEmail] = useState('');
+	const [pass, setPass] = useState('');
+	const [showPass, setShowPass] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+
+	const navigate = useNavigate();
 
 	// Reproduce video en cualquier navegador
 	useEffect(() => {
@@ -27,6 +36,7 @@ const Register = () => {
 
 		const video = document.getElementById('my-video');
 		video.addEventListener('ended', handleVideoEnded);
+		video.muted = true;
 		video.play();
 
 		return () => {
@@ -34,65 +44,46 @@ const Register = () => {
 		};
 	}, []);
 
-	/* SignUp Validation */
-
-	const [values, setValues] = useState({
-		nombre: '',
-		ape_pat: '',
-		ape_mat: '',
-		num_telefono: '',
-		email: '',
-		password: '',
-    })
-
-	const navigate = useNavigate();
-
-	const [errors, setErrors] = useState({})
-
-	const [isRegistered, setIsRegistered] = useState(false);
-
-	const [showPassword, setShowPassword] = useState(false);
-
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		setIsRegistered(true);
-		
-		try {
-			const validationErrors = await Validation(values);
-			setErrors(validationErrors);
-	
-			if (validationErrors.cuentaRegi === "Incorrecto") {
-				alert(
-					"Registro falló con los parámetros deseados, vuelve a intentar."
-				);
-				navigate('/register');
-			} else {
-				alert(
-					"Usuario registrado exitosamente! Puedes regresar a Login."
-				);
-				axios.post('http://localhost:5000/signup', values).then(() => {
-					navigate('/login');
-				});
-			}
-		} catch (err) {
-			console.error(err);
-			alert("Error en la validación. Por favor, inténtalo de nuevo.");
-		}
-	};
-
-
-	const handleInputChange = (e) => {
-		const { name, value } = e.target;
-		setValues((prevData) => ({
-			...prevData,
-			[name]: value,
-		}));
-		console.log("Valores actualizados:", values);
-
-	};
-
 	const handleTogglePasswordVisibility = () => {
-		setShowPassword((prevShowPassword) => !prevShowPassword);
+		setShowPass((prevShowPassword) => !prevShowPassword);
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setIsLoading(true);
+		try {
+			const response = await axios.post(URI, {
+				nombre: nombre,
+				ape_pat: apat,
+				ape_mat: amat,
+				numero: numtel,
+				email: email,
+				pass: pass,
+			});
+
+			console.log('Respond from backend:', response.data);
+			
+			
+		} catch (error) {
+			console.log(error.response.data);
+			// Handle API error and display user-friendly message
+			if (error.response) {
+				console.log('API Error:', error.response.data.message);
+				// Display error message to the user
+				// ...
+			} else if (error.request) {
+				console.log('Request Error:', error.request);
+				// Display error message to the user
+				// ...
+			} else {
+				console.log('Error:', error.message);
+				// Display error message to the user
+				// ...
+			}
+		} finally {
+			setIsLoading(false);
+		}
+		navigate('/login');
 	};
 
 	return (
@@ -116,101 +107,110 @@ const Register = () => {
 
 				<div className='formDivRegister flexH'>
 					<div className='headerDivRegi'>
-					<Link to='/'>
-						<img src={logo} alt='' />
-					</Link>
+						<Link to='/'>
+							<img src={logo} alt='' />
+						</Link>
 						<h3>Crear cuenta.</h3>
 					</div>
 
-					<form action="" onSubmit={handleSubmit} className=''>
+					<form onSubmit={handleSubmit} method='post'>
 						<div>
 							<div className='inpdiv'>
 								<input
 									type='text'
 									name='nombre'
-									value={values.nombre}
-									onChange={handleInputChange}
+									value={nombre}
+									onChange={(e) => setNombre(e.target.value)}
 									required
 								/>
 								<label className='etiqueta'>
 									<FaUserShield className='iconRegi' />
-									 Nombre 
+									Nombre
 								</label>
 							</div>
 							<div className='inpdiv'>
 								<input
 									type='text'
-									name='ape_pat'
-									value={values.ape_pat}
-									onChange={handleInputChange}
+									name='apat'
+									value={apat}
+									onChange={(e) => setApat(e.target.value)}
 									required
 								/>
-								<label className='etiqueta'><FaUserShield className='iconRegi' /> Apellido Paterno</label>
+								<label className='etiqueta'>
+									<FaUserShield className='iconRegi' /> Apellido Paterno
+								</label>
 							</div>
 							<div className='inpdiv'>
 								<input
 									type='text'
-									name='ape_mat'
-									value={values.ape_mat}
-									onChange={handleInputChange}
+									name='amat'
+									value={amat}
+									onChange={(e) => setAmat(e.target.value)}
 									required
 								/>
-								<label className='etiqueta'><FaUserShield className='iconRegi' />Apellido Materno</label>
+								<label className='etiqueta'>
+									<FaUserShield className='iconRegi' />
+									Apellido Materno
+								</label>
 							</div>
 							<div className='inpdiv'>
-							<input
-								type='tel'
-								name='num_telefono'
-								value={values.num_telefono}
-								onChange={handleInputChange}
-								required
-							/>
-							<label className='etiqueta'><BsFillTelephoneInboundFill className='iconRegi'/>Celular</label>
-						</div>
-						<div className='inpdiv'>
-							<input
-								type='email'
-								name='email'
-								value={values.email}
-								onChange={handleInputChange}
-								required
-							/>
-							<label className='etiqueta'><MdMarkEmailRead className='iconRegi'/>Correo Electrónico</label>
-						</div>
+								<input
+									type='number'
+									name='numero'
+									value={numtel}
+									onChange={(e) => setNumtel(e.target.value)}
+									required
+								/>
+								<label className='etiqueta'>
+									<BsFillTelephoneInboundFill className='iconRegi' />
+									Celular
+								</label>
+							</div>
+							<div className='inpdiv'>
+								<input
+									type='email'
+									name='email'
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+									required
+								/>
+								<label className='etiqueta'>
+									<MdMarkEmailRead className='iconRegi' />
+									Correo Electrónico
+								</label>
+							</div>
 
-						<div className='inpdiv'>
-							<input
-								type={showPassword ? 'text' : 'password'}
-								name='password'
-								value={values.password}
-								onChange={handleInputChange}
-								required
-							/>
-							<label className='etiqueta'><RiLockPasswordLine className='iconRegi'/>Contraseña</label>
+							<div className='inpdiv'>
+								<input
+									type={showPass ? 'text' : 'password'}
+									name='password'
+									value={pass}
+									onChange={(e) => setPass(e.target.value)}
+									required
+								/>
+								<label className='etiqueta'>
+									<RiLockPasswordLine className='iconRegi' />
+									Contraseña
+								</label>
 								<div
 									className='password-icon'
 									onClick={handleTogglePasswordVisibility}
 								>
-									{showPassword ? <FaEyeSlash /> : <FaEye />}
+									{showPass ? <FaEyeSlash /> : <FaEye />}
 								</div>
-						</div>
+							</div>
 
-							<button type='submit' className='regiBtn'>
-								<span>Registrar</span>
+							<button type='submit' className='regiBtn' disabled={isLoading}>
+								<span>{isLoading ? 'Loading...' : 'Registrar'}</span>
 								<MdOutlineLogin className='icon' />
 							</button>
 						</div>
 					</form>
-					<div className="mensaje">
-						{ (errors.password && <span className='text-danger'>{errors.password}</span>) }
-					</div>
+					<div className='mensaje'></div>
 				</div>
 			</div>
 		</div>
 	);
 };
-
-
-
 
 export default Register;
