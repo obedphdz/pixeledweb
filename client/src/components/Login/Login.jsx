@@ -58,6 +58,7 @@ const Login = () => {
 		if (Object.keys(validationErrors).length === 0) {
 			setLoginSuccess(true);
 
+<<<<<<< HEAD
 			axios
 				.post('http://localhost:8000/login', values)
 				.then((res) => {
@@ -84,6 +85,67 @@ const Login = () => {
 						}
 					} else if (res.data === 'Failed') {
 						alert('Incorrect login credentials.');
+=======
+		axios.post('http://localhost:5000/login', values).then((res) => {
+			if (res.data.status === "Success") {
+			  if (res.data.userType === "Cliente") {
+				navigate('/cliente'); // Redirige al dashboard del cliente
+			} else if (res.data.userType === "Empleado") {
+				// Aquí puedes verificar el correo del empleado y redirigir a vistas específicas
+				if (res.data.user.correo_emp === 'admin@pixeled.com') {
+				  navigate('/admin');
+				} else if (res.data.user.correo_emp === 'diseno@pixeled.com') {
+				  navigate('/diseñador');
+				} else if (res.data.user.correo_emp === 'admin.diseno@pixeled.com') {
+					navigate('/jefe-dise');
+				} else if (res.data.user.correo_emp === 'impresion@pixeled.com') {
+					navigate('/diseñador');
+				} else {
+				  navigate('/login');
+				}
+			  } else {
+				alert("Inicio de sesión incorrecto.");
+			  }
+			} else if (res.data === "Failed") {
+			  alert("Inicio de sesión incorrecto.");
+			}
+		  }).catch((err) => console.log(err));
+	};
+	
+
+return (
+	<div className='loginPage flexH'>
+		<div className='container flexH'>
+			<div className='videoDiv'>
+				<video src={video} id='my-video' className='myVideo'></video>
+
+				<div className='textDivLogin'>
+					<h2 className='title'>Crea y vende productos extraordinarios. </h2>
+					<p>Adopt the peace of nature!</p>
+				</div>
+
+				<div className='footerDiv flexH'>
+					<span className='text'>Aún no tienes una cuenta?</span>
+					<Link to='/register'>
+						<button className='btnSignUp'>Sign Up</button>
+					</Link>
+				</div>
+			</div>
+
+			<div className='formDivLogin flexH'>
+				<div className='headerDiv'>
+				<Link to='/'>
+					<img src={logo} alt='' />
+				</Link>
+					<h3>Bienvenido.</h3>
+				</div>
+
+				<form action='' onSubmit={handleSubmit} className='formLogin gridH'>
+					{
+						(errors.email && <span className='loginStatus'>{errors.email}</span>) ||
+						(errors.password && <span className='loginStatus'>{errors.password}</span>) ||
+						(errors.cuenta && <span className='loginStatus'>{errors.cuenta}</span>)
+>>>>>>> 1e42649e59706b679c26bc82e343962c0a837891
 					}
 				})
 				.catch((err) => console.log(err));
