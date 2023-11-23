@@ -7,12 +7,12 @@ import OrdersInProduction from "./OrdersInProduction"
 const VistaOrdenes = () => {
   return (
     <div className="body-app">
-        <div className="mainContainer">
-			<Slidenew sections={sectionsForAdmin} />
-			<div className="ordersContainer">
-				<OrdersInProduction/>
-			</div>
-		</div>
+      <div className="mainContainer">
+        <Slidenew sections={sectionsForAdmin} />
+        <div className="ordersContainer">
+          <OrdersInProduction/>
+        </div>
+      </div>
     </div>
   )
 }

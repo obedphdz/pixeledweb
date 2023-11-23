@@ -121,7 +121,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
+							<Link to='/empleados' className='menuLink flex'>
 								<BsPersonBoundingBox className='icon' />
 								<span className='smallText'>Empleados</span>
 							</Link>

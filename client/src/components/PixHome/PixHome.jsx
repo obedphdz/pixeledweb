@@ -13,6 +13,7 @@ import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
 import Diseñador from '../AppAdmin/AppDiseñador/Diseñador';
 import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
 import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
+import VistaEmp from '../AppAdmin/Empleados/VistaEmp';
 
 
 
@@ -35,6 +36,7 @@ function PixHome() {
             <Route path='/diseñador' element={<Diseñador/>}/>
             <Route path='/ordenes' element={<VistaOrdenes/>}/>
             <Route path='/crear-orden' element={<NuevaOrden/>}/>
+            <Route path='/empleados' element={<VistaEmp/>}/>
             <Route path='/crear-orden-dise' element={<CrearOrdenDi/>}/>
 
             <Route path='*' element={<ErrorPage/>}/>
