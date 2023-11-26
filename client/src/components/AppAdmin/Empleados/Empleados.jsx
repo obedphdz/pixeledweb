@@ -1,9 +1,9 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit, Inject } from '@syncfusion/ej2-react-grids';
 import { employeesData, employeesGrid } from '../../../data/dummy';
-import  Header  from '../Orders/Header/Header';
+import  Header  from '../MainBody/Header/Header';
 
 const Empleados = () => {
-    const toolbarOptions = ['Nuevo', 'Editar', 'Eliminar'];
+    const toolbarOptions = ['Add', 'Edit', 'Delete'];
     const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
     const pageSettings = { pageCount: 5 };
   return (

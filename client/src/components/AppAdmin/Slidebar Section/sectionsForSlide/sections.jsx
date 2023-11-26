@@ -30,7 +30,7 @@ export const sectionsForAdmin = [
 		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/crear-cotiza' },
 		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/nueva-orden' },
 		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ordenes' },
-		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/' },
+		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/historial' },
 		],
 	  },
 ]

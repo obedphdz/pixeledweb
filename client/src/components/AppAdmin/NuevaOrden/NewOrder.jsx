@@ -1,17 +1,32 @@
 /* eslint-disable no-unused-vars */
 
-import { TextBoxComponent, NumericTextBoxComponent, UploaderComponent  } from '@syncfusion/ej2-react-inputs';
-import { DatePickerComponent} from '@syncfusion/ej2-react-calendars';
+import { TextBoxComponent, NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownTreeComponent } from '@syncfusion/ej2-react-dropdowns';
 import './NewOrder.css';
 import { useState } from 'react';
 import * as dataSource from './data/data.json';
 import SubirArchivo from './Archivo/subirArchivo';
-import Searching from './Archivo/Searching';
+import MiModal from './ModalOrder/MiModal';
 
+const NewOrder = (props) => {
+  const [showModal, setShowModal] = useState(false);
+  const [limpiarDatos, setLimpiarDatos] = useState(false);
+  const [pedidos, setPedidos] = useState([]);
+  const [pedidoActual, setPedidoActual] = useState({
+  clientes: [{ nombre: '', telefono: '' }],
+  filas: [{
+    cantidad: '',
+    archivo: '',
+    base: '',
+    altura: '',
+    material: '',
+    acabados: '',
+    nota: '',
+  }],
+});
 
-const NewOrder =(props) => {
-    const [clientes, setClientes] = useState([{ nombre: '', telefono: '' }]);
+  const [clientes, setClientes] = useState([{ nombre: '', telefono: '' }]);
 	const [filas, setFilas] = useState([
 		{
 			cantidad: '',
@@ -53,10 +68,9 @@ const NewOrder =(props) => {
 		setFilas(newFilas);
 	};
 
-
-    const floatFocus = (args) => {
+  const floatFocus = (args) => {
         args.target.parentElement.classList.add("e-input-focus");
-    };
+  };
     const floatBlur = (args) => {
         args.target.parentElement.classList.remove('e-input-focus');
     };
@@ -72,46 +86,86 @@ const NewOrder =(props) => {
     
     const dateValue = new Date();
 
-    /* Dropdown */
-
-    const data = dataSource;
-    const fields = { dataSource: data.defaultData, value: 'id', text: 'name', child: 'subChild' };
+    const data = dataSource; // You need to import your data source here
+    const fieldMaterial = { dataSource: data.materialData, value: 'id', text: 'name', child: 'subChild' };
+    const fieldAcabados = { dataSource: data.acabadosData, value: 'id', text: 'name', child: 'subChild' };
+    const fieldTipoImpresion = { dataSource: data.tipoImpresionData, value: 'id', text: 'name', child: 'subChild' };
     const [value, setValue] = useState(null);
     const [text, setText] = useState(null);
-    // call the change event's function after initialized the component.
+  
     const onChange = (args) => {
-        // update the text and value property values in property panel based on selected item in Dropdown Tree
-        setValue(args.value && args.value.length > 0 ? args.value[0] : '');
-        setText(args.element.value);
+      setValue(args.value && args.value.length > 0 ? args.value[0] : '');
+      setText(args.element.value);
     };
+
+    /* Modal de las ordenes */
+
+    const handleShowModal = () => {
+      setLimpiarDatos(false);
+      setShowModal(true);
+      setPedidoActual({
+        clientes: [...clientes],
+        filas: [...filas],
+      });
+    };
+
+    const handleCloseModal = () => {
+      setShowModal(false);
+    };
+  
+    const handleContinueWithOrder = () => {
+      // Almacena el pedido actual en la lista de pedidos
+    setPedidos([...pedidos, { cliente: clientes[0], detalles: filas }]);
+    // Limpia los datos para un nuevo pedido
+    setClientes([{ nombre: '', telefono: '' }]);
+    setFilas([
+      {
+        cantidad: '',
+        archivo: '',
+        base: '',
+        altura: '',
+        material: '',
+        acabados: '',
+        nota: '',
+      },
+    ]);
+    // Cierra el modal
+    setShowModal(false);
+    };
+  
+    const handleSendOrder = () => {
+      // Puedes agregar lógica adicional para guardar los datos de la orden completa del cliente
+      handleCloseModal();
+    };
+  
 
     return (
         <div className='control-pane'>
-        <div className='tituloSeccion'>
-            <h1>{props.h1texto}</h1>
-            <p>{props.ptexto}</p>
-        </div>
-        <div className='control-section input-content-wrapper'>
-          {/* Datos Personales Cliente */}
-          <div className="row custom-margin material b-DatosPersonalesCliente">
-            <div className="col-xs-12 col-sm-12 col-lg-12 col-md-12">
-              <b>Datos Personales Cliente.</b>
-            </div>
+          <div className='tituloSeccion'>
+              <h1>{props.h1texto}</h1>
+              <p>{props.ptexto}</p>
           </div>
-          <div className="row custom-margin custom-padding-5 material inputDatos">
-            <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
-              <TextBoxComponent placeholder="Nombre" cssClass="e-outline" floatLabelType="Auto" id='nombreCliente' />
+          <div className='control-section input-content-wrapper'>
+            {/* Datos Personales Cliente */}
+            <div className="row custom-margin material b-DatosPersonalesCliente">
+              <div className="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+                <b>Datos Personales Cliente.</b>
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
-              <TextBoxComponent placeholder="Apellido Paterno" cssClass="e-outline" floatLabelType="Auto" id='apePatCliente' />
+            <div className="row custom-margin custom-padding-5 material inputDatos">
+              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                <TextBoxComponent placeholder="Nombre" cssClass="e-outline" floatLabelType="Auto" id='nombreCliente' />
+              </div>
+              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                <TextBoxComponent placeholder="Apellido Paterno" cssClass="e-outline" floatLabelType="Auto" id='apePatCliente' />
+              </div>
+              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                <TextBoxComponent placeholder="Apellido Materno" cssClass="e-outline" floatLabelType="Auto" id='apeMatCliente' />
+              </div>
+              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                <TextBoxComponent placeholder="Contacto tel" cssClass="e-outline" floatLabelType="Auto" id='contactoCliente' />
+              </div>
             </div>
-            <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
-              <TextBoxComponent placeholder="Apellido Materno" cssClass="e-outline" floatLabelType="Auto" id='apeMatCliente' />
-            </div>
-            <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6">
-              <TextBoxComponent placeholder="Contacto tel" cssClass="e-outline" floatLabelType="Auto" id='contactoCliente' />
-            </div>
-          </div>
   
           {/* Tu Pedido */}
           <div className="row custom-margin">
@@ -133,25 +187,26 @@ const NewOrder =(props) => {
             </div>
           </div>
 
+          {/* Material */}
+        <div className='row custom-margin custom-padding-5'>
+          <div className='control-section'>
+            <div className="control-label">Material</div>
+            <div className='col-lg-8'>
+              <div id="acabados">
+                <DropDownTreeComponent fields={fieldMaterial} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu  material" popupHeight="200px" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
           {/* Acabados */}
         <div className='row custom-margin custom-padding-5'>
           <div className='control-section'>
             <div className="control-label">Acabados</div>
             <div className='col-lg-8'>
               <div id="acabados">
-                <DropDownTreeComponent fields={fields} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tus acabados" popupHeight="200px" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Acabados */}
-        <div className='row custom-margin custom-padding-5'>
-          <div className='control-section'>
-            <div className="control-label">Material</div>
-            <div className='col-lg-8'>
-              <div id="acabados">
-                <DropDownTreeComponent fields={fields} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu  material" popupHeight="200px" />
+                <DropDownTreeComponent fields={fieldAcabados} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tus acabados" popupHeight="200px" />
               </div>
             </div>
           </div>
@@ -163,7 +218,7 @@ const NewOrder =(props) => {
             <div className="control-label">Tipo de Impresión</div>
             <div className='col-lg-8'>
               <div id="tipoImpresion">
-                <DropDownTreeComponent fields={fields} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu impresion" popupHeight="200px" />
+                <DropDownTreeComponent fields={fieldTipoImpresion} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu impresion" popupHeight="200px" />
               </div>
             </div>
           </div>
@@ -198,20 +253,24 @@ const NewOrder =(props) => {
             <textarea className='textCont' type='text' name='nota' />
           </div>
         </div>
+        {/* Botones */}
         <div className='contBotones'>
-						<button
-							className='hvr-shutter-out-horizontal'
-							type='button'
-							onClick={handleAddFila}
-						>
-							Agregar Archivo
-						</button>
-						<button className='hvr-shutter-out-horizontal' type='submit'>
-							Crear {props.btnaccion}
-						</button>
-					</div>
-          <Searching/>
-      </div>
+        <button className='hvr-shutter-out-horizontal' type='button' onClick={handleShowModal}>
+          Agregar otro archivo
+        </button>
+        <button className='hvr-shutter-out-horizontal' type='submit'>
+          Crear {props.btnaccion}
+        </button>
+        </div>
+
+        <MiModal
+        showModal={showModal}
+        handleCloseModal={() => setShowModal(false)}
+        handleContinueWithOrder={handleContinueWithOrder}
+        handleSendOrder={handleSendOrder}
+        pedidos={pedidos} // Pasa la lista de pedidos al modal
+      />
+    </div>
     );
 }
 

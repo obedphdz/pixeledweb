@@ -9,7 +9,7 @@ const NuevaOrden = () => {
 	<div className='body-app'>
 		<div className="mainContainer">
 				<Slidenew sections={sectionsForAdmin}  />
-			<div className="inputOrdersContainer">
+			<div className="inputbodyContainer">
 				<NewOrder 
 					h1texto='Crear Orden de Producción'
 					ptexto='Ingresa los datos de tu pedido'

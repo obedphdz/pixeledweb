@@ -1,31 +1,46 @@
 {
-    "defaultData": [
+    "materialData": [
     
-        { "id": "01-02-01", "name": "Lona Opaca 13oz" },
-        { "id": "01-02-02", "name": "Lona Traslucida" },
-        { "id": "01-02-03", "name": "Lona Mesh" },
-        { "id": "01-02-01", "name": "Canvas" },
-        { "id": "01-02-02", "name": "Vinil Reflejante Impreso" },
-        { "id": "01-02-03", "name": "Vinil Impreso", "value": "Vinil Impreso"},
-        { "id": "01-02-01", "name": "Vinil Wallgraphic" },
-        { "id": "01-02-02", "name": "Lona Traslucida" },
-        { "id": "01-02-03", "name": "Vinil Microperforado" },
-        { "id": "01-02-01", "name": "Vinil Estático" },
-        { "id": "01-02-02", "name": "Vinil Mate" },
-        { "id": "01-02-01", "name": "Vinil Transparente Brillante" },
-        { "id": "01-02-02", "name": "Vinil Transparente Mate" },
-        { "id": "01-02-03", "name": "Vinil Imantado" },
-        { "id": "01-02-01", "name": "Vinil Floorgraphic" },
-        { "id": "01-02-02", "name": "Recorte de Vinil Opaco" },
-        { "id": "01-02-01", "name": "Recorte de Vinil Brillante" },
-        { "id": "01-02-02", "name": "Recorte de Vinil Traslúcido" },
-        { "id": "01-02-03", "name": "Recorte de Vinil Esmerilado" },
-        { "id": "01-02-01", "name": "Trovicel 3mm con impresion o recorte" },
-        { "id": "01-02-02", "name": "Trovicel 6mm con impresion o recorte" },
-        { "id": "01-02-01", "name": "Acrilico 3mm con impresion o recorte" },
-        { "id": "01-02-02", "name": "Coroplast con impresion o recorte" },
-        { "id": "01-02-01", "name": "Estireno con impresion o recorte" },
-        { "id": "01-02-02", "name": "Foamboard" },
-        { "id": "01-02-03", "name": "Trovicel con cara de aluminio" }
+        { "id": "mate1", "name": "Lona Opaca 13oz", "time": "24hrs", "price":"110" },
+        { "id": "mate2", "name": "Lona Traslucida", "time": "24hrs", "price":"110" },
+        { "id": "mate3", "name": "Lona Mesh", "time": "24hrs", "price":"110" },
+        { "id": "mate4", "name": "Canvas", "time": "24hrs", "price":"110" },
+        { "id": "mate5", "name": "Vimatenil Reflejante Impreso", "time": "24hrs", "price":"110" },
+        { "id": "mate6", "name": "Vinil Impreso", "value": "Vinil Impreso", "time": "24hrs", "price":"110"},
+        { "id": "mate7", "name": "Vinil Wallgraphic", "time": "24hrs", "price":"110" },
+        { "id": "mate8", "name": "Lona Traslucida", "time": "24hrs", "price":"110" },
+        { "id": "mate9", "name": "Vinil Microperforado", "time": "24hrs", "price":"110" },
+        { "id": "mate10", "name": "Vinil Estático", "time": "24hrs", "price":"110" },
+        { "id": "mate11", "name": "Vinil Mate", "time": "24hrs", "price":"110" },
+        { "id": "mate12", "name": "Vinil Transparente Brillante", "time": "24hrs", "price":"110" },
+        { "id": "mate13", "name": "Vinil Transparente Mate", "time": "24hrs", "price":"110" },
+        { "id": "mate14", "name": "Vinil Imantado", "time": "24hrs", "price":"110" },
+        { "id": "mate15", "name": "Vinil Floorgraphic", "time": "24hrs", "price":"110" },
+        { "id": "mate16", "name": "Recorte de Vinil Opaco", "time": "24hrs", "price":"110" },
+        { "id": "mate17", "name": "Recorte de Vinil Brillante", "time": "24hrs", "price":"110" },
+        { "id": "mate18", "name": "Recorte de Vinil Traslúcido", "time": "24hrs", "price":"110" },
+        { "id": "mate19", "name": "Recorte de Vinil Esmerilado", "time": "24hrs", "price":"110" },
+        { "id": "mate20", "name": "Trovicel 3mm con impresion o recorte", "time": "24hrs", "price":"110" },
+        { "id": "mate21", "name": "Trovicel 6mm con impresion o recorte", "time": "24hrs", "price":"110" },
+        { "id": "mate22", "name": "Acrilico 3mm con impresion o recorte", "time": "24hrs", "price":"110" },
+        { "id": "mate23", "name": "Coroplast con impresion o recorte", "time": "24hrs", "price":"110" },
+        { "id": "mate24", "name": "Estireno con impresion o recorte", "time": "24hrs", "price":"110" },
+        { "id": "mate25", "name": "Foamboard", "time": "24hrs" },
+        { "id": "mate26", "name": "Trovicel con cara de aluminio", "time": "24hrs", "price":"110" }
+    ],
+
+    "acabadosData": [
+        { "id": "aca1", "name": "Bastilla y Ojillos", "time": "24hrs", "price":"110"},
+        { "id": "aca2", "name": "Tensar", "time": "24hrs", "price":"110"},
+        { "id": "aca3", "name": "Bolsas", "time": "24hrs", "price":"110"},
+        { "id": "aca4", "name": "Corte al ras", "time": "24hrs", "price":"110"},
+        { "id": "aca5", "name": "Depilar y empapelar", "time": "24hrs", "price":"110"}
+    ],
+
+    "tipoImpresionData": [
+        { "id": "imp1", "name": "Alta Definición", "time": "24hrs", "price":"110"},
+        { "id": "imp2", "name": "Letras 3D", "time": "24hrs", "price":"110"},
+        { "id": "imp3", "name": "Taller", "time": "24hrs", "price":"110"},
+        { "id": "imp4", "name": "Bastidor", "time": "24hrs", "price":"110"}
     ]
 }

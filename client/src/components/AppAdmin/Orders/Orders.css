@@ -1,15 +1,16 @@
 
 /* Orders.css */
 
-.ordersContainer {
+.bodyContainer {
   flex: 1; 
   padding: 5.5rem;
   overflow: auto;
   margin-top: 0rem;
+  overflow-x: auto;
   height: 64rem;
 }
 
-.inputOrdersContainer {
+.inputbodyContainer {
   flex: 1; 
   overflow: auto;
   margin-top: 10rem;

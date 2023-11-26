@@ -39,7 +39,7 @@ const JefeDise = () => {
             </div>
         </div>
 			<Slidenew sections={sectionsForJefeDi} />
-			<div className="ordersContainer">
+			<div className="bodyContainer">
 				<OrdersInProduction />
 			</div>
 		</div>

@@ -14,6 +14,10 @@ import Diseñador from '../AppAdmin/AppDiseñador/Diseñador';
 import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
 import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
 import VistaEmp from '../AppAdmin/Empleados/VistaEmp';
+import VistaDetallesOrd from '../AppAdmin/Orders/VistaDetallesOrd';
+import MiModal from '../AppAdmin/NuevaOrden/ModalOrder/MiModal';
+import VistaClientes from '../AppAdmin/Clientes/VistaClientes';
+import VistaHistorial from '../AppAdmin/HistorialPedidos/VistaHistorial';
 
 
 
@@ -35,9 +39,14 @@ function PixHome() {
             <Route path='/jefe-dise' element={<JefeDise/>}/>
             <Route path='/diseñador' element={<Diseñador/>}/>
             <Route path='/ordenes' element={<VistaOrdenes/>}/>
+            <Route path='/ordenes/detalles-ord' element={<VistaDetallesOrd/>}/>
             <Route path='/crear-orden' element={<NuevaOrden/>}/>
             <Route path='/empleados' element={<VistaEmp/>}/>
+            <Route path='/historial' element={<VistaHistorial/>}/>
+            <Route path='/clientes' element={<VistaClientes/>}/>
             <Route path='/crear-orden-dise' element={<CrearOrdenDi/>}/>
+            <Route path='/modal' element={<MiModal/>}/>
+
 
             <Route path='*' element={<ErrorPage/>}/>
           </Routes>

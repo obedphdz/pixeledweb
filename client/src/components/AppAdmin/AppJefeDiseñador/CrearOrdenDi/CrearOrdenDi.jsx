@@ -10,7 +10,7 @@ const CrearOrdenDi = () => {
     <div className='body-app'>
 		<div className="mainContainer">
 				<Slidenew sections={sectionsForJefeDi}  />
-			<div className="inputOrdersContainer">
+			<div className="inputbodyContainer">
 				<NewOrder 
 					h1texto='Crear Orden de Producción'
 					ptexto='Ingresa los datos de tu pedido'
