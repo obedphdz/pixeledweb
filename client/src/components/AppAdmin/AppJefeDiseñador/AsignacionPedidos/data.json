@@ -1,0 +1,33 @@
+{
+    "waitingList": [
+      { "Id": 1, "Name": "John Doe", "Description": "Patient with general issue" },
+      { "Id": 2, "Name": "Jane Smith", "Description": "Dental checkup" }
+    ],
+    "hospitalData": [
+      { "Id": 1, "Name": "Appointment 1", "StartTime": "2023-11-27T09:00:00", "EndTime": "2023-11-27T10:00:00", "Description": "General checkup", "DepartmentID": 1, "ConsultantID": 1 },
+      { "Id": 2, "Name": "Appointment 2", "StartTime": "2023-11-27T11:00:00", "EndTime": "2023-11-27T12:00:00", "Description": "Dental procedure", "DepartmentID": 2, "ConsultantID": 2 }
+    ],
+
+    "resourceData": [
+      {
+        "Id": 1,
+        "Subject": "Meeting with Nancy",
+        "StartTime": "2023-01-04T09:00:00",
+        "EndTime": "2023-01-04T10:00:00",
+        "TaskId": 1,  
+        "CategoryColor": "#df5286"
+      },
+      {
+        "Id": 2,
+        "Subject": "Meeting with Steven",
+        "StartTime": "2023-01-05T10:00:00",
+        "EndTime": "2023-01-05T11:30:00",
+        "TaskId": 2,
+        "CategoryColor": "#7fa900"
+      }
+    ],
+    "timelineResourceData": [
+    ]
+  }
+  
+  

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { GridComponent, ColumnsDirective, ColumnDirective, Page, Sort, Inject, Filter } from '@syncfusion/ej2-react-grids';
-import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import  Header  from '../MainBody/Header/Header';
 import { historialOrdersData } from '../../../data/dummy';

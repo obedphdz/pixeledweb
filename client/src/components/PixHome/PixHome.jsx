@@ -10,7 +10,6 @@ import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
 import Precios from '../AppAdmin/PreciosLista/Precios';
 import Cliente from '../AppCliente/Cliente';
 import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
-import Diseñador from '../AppAdmin/AppDiseñador/Diseñador';
 import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
 import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
 import VistaEmp from '../AppAdmin/Empleados/VistaEmp';
@@ -18,6 +17,12 @@ import VistaDetallesOrd from '../AppAdmin/Orders/VistaDetallesOrd';
 import MiModal from '../AppAdmin/NuevaOrden/ModalOrder/MiModal';
 import VistaClientes from '../AppAdmin/Clientes/VistaClientes';
 import VistaHistorial from '../AppAdmin/HistorialPedidos/VistaHistorial';
+import Disenador from '../AppAdmin/AppDiseñador/Disenador';
+import VistaDetallesDise from '../AppAdmin/AppDiseñador/VistaDetallesDise';
+import HistorialDise from '../AppAdmin/AppDiseñador/HistorialDise';
+import HistorialJefeDise from '../AppAdmin/AppJefeDiseñador/HistorialPedidos/HistorialJefeDise';
+import VistaAsigPedi from '../AppAdmin/AppJefeDiseñador/AsignacionPedidos/VistaAsigPedi';
+import MisPedidos from '../AppAdmin/AppJefeDiseñador/Pedidos Asignados/MisPedidos';
 
 
 
@@ -36,15 +41,25 @@ function PixHome() {
             <Route path='/precios' element={<Precios/>}/>
             <Route path='/crear-cotiza' element={<CrearCotizaciones/>}/>
             <Route path='/cliente' element={<Cliente/>}/>
+
             <Route path='/jefe-dise' element={<JefeDise/>}/>
-            <Route path='/diseñador' element={<Diseñador/>}/>
+            <Route path='/jefe-dise/crear-orden-dise' element={<CrearOrdenDi/>}/>
+            <Route path='/jefe-dise/historial' element={<HistorialJefeDise/>}/>
+            <Route path='/jefe-dise/asignar' element={<VistaAsigPedi/>}/>
+            <Route path='/jefe-dise/detalles-ord' element={<VistaDetallesDise/>}/>
+            <Route path='/jefe-dise/pedidos' element={<MisPedidos/>}/>
+
+            <Route path='/diseñador' element={<Disenador/>}/>
+            <Route path='/diseñador/detalles-ord' element={<VistaDetallesDise/>}/>
+            <Route path='/diseñador/historial' element={<HistorialDise/>}/>
+            <Route path='/diseñador/mis-pedidos' element={<MisPedidos/>}/>
+
             <Route path='/ordenes' element={<VistaOrdenes/>}/>
             <Route path='/ordenes/detalles-ord' element={<VistaDetallesOrd/>}/>
             <Route path='/crear-orden' element={<NuevaOrden/>}/>
             <Route path='/empleados' element={<VistaEmp/>}/>
             <Route path='/historial' element={<VistaHistorial/>}/>
             <Route path='/clientes' element={<VistaClientes/>}/>
-            <Route path='/crear-orden-dise' element={<CrearOrdenDi/>}/>
             <Route path='/modal' element={<MiModal/>}/>
 
 

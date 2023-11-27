@@ -11,20 +11,10 @@ import MiModal from './ModalOrder/MiModal';
 
 const NewOrder = (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [limpiarDatos, setLimpiarDatos] = useState(false);
-  const [pedidos, setPedidos] = useState([]);
-  const [pedidoActual, setPedidoActual] = useState({
-  clientes: [{ nombre: '', telefono: '' }],
-  filas: [{
-    cantidad: '',
-    archivo: '',
-    base: '',
-    altura: '',
-    material: '',
-    acabados: '',
-    nota: '',
-  }],
-});
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
 
   const [clientes, setClientes] = useState([{ nombre: '', telefono: '' }]);
 	const [filas, setFilas] = useState([
@@ -100,37 +90,14 @@ const NewOrder = (props) => {
 
     /* Modal de las ordenes */
 
-    const handleShowModal = () => {
-      setLimpiarDatos(false);
-      setShowModal(true);
-      setPedidoActual({
-        clientes: [...clientes],
-        filas: [...filas],
-      });
-    };
-
+  
     const handleCloseModal = () => {
       setShowModal(false);
     };
   
     const handleContinueWithOrder = () => {
-      // Almacena el pedido actual en la lista de pedidos
-    setPedidos([...pedidos, { cliente: clientes[0], detalles: filas }]);
-    // Limpia los datos para un nuevo pedido
-    setClientes([{ nombre: '', telefono: '' }]);
-    setFilas([
-      {
-        cantidad: '',
-        archivo: '',
-        base: '',
-        altura: '',
-        material: '',
-        acabados: '',
-        nota: '',
-      },
-    ]);
-    // Cierra el modal
-    setShowModal(false);
+      // Puedes agregar lógica adicional si es necesario antes de recargar la página
+      handleCloseModal();
     };
   
     const handleSendOrder = () => {
@@ -193,8 +160,8 @@ const NewOrder = (props) => {
             <div className="control-label">Material</div>
             <div className='col-lg-8'>
               <div id="acabados">
-                <DropDownTreeComponent fields={fieldMaterial} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu  material" popupHeight="200px" />
-              </div>
+{/*                 <DropDownTreeComponent fields={fieldMaterial} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu  material" popupHeight="200px" />
+ */}              </div>
             </div>
           </div>
         </div>
@@ -206,8 +173,8 @@ const NewOrder = (props) => {
             <div className="control-label">Acabados</div>
             <div className='col-lg-8'>
               <div id="acabados">
-                <DropDownTreeComponent fields={fieldAcabados} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tus acabados" popupHeight="200px" />
-              </div>
+{/*                 <DropDownTreeComponent fields={fieldAcabados} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tus acabados" popupHeight="200px" />
+ */}              </div>
             </div>
           </div>
         </div>
@@ -218,8 +185,8 @@ const NewOrder = (props) => {
             <div className="control-label">Tipo de Impresión</div>
             <div className='col-lg-8'>
               <div id="tipoImpresion">
-                <DropDownTreeComponent fields={fieldTipoImpresion} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu impresion" popupHeight="200px" />
-              </div>
+{/*                 <DropDownTreeComponent fields={fieldTipoImpresion} change={onChange.bind(this)} changeOnBlur={false} placeholder="Selecciona tu impresion" popupHeight="200px" />
+ */}              </div>
             </div>
           </div>
         </div>
@@ -268,7 +235,7 @@ const NewOrder = (props) => {
         handleCloseModal={() => setShowModal(false)}
         handleContinueWithOrder={handleContinueWithOrder}
         handleSendOrder={handleSendOrder}
-        pedidos={pedidos} // Pasa la lista de pedidos al modal
+        // Puedes pasar más propiedades según sea necesario
       />
     </div>
     );

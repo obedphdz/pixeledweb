@@ -23,6 +23,7 @@
     "@syncfusion/ej2-react-grids": "^23.1.44",
     "@syncfusion/ej2-react-inputs": "^23.1.43",
     "@syncfusion/ej2-react-popups": "^23.1.44",
+    "@syncfusion/ej2-react-schedule": "^23.2.4",
     "@syncfusion/ej2-react-splitbuttons": "^23.1.43",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "aos": "^3.0.0-beta.6",
