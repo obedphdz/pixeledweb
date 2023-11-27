@@ -15,7 +15,7 @@
     font-size: 1.5rem;
   }
 
-  .inputOrdersContainer {
+  .inputbodyContainer {
     flex: 1; 
     padding: 8.8rem;
     overflow: auto;
@@ -53,7 +53,12 @@
   }
 
   .contBotones{
+    margin-top: 5rem;
     text-align: right;
+  }
+
+  .textCont{
+    color: black;
   }
 
   .hvr-shutter-out-horizontal {

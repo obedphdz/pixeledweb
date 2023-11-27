@@ -139,7 +139,7 @@ const Slidenew  = ({ sections }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/clientes'>
                   <ItemSlide icon={<FiUsers />} showName={open} name='Clientes' />
                 </Link>
               </li>
@@ -154,7 +154,7 @@ const Slidenew  = ({ sections }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/empleados'>
                   <ItemSlide icon={<BsPersonBoundingBox />} showName={open} name='Empleados' />
                 </Link>
               </li>

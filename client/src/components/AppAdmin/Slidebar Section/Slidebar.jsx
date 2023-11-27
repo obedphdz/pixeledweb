@@ -74,7 +74,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
+							<Link to='/historial' className='menuLink flex'>
 								<BsClockHistory className='icon' />
 								<span className='smallText'>Historial Pedidos</span>
 							</Link>
@@ -100,7 +100,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
+							<Link to='/clientes' className='menuLink flex'>
 								<FiUsers className='icon' />
 								<span className='smallText'>Clientes</span>
 							</Link>

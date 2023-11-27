@@ -1,0 +1,21 @@
+{
+    "recurrenceData": [
+      {
+        "Id": 1,
+        "Subject": "Diseño Pendiente 1",
+        "StartTime": "2021-02-20T09:00:00",
+        "EndTime": "2021-02-20T10:30:00",
+        "CategoryColor": "#1aaa55",
+        "Designer": "John Doe"
+      },
+      {
+        "Id": 2,
+        "Subject": "Diseño Pendiente 2",
+        "StartTime": "2021-02-21T11:00:00",
+        "EndTime": "2021-02-21T12:30:00",
+        "CategoryColor": "#ff4081",
+        "Designer": "Jane Smith"
+      }   
+    ]
+  }
+  

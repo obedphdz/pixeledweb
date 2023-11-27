@@ -1,24 +1,21 @@
 
 import Slidenew from "../../Slidebar Section/Slidenew"
 import { sectionsForJefeDi } from "../../Slidebar Section/sectionsForSlide/sections"
-import NewOrder from "../../NuevaOrden/NewOrder"
 import '../../Orders/Orders.css'
+import Asignacion from "./Asignacion"
 
 
-const CrearOrdenDi = () => {
+const VistaAsigPedi = () => {
   return (
     <div className='body-app'>
 		<div className="mainContainer">
 				<Slidenew sections={sectionsForJefeDi}  />
 			<div className="inputbodyContainer">
-				<NewOrder 
-					h1texto='Crear Orden de Producción'
-					ptexto='Ingresa los datos de tu pedido'
-					btnaccion='Pedido'/>
+				<Asignacion/>
 			</div>
 		</div>
 	</div>
   )
 }
 
-export default CrearOrdenDi
+export default VistaAsigPedi
