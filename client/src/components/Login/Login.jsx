@@ -37,14 +37,11 @@ const Login = () => {
 	const [values, setValues] = useState({
 		email: '',
 		password: '',
-		cuenta: '',
 	});
 
 	const navigate = useNavigate();
 
 	const [errors, setErrors] = useState({});
-
-	const [loginSuccess, setLoginSuccess] = useState(false);
 
 	const handleInput = (event) => {
 		setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
@@ -53,43 +50,32 @@ const Login = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const validationErrors = Validation(values);
-
-		if (Object.keys(validationErrors).length === 0) {
-			setLoginSuccess(true);
-
+		const { email, pass } = values;
+		console.log('Valores enviados:', values);
+		
+			// Realizar la autenticación
 			axios
-				.post('http://localhost:8000/login', values)
+				.post(`http://localhost:8000/login`, { email, pass })
 				.then((res) => {
 					if (res.data.status === 'Success') {
-						if (res.data.userType === 'Cliente') {
-							navigate('/cliente'); // Redirect to the customer dashboard
-						} else if (res.data.userType === 'Empleado') {
-							// Check the employee's email and redirect to specific views
-							if (res.data.user.correo_emp === 'admin@pixeled.com') {
-								navigate('/admin');
-							} else if (res.data.user.correo_emp === 'diseno@pixeled.com') {
-								navigate('/diseñador');
-							} else if (
-								res.data.user.correo_emp === 'admin.diseno@pixeled.com'
-							) {
-								navigate('/jefeDise');
-							} else if (res.data.user.correo_emp === 'impresion@pixeled.com') {
-								navigate('/diseñador');
+						// Obtener el tipo de usuario
+						const userType = res.data.userType;
+						// Redireccionar al usuario
+						if (userType === 'Empleado-Administracion-Jefe') {
+							navigate('/admin');
+						} else if (userType === 'Empleado') {
+							if (res.data.userId) {
+								navigate('/jefeDise', { userId: res.data.userId });
 							} else {
-								navigate('/login');
+								navigate('/diseñador');
 							}
-						} else {
-							alert('Incorrect login credentials.');
 						}
-					} else if (res.data === 'Failed') {
+					} else {
 						alert('Incorrect login credentials.');
 					}
 				})
 				.catch((err) => console.log(err));
-		} else {
-			setErrors(validationErrors);
-		}
+		
 	};
 
 	return (
@@ -119,7 +105,7 @@ const Login = () => {
 						<h3>Bienvenido.</h3>
 					</div>
 
-					<form action='' onSubmit={handleSubmit} className='formLogin gridH'>
+					<form action='post' onSubmit={handleSubmit} className='formLogin gridH'>
 						{(errors.email && (
 							<span className='loginStatus'>{errors.email}</span>
 						)) ||
@@ -155,10 +141,11 @@ const Login = () => {
 								<BsFillShieldLockFill className='icon' />
 								<input
 									type='password'
-									id='password'
+									id='pass'
 									placeholder='Enter Password'
 									onChange={handleInput}
-									name='password'
+									name='pass'
+									autoComplete='current-password'
 									required
 								/>
 							</div>
