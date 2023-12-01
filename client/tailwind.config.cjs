@@ -26,6 +26,8 @@ module.exports = {
       lg: "1200px",
       /* PC's */
       xl: "1700px",
+       /* 27-inch screen */
+      '27inch': "2560px",
     },
   },
   plugins: [

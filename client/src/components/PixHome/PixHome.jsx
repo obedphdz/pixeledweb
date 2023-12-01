@@ -34,7 +34,7 @@ function PixHome() {
           <Routes>
             {/* <Route path="/" element={<><NavBar/><Slider/><Banner/></>}/> */}        
             <Route path="/" element={<App/>}/> 
-            <Route path="/ad" element={<Admin/>}/>
+            <Route path="/admin" element={<Admin/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/nueva-orden' element={<NuevaOrden/>}/>
@@ -42,25 +42,20 @@ function PixHome() {
             <Route path='/crear-cotiza' element={<CrearCotizaciones/>}/>
             <Route path='/cliente' element={<Cliente/>}/>
 
-            <Route path='/jd' element={<JefeDise/>}/>
-            <Route path='/jd/crear-orden-dise' element={<CrearOrdenDi/>}/>
-            <Route path='/jd/historial' element={<HistorialJefeDise/>}/>
-            <Route path='/jd/asignar' element={<VistaAsigPedi/>}/>
-            <Route path='/jd/detalles-ord' element={<VistaDetallesDise/>}/>
-            <Route path='/jd/pedidos' element={<MisPedidos/>}/>
+            <Route path='/jefe-dise' element={<JefeDise/>}/>
+            <Route path='/jefe-dise/crear-orden-dise' element={<CrearOrdenDi/>}/>
+            <Route path='/jefe-dise/historial' element={<HistorialJefeDise/>}/>
+            <Route path='/jefe-dise/asignar' element={<VistaAsigPedi/>}/>
+            <Route path='/jefe-dise/detalles-ord' element={<VistaDetallesDise/>}/>
+            <Route path='/jefe-dise/pedidos' element={<MisPedidos/>}/>
 
-            <Route path='/di' element={<Disenador/>}/>
-            <Route path='/di/detalles-ord' element={<VistaDetallesDise/>}/>
-            <Route path='/di/historial' element={<HistorialDise/>}/>
-            <Route path='/di/mis-pedidos' element={<MisPedidos/>}/>
+            <Route path='/diseñador' element={<Disenador/>}/>
+            <Route path='/diseñador/detalles-ord' element={<VistaDetallesDise/>}/>
+            <Route path='/diseñador/historial' element={<HistorialDise/>}/>
+            <Route path='/diseñador/mis-pedidos' element={<MisPedidos/>}/>
 
-            <Route path='/ordenes' element={<VistaOrdenes/>}/>
-            <Route path='/ordenes/detalles-ord' element={<VistaDetallesOrd/>}/>
-            <Route path='/crear-orden' element={<NuevaOrden/>}/>
-            <Route path='/empleados' element={<VistaEmp/>}/>
-            <Route path='/historial' element={<VistaHistorial/>}/>
-            <Route path='/clientes' element={<VistaClientes/>}/>
             <Route path='/modal' element={<MiModal/>}/>
+            <Route path='/cliente' element={<Cliente/>}/>
 
 
             <Route path='*' element={<ErrorPage/>}/>

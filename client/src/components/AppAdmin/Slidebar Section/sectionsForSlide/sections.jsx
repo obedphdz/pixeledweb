@@ -7,10 +7,10 @@ export const sectionsForAdmin = [
 	{
 		title: 'Pedidos',
 		items: [
-		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/crear-cotiza' },
-		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/nueva-orden' },
-		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ordenes' },
-		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/historial' },
+		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/admin/crear-cotiza' },
+		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/admin/nueva-orden' },
+		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/admin/ordenes' },
+		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/admin/historial' },
 		],
 	  },
 ]

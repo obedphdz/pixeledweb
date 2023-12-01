@@ -55,8 +55,8 @@ return (
         <h1>Ordenes de Producción - Historial Pedidos</h1>
         <p></p>      
         <div className="buttons flex">
-          <button className="btn">Ordenes Producción</button>
-          <button className="btn transparent">Historial Pedidos</button>
+            <button className="btn">Ordenes Producción</button>
+            <button className="btn transparent">Historial Pedidos</button>
         </div>
 
         <div className="videoDiv">
