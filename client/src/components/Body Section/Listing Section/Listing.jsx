@@ -1,7 +1,6 @@
 import './Listing.css'
 import { Link } from 'react-router-dom';
 
-
 // Imported Icons ==============> 
 import {BsArrowRightShort} from 'react-icons/bs'
 
@@ -21,7 +20,7 @@ const Listing = () => {
 
       <div className="heading flex">
         <h1> Ordenes </h1>
-        <Link to='/ordenes'>
+        <Link to='/admin/ordenes'>
           <button className='btn flex'>
               See All <BsArrowRightShort className="icon"/>
           </button>
@@ -66,10 +65,12 @@ const Listing = () => {
 
         <div className="topSellers">
           <div className="heading flex">
-            <h3>Diseñadores</h3>
-              <button className='btn flex'>
-                See All <BsArrowRightShort className="icon"/>
-              </button>
+            <h3>Diseñadores y Empleados</h3>
+              <Link to='/admin/empleados'>
+                <button className='btn flex'>
+                  See All <BsArrowRightShort className="icon"/>
+                </button>
+              </Link>
           </div>
 
           <div className="cardSellers flex">
@@ -95,9 +96,11 @@ const Listing = () => {
         <div className="featuredSellers">
           <div className="heading flex">
             <h3>Lista de Proveedores.</h3>
-              <button className='btn flex'>
-                See All <BsArrowRightShort className="icon"/>
-              </button>
+              <Link to='/admin/proveedores'>
+                <button className='btn flex'>
+                  See All <BsArrowRightShort className="icon"/>
+                </button>
+              </Link>
           </div>
 
           <div className="cardSellers flex">

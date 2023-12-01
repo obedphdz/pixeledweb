@@ -1,5 +1,6 @@
 import './Activity.css'
 import {BsArrowRightShort} from 'react-icons/bs'
+import {Link} from 'react-router-dom'
 import user1 from '../../../assets/img/users/user2.png'
 import user2 from '../../../assets/img/users/user6.png'
 import user3 from '../../../assets/img/users/user4.png'
@@ -11,10 +12,12 @@ const Activity = () => {
 
       <div className="heading flex">
         <h1>Solicitudes de Material</h1>
-        <button className='btn flex'>
-          See All 
-          <BsArrowRightShort className='icon'/>        
-        </button>
+        <Link to='/material'>
+          <button className='btn flex'>
+            See All 
+            <BsArrowRightShort className='icon'/>        
+          </button>
+        </Link>
       </div>
 
       <div className="secContainer grid">

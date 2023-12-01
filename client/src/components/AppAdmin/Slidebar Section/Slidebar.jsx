@@ -53,7 +53,7 @@ const Slidebar = () => {
 
 				<ul className='menuLists grid'>
 					<li className='listItem'>
-						<Link to='/crear-cotiza' className='menuLink flex'>
+						<Link to='/admin/crear-cotiza' className='menuLink flex'>
 							<MdOutlinePriceChange className='icon' />
 							<span className='smallText'>Crear Cotización</span>
 						</Link>
@@ -67,14 +67,14 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-						<Link to='/ordenes' className='menuLink flex'>
+						<Link to='/admin/ordenes' className='menuLink flex'>
 							<HiOutlineClipboardList className='icon' />
 							<span className='smallText'>Ordenes en Producción</span>
 						</Link>
 					</li>
 
 					<li className='listItem'>
-							<Link to='/historial' className='menuLink flex'>
+							<Link to='/admin/historial' className='menuLink flex'>
 								<BsClockHistory className='icon' />
 								<span className='smallText'>Historial Pedidos</span>
 							</Link>
@@ -100,7 +100,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-							<Link to='/clientes' className='menuLink flex'>
+							<Link to='/admin/clientes' className='menuLink flex'>
 								<FiUsers className='icon' />
 								<span className='smallText'>Clientes</span>
 							</Link>
@@ -121,7 +121,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-							<Link to='/empleados' className='menuLink flex'>
+							<Link to='/admin/empleados' className='menuLink flex'>
 								<BsPersonBoundingBox className='icon' />
 								<span className='smallText'>Empleados</span>
 							</Link>

@@ -34,13 +34,17 @@ function PixHome() {
           <Routes>
             {/* <Route path="/" element={<><NavBar/><Slider/><Banner/></>}/> */}        
             <Route path="/" element={<App/>}/> 
-            <Route path="/admin" element={<Admin/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/nueva-orden' element={<NuevaOrden/>}/>
-            <Route path='/precios' element={<Precios/>}/>
-            <Route path='/crear-cotiza' element={<CrearCotizaciones/>}/>
-            <Route path='/cliente' element={<Cliente/>}/>
+            <Route path="/admin" element={<Admin/>}/>
+            <Route path='/admin/nueva-orden' element={<NuevaOrden/>}/>
+            <Route path='/admin/precios' element={<Precios/>}/>
+            <Route path='/admin/crear-cotiza' element={<CrearCotizaciones/>}/>
+            <Route path='/admin/ordenes' element={<VistaOrdenes/>}/>
+            <Route path='/admin/ordenes/detalles-ord' element={<VistaDetallesOrd/>}/>
+            <Route path='/admin/empleados' element={<VistaEmp/>}/>
+            <Route path='/admin/historial' element={<VistaHistorial/>}/>
+            <Route path='/admin/clientes' element={<VistaClientes/>}/>
 
             <Route path='/jefe-dise' element={<JefeDise/>}/>
             <Route path='/jefe-dise/crear-orden-dise' element={<CrearOrdenDi/>}/>
@@ -54,13 +58,8 @@ function PixHome() {
             <Route path='/diseñador/historial' element={<HistorialDise/>}/>
             <Route path='/diseñador/mis-pedidos' element={<MisPedidos/>}/>
 
-            <Route path='/ordenes' element={<VistaOrdenes/>}/>
-            <Route path='/ordenes/detalles-ord' element={<VistaDetallesOrd/>}/>
-            <Route path='/crear-orden' element={<NuevaOrden/>}/>
-            <Route path='/empleados' element={<VistaEmp/>}/>
-            <Route path='/historial' element={<VistaHistorial/>}/>
-            <Route path='/clientes' element={<VistaClientes/>}/>
             <Route path='/modal' element={<MiModal/>}/>
+            <Route path='/cliente' element={<Cliente/>}/>
 
 
             <Route path='*' element={<ErrorPage/>}/>

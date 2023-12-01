@@ -63,7 +63,7 @@ const Login = () => {
 				.then((res) => {
 					if (res.data.status === 'Success') {
 						if (res.data.userType === 'Cliente') {
-							navigate('/cliente'); // Redirect to the customer dashboard
+							navigate('/admin/cliente'); // Redirect to the customer dashboard
 						} else if (res.data.userType === 'Empleado') {
 							// Check the employee's email and redirect to specific views
 							if (res.data.user.correo_emp === 'admin@pixeled.com') {

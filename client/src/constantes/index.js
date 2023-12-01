@@ -6,12 +6,12 @@ import impHD from '../assets/svg/impHD.svg'
 import rotulacion from '../assets/svg/rotulacion.svg'
 import señaletica from '../assets/svg/señaletica.svg'
 import pantallasLed from '../assets/svg/pantallasLed.svg'
+import Face from '../assets/svg/ffb.svg'
+import insta from '../assets/svg/lig.svg'
 import pizza from '../assets/img/nuestrosClientes/pizza5.png'
 import coca from '../assets/img/nuestrosClientes/coca.png'
 import vitro from '../assets/img/nuestrosClientes/vitrobw.png'
 import burger from '../assets/img/nuestrosClientes/burger.png'
-import Face from '../assets/facebook.svg'
-import insta from '../assets/instagram.svg'
 
 export const navLinks = [
   {
@@ -131,10 +131,12 @@ export const footerLinks = [
     links: [
       {
         name: "Instagram",
+        icon: insta,
         link: "https://www.instagram.com/pixeledmx/",
       },
       {
         name: "Faceboook",
+        icon: Face,
         link: "https://www.facebook.com/pixeledags",
       },
     ],
