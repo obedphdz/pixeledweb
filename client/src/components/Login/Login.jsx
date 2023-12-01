@@ -1,7 +1,7 @@
 /* Login.jsx */
 /* eslint-disable no-unused-vars */
 import './Login.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Fragment } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Validation from './LoginValidation';
 import axios from 'axios';
@@ -13,6 +13,9 @@ import logo from '../../assets/img/imgPixeled/logoblack.svg';
 import { FaUserShield } from 'react-icons/fa';
 import { BsFillShieldLockFill } from 'react-icons/bs';
 import { MdOutlineLogin } from 'react-icons/md';
+
+// Tailwind Modal Components
+import { Dialog, Transition } from '@headlessui/react';
 
 const Login = () => {
 	// Reproduce video
@@ -48,34 +51,61 @@ const Login = () => {
 		console.log('Valores actualizados:', values);
 	};
 
+	const showIncorrectPasswordModal = () => {
+		// Create the modal content
+		const modalContent = (
+			<div className='incorrectPasswordModal'>
+				<h2>Datos Incorrectos</h2>
+				<p>Verifique su correo electrónico y contraseña, e intente de nuevo.</p>
+				<button onClick={() => closeModal()}>Cerrar</button>
+			</div>
+		);
+
+		// Append the modal content to the body
+		const modal = document.createElement('div');
+		modal.className = 'modal';
+		modal.appendChild(modalContent);
+		document.body.appendChild(modal);
+
+		// Add event listener to close the modal on click
+		const closeModal = () => {
+			modal.parentNode.removeChild(modal);
+		};
+	};
+
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const { email, pass } = values;
 		console.log('Valores enviados:', values);
-		
-			// Realizar la autenticación
-			axios
-				.post(`http://localhost:8000/login`, { email, pass })
-				.then((res) => {
-					if (res.data.status === 'Success') {
-						// Obtener el tipo de usuario
-						const userType = res.data.userType;
-						// Redireccionar al usuario
-						if (userType === 'Empleado-Administracion-Jefe') {
-							navigate('/admin');
-						} else if (userType === 'Empleado') {
-							if (res.data.userId) {
-								navigate('/jefeDise', { userId: res.data.userId });
-							} else {
-								navigate('/diseñador');
-							}
-						}
-					} else {
-						alert('Incorrect login credentials.');
+
+		// Realizar la autenticación
+		axios
+			.post(`http://localhost:8000/login`, { email, pass })
+			.then((res) => {
+				if (res.data.status === 'Success') {
+					// Obtener el tipo de usuario
+					const userType = res.data.userType;
+					// Redireccionar al usuario
+					if (userType === 'Empleado-Administracion-Jefe') {
+						navigate('/ad', { userId: res.data.userId });
+					} else if (userType === 'Empleado-Diseño-Jefe') {
+						navigate('/jd', { userId: res.data.userId });
+					} else if (userType === 'Diseñador') {
+						navigate('/di', { userId: res.data.userId });
+					} else if (userType === 'Ventas') {
+						navigate('/ven', { userId: res.data.userId });
+					} else if (userType === 'Impresion') {
+						navigate('/im', { userId: res.data.userId });
+					} else if (userType === 'Taller-Jefe') {
+						navigate('/jt', { userId: res.data.userId });
+					} else if (userType === 'Taller') {
+						navigate('/t', { userId: res.data.userId });
 					}
-				})
-				.catch((err) => console.log(err));
-		
+				} else {
+					showIncorrectPasswordModal();
+				}
+			})
+			.catch((err) => console.log(err));
 	};
 
 	return (
@@ -105,7 +135,11 @@ const Login = () => {
 						<h3>Bienvenido.</h3>
 					</div>
 
-					<form action='post' onSubmit={handleSubmit} className='formLogin gridH'>
+					<form
+						action='post'
+						onSubmit={handleSubmit}
+						className='formLogin gridH'
+					>
 						{(errors.email && (
 							<span className='loginStatus'>{errors.email}</span>
 						)) ||
@@ -144,6 +178,13 @@ const Login = () => {
 									id='pass'
 									placeholder='Enter Password'
 									onChange={handleInput}
+									onKeyUp={(e) => {
+										e.preventDefault();
+										setValues((prev) => ({
+											...prev,
+											[e.target.name]: e.target.value,
+										}));
+									}}
 									name='pass'
 									autoComplete='current-password'
 									required
@@ -152,7 +193,7 @@ const Login = () => {
 						</div>
 
 						<button type='submit' className='btn flexH'>
-							<span>Login</span>
+							<span>Iniciar Sesión</span>
 							<MdOutlineLogin className='icon' />
 						</button>
 						<span className='forgotPassword'>

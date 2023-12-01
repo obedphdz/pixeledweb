@@ -45,12 +45,19 @@ export const iniciarSesion = async (req, res) => {
     }
 
     let user;
+    let userType;
     // Consulta en la tabla de clientes
     user = await ClienteModel.findOne({ where: { email } });
+    if (user) {
+      userType = "Cliente";
+    }
 
     // Si no se encuentra el usuario en la tabla de clientes, busca en la tabla de empleados
     if (!user) {
       user = await EmpleadoModel.findOne({ where: { email } });
+      if (user) {
+        userType = "Empleado";
+      }
     }
 
     if (!user) {
@@ -64,26 +71,26 @@ export const iniciarSesion = async (req, res) => {
     console.log(user);
 
     // Redireccionar según el tipo de usuario y su rol
-    if (user.hasOwnProperty("area_trab") && user.hasOwnProperty("cargo")) {
+    if (userType === "Empleado") {
       // Usuario Empleado
-      if (user.area_trab === "Administracion" && user.cargo === "Jefe") {
+      if (user.area_trab == "Administracion" && user.cargo == "Jefe") {
         res.json({
           message: "Inicio de sesión exitoso",
           userType: "Empleado-Administracion-Jefe",
           status: "Success",
           userId: user.id_empleado,
         });
-      } else if (user.area_trab === "Diseño" && user.cargo === "Jefe") {
+      } else if (user.area_trab == "Diseño" && user.cargo == "Jefe") {
         res.json({
           message: "Inicio de sesión exitoso",
           userType: "Empleado-Diseño-Jefe",
           status: "Success",
           userId: user.id_empleado,
         });
-      } else if (user.area_trab === "Diseño" && user.cargo === "Diseñador") {
+      } else if (user.area_trab == "Diseño" && user.cargo == "Diseñador") {
         res.json({
           message: "Inicio de sesión exitoso",
-          userType: "Empleado-Diseño-Diseñador",
+          userType: "Diseñador",
           status: "Success",
           userId: user.id_empleado,
         });

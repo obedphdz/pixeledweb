@@ -19,7 +19,7 @@ const Register = () => {
 	const [nombre, setNombre] = useState('');
 	const [apat, setApat] = useState('');
 	const [amat, setAmat] = useState('');
-	const [numtel, setNumtel] = useState('');
+	const [numero, setNumero] = useState('');
 	const [email, setEmail] = useState('');
 	const [pass, setPass] = useState('');
 	const [showPass, setShowPass] = useState(false);
@@ -56,14 +56,12 @@ const Register = () => {
 				nombre: nombre,
 				ape_pat: apat,
 				ape_mat: amat,
-				numero: numtel,
+				numero: numero,
 				email: email,
 				pass: pass,
 			});
 
 			console.log('Respond from backend:', response.data);
-			
-			
 		} catch (error) {
 			console.log(error.response.data);
 			// Handle API error and display user-friendly message
@@ -153,12 +151,12 @@ const Register = () => {
 									Apellido Materno
 								</label>
 							</div>
-							<div className='inpdiv'>
+							<div className='inpdiv'>  
 								<input
-									type='number'
+									type='text'
 									name='numero'
-									value={numtel}
-									onChange={(e) => setNumtel(e.target.value)}
+									value={numero}
+									onChange={(e) => setNumero(e.target.value)}
 									required
 								/>
 								<label className='etiqueta'>

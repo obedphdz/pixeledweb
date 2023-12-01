@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@headlessui/react": "^1.7.17",
     "@syncfusion/ej2": "^23.1.44",
     "@syncfusion/ej2-base": "^23.1.41",
     "@syncfusion/ej2-data": "^23.2.4",
