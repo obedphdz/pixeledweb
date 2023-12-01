@@ -58,22 +58,6 @@ const Login = () => {
 				.post(`http://localhost:8000/login`, { email, pass })
 				.then((res) => {
 					if (res.data.status === 'Success') {
-<<<<<<< HEAD
-						if (res.data.userType === 'Cliente') {
-							navigate('/admin/cliente'); // Redirect to the customer dashboard
-						} else if (res.data.userType === 'Empleado') {
-							// Check the employee's email and redirect to specific views
-							if (res.data.user.correo_emp === 'admin@pixeled.com') {
-								navigate('/admin');
-							} else if (res.data.user.correo_emp === 'diseno@pixeled.com') {
-								navigate('/diseñador');
-							} else if (
-								res.data.user.correo_emp === 'admin.diseno@pixeled.com'
-							) {
-								navigate('/jefeDise');
-							} else if (res.data.user.correo_emp === 'impresion@pixeled.com') {
-								navigate('/diseñador');
-=======
 						// Obtener el tipo de usuario
 						const userType = res.data.userType;
 						// Redireccionar al usuario
@@ -82,7 +66,6 @@ const Login = () => {
 						} else if (userType === 'Empleado') {
 							if (res.data.userId) {
 								navigate('/jefeDise', { userId: res.data.userId });
->>>>>>> c5e1dd69d90979878a02c3c62be8c68e90b23001
 							} else {
 								navigate('/diseñador');
 							}
