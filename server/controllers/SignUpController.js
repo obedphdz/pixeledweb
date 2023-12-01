@@ -1,4 +1,8 @@
-import { ClienteModel, ContactoModel } from "../models/SignUpModels.js";
+import {
+  ClienteModel,
+  ContactoModel,
+  EmpleadoModel,
+} from "../models/SignUpModels.js";
 
 export const registrarCliente = async (req, res) => {
   try {
@@ -37,18 +41,63 @@ export const iniciarSesion = async (req, res) => {
   try {
     const { email, pass } = req.body;
     if (!email || !pass) {
-      throw new Error("Debes ingresar un correo electrónico y una contraseña.");
+      throw new Error("Completa todos los campos");
     }
-    const cliente = await ClienteModel.findOne({ where: { email } });
-    if (!cliente) {
+
+    let user;
+    // Consulta en la tabla de clientes
+    user = await ClienteModel.findOne({ where: { email } });
+
+    // Si no se encuentra el usuario en la tabla de clientes, busca en la tabla de empleados
+    if (!user) {
+      user = await EmpleadoModel.findOne({ where: { email } });
+    }
+
+    if (!user) {
       throw new Error("El usuario no existe");
     }
-    if (cliente.pass !== pass) {
+
+    if (user.pass !== pass) {
       throw new Error("La contraseña es incorrecta!");
     }
-    res.json({
-      message: "Inicio de sesión exitoso",
-    });
+
+    console.log(user);
+
+    // Redireccionar según el tipo de usuario y su rol
+    if (user.hasOwnProperty("area_trab") && user.hasOwnProperty("cargo")) {
+      // Usuario Empleado
+      if (user.area_trab === "Administracion" && user.cargo === "Jefe") {
+        res.json({
+          message: "Inicio de sesión exitoso",
+          userType: "Empleado-Administracion-Jefe",
+          status: "Success",
+          userId: user.id_empleado,
+        });
+      } else if (user.area_trab === "Diseño" && user.cargo === "Jefe") {
+        res.json({
+          message: "Inicio de sesión exitoso",
+          userType: "Empleado-Diseño-Jefe",
+          status: "Success",
+          userId: user.id_empleado,
+        });
+      } else if (user.area_trab === "Diseño" && user.cargo === "Diseñador") {
+        res.json({
+          message: "Inicio de sesión exitoso",
+          userType: "Empleado-Diseño-Diseñador",
+          status: "Success",
+          userId: user.id_empleado,
+        });
+      } else {
+        throw new Error("Error al determinar el rol del empleado");
+      }
+    } else {
+      // Usuario Cliente
+      res.json({
+        message: "Inicio de sesión exitoso",
+        userType: "Cliente",
+        status: "Success",
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(400).json({
