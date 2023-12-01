@@ -7,10 +7,10 @@ export const sectionsForAdmin = [
 	{
 		title: 'Pedidos',
 		items: [
-		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/admin/crear-cotiza' },
-		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/admin/nueva-orden' },
-		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/admin/ordenes' },
-		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/admin/historial' },
+		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/ad/crear-cotiza' },
+		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/ad/nueva-orden' },
+		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ad/ordenes' },
+		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/ad/historial' },
 		],
 	  },
 ]
@@ -20,11 +20,11 @@ export const sectionsForJefeDi = [
 	{
 	  title: 'Pedidos',
 	  items: [
-		{ name: 'Crear Pedido', icon: <MdOutlinePriceChange />, link: '/jefe-dise/crear-orden-dise' },
-		{ name: 'Asignacion de Pedidos', icon: <BsFillClipboardPlusFill />, link: '/jefe-dise/asignar' },
-		{ name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/jefe-dise/material' },
-		{ name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/jefe-dise/pedidos' },
-		{ name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/jefe-dise/historial' },
+		{ name: 'Crear Pedido', icon: <MdOutlinePriceChange />, link: '/jd/crear-orden-dise' },
+		{ name: 'Asignacion de Pedidos', icon: <BsFillClipboardPlusFill />, link: '/jd/asignar' },
+		{ name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/jd/material' },
+		{ name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/jd/pedidos' },
+		{ name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/jd/historial' },
 	  ],
 	},
 	/* {
@@ -40,9 +40,9 @@ export const sectionsForDisenador = [
 	{
 		title: 'Pedidos',
 		items: [
-		  { name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/admin' },
-		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/diseñador/historial' },
-		  { name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/admin' }
+		  { name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/ad' },
+		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/di/historial' },
+		  { name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/ad' }
 		],
 	  },
 ]

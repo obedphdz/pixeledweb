@@ -9,9 +9,9 @@ const sectionsForAdmin = [
 	{
 		title: 'Pedidos',
 		items: [
-		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/admin/crear-cotiza' },
-		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/admin/nueva-orden' },
-		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/admin/ordenes' },
+		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/ad/crear-cotiza' },
+		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/ad/nueva-orden' },
+		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ad/ordenes' },
 		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/' },
 		],
 	  },

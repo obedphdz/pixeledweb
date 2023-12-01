@@ -56,7 +56,7 @@ const Slidenew  = ({ sections }) => {
         variants={sideBarVariants}
     >
       <div className='logoDiv flex'>
-        <Link to='/admin'>
+        <Link to='/ad'>
           <img
             src={logo1}
             alt='pixeledImage'
@@ -139,7 +139,7 @@ const Slidenew  = ({ sections }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/admin/clientes'>
+                <Link to='/ad/clientes'>
                   <ItemSlide icon={<FiUsers />} showName={open} name='Clientes' />
                 </Link>
               </li>
@@ -154,7 +154,7 @@ const Slidenew  = ({ sections }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/admin/empleados'>
+                <Link to='/ad/empleados'>
                   <ItemSlide icon={<BsPersonBoundingBox />} showName={open} name='Empleados' />
                 </Link>
               </li>

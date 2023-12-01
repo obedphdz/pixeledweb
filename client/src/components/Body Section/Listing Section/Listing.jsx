@@ -20,7 +20,7 @@ const Listing = () => {
 
       <div className="heading flex">
         <h1> Ordenes </h1>
-        <Link to='/admin/ordenes'>
+        <Link to='/ad/ordenes'>
           <button className='btn flex'>
               See All <BsArrowRightShort className="icon"/>
           </button>
@@ -66,7 +66,7 @@ const Listing = () => {
         <div className="topSellers">
           <div className="heading flex">
             <h3>Diseñadores y Empleados</h3>
-              <Link to='/admin/empleados'>
+              <Link to='/ad/empleados'>
                 <button className='btn flex'>
                   See All <BsArrowRightShort className="icon"/>
                 </button>
@@ -96,7 +96,7 @@ const Listing = () => {
         <div className="featuredSellers">
           <div className="heading flex">
             <h3>Lista de Proveedores.</h3>
-              <Link to='/admin/proveedores'>
+              <Link to='/ad/proveedores'>
                 <button className='btn flex'>
                   See All <BsArrowRightShort className="icon"/>
                 </button>

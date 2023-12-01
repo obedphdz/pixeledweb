@@ -32,39 +32,27 @@ function PixHome() {
 					<Route path='/' element={<App />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<Register />} />
-					<Route path='/admin' element={<Admin />} />
-					<Route path='/admin/nueva-orden' element={<NuevaOrden />} />
-					<Route path='/admin/precios' element={<Precios />} />
-					<Route path='/admin/crear-cotiza' element={<CrearCotizaciones />} />
-					<Route path='/admin/ordenes' element={<VistaOrdenes />} />
-					<Route
-						path='/admin/ordenes/detalles-ord'
-						element={<VistaDetallesOrd />}
-					/>
-					<Route path='/admin/empleados' element={<VistaEmp />} />
-					<Route path='/admin/historial' element={<VistaHistorial />} />
-					<Route path='/admin/clientes' element={<VistaClientes />} />
+					<Route path='/ad' element={<Admin />} />
+					<Route path='/ad/nueva-orden' element={<NuevaOrden />} />
+					<Route path='/ad/precios' element={<Precios />} />
+					<Route path='/ad/crear-cotiza' element={<CrearCotizaciones />} />
+					<Route path='/ad/ordenes' element={<VistaOrdenes />} />
+					<Route path='/ad/ordenes/detalles-ord' element={<VistaDetallesOrd />}/>
+					<Route path='/ad/empleados' element={<VistaEmp />} />
+					<Route path='/ad/historial' element={<VistaHistorial />} />
+					<Route path='/ad/clientes' element={<VistaClientes />} />
 
-					<Route path='/jefe-dise' element={<JefeDise />} />
-					<Route
-						path='/jefe-dise/crear-orden-dise'
-						element={<CrearOrdenDi />}
-					/>
-					<Route path='/jefe-dise/historial' element={<HistorialJefeDise />} />
-					<Route path='/jefe-dise/asignar' element={<VistaAsigPedi />} />
-					<Route
-						path='/jefe-dise/detalles-ord'
-						element={<VistaDetallesDise />}
-					/>
-					<Route path='/jefe-dise/pedidos' element={<MisPedidos />} />
+					<Route path='/jd' element={<JefeDise />} />
+					<Route path='/jd/crear-orden-dise' element={<CrearOrdenDi />}/>
+					<Route path='/jd/historial' element={<HistorialJefeDise />} />
+					<Route path='/jd/asignar' element={<VistaAsigPedi />} />
+					<Route path='/jd/detalles-ord' element={<VistaDetallesDise />}/>
+					<Route path='/jd/pedidos' element={<MisPedidos />} />
 
-					<Route path='/diseñador' element={<Disenador />} />
-					<Route
-						path='/diseñador/detalles-ord'
-						element={<VistaDetallesDise />}
-					/>
-					<Route path='/diseñador/historial' element={<HistorialDise />} />
-					<Route path='/diseñador/mis-pedidos' element={<MisPedidos />} />
+					<Route path='/di' element={<Disenador />} />
+					<Route path='/di/detalles-ord' element={<VistaDetallesDise />}/>
+					<Route path='/di/historial' element={<HistorialDise />} />
+					<Route path='/di/mis-pedidos' element={<MisPedidos />} />
 
 					<Route path='/modal' element={<MiModal />} />
 					<Route path='/cliente' element={<Cliente />} />
