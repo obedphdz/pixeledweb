@@ -31,7 +31,7 @@ const Business = () =>  (
           Sobre nosotros. <br className="sm:block hidden" /> 
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Somos una empresa originaria de México que domina su campo y comprende que nuestra excelencia en calidad, puntualidad en entregas y dedicación al servicio al cliente constituyen nuestros mayores activos. <br/> <br/>Convertimos los proyectos de nuestros clientes en auténticas realidades, empleando incansables esfuerzos y una sólida creencia en que todos los sueños son alcanzables.
+        Somos una imprenta con raíces en México, líder en nuestra industria, y reconocemos que nuestros principales pilares son la excelencia en calidad, la entrega puntual y la devoción hacia la atención al cliente. <br/> <br/>Transformamos las ideas y proyectos de nuestros clientes en auténticas obras impresas, dedicando esfuerzos continuos y manteniendo la convicción sólida de que todos los sueños pueden materializarse a través de la impresión
         </p>
 
         <Button styles={`mt-10`} /></div>

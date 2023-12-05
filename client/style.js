@@ -22,10 +22,10 @@ const styles = {
       /* Estilos específicos para pantallas de 27 pulgadas */
   
       boxWidth: "xl:max-w-[2560px] w-full", 
-    heading2: "font-poppins font-semibold lg:text-[5vw] text-[52px] text-gradient lg:leading-[6vw] leading-[66.8px] w-full", 
-    heading3: "font-poppins font-semibold lg:text-[5vw] text-[52px] text-gradient3 lg:leading-[6vw] leading-[66.8px] w-full", 
-    paragraph: "font-poppins font-bolder text-black text-[2vw] leading-[3.6vw]", 
-    paragraph2: "font-poppins font-normal text-white text-[2.2vw] leading-[3.6vw]",
+      heading2: "font-poppins font-semibold lg:text-[5vw] text-[52px] text-gradient lg:leading-[6vw] leading-[66.8px] w-full", 
+      heading3: "font-poppins font-semibold lg:text-[5vw] text-[52px] text-gradient3 lg:leading-[6vw] leading-[66.8px] w-full", 
+      paragraph: "font-poppins font-bolder text-black text-[2vw] leading-[3.6vw]", 
+      paragraph2: "font-poppins font-normal text-white text-[2.2vw] leading-[3.6vw]",
   
     }  
   };

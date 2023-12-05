@@ -42,14 +42,15 @@ export const nosotros = [
     icon: star,
     title: "Diseño Cautivador",
     content:
-      "Analizamos elementos, tipografía y matices artísticos.",
+    "Analizamos elementos, tipografía y matices artísticos para crear soluciones visuales que destacan.",
   },  
   {
     id: "feature-2",
     icon: shield,
     title: "Tu Visión, Nuestra Experiencia Artística",
     content:
-      "Tu visión, nuestra experiencia artística. Experimentamos con elementos visuales, teoría del color e impacto.",
+    "Cada proyecto es una colaboración entre tu visión y nuestra experiencia artística. Experimentamos con elementos visuales, teoría del color e impacto para dar vida a tus ideas.",
+  
   },
   {
     id: "feature-3",

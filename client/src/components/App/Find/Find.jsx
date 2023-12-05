@@ -81,7 +81,7 @@ const Find = () => {
           <SwiperSlide>
             <Card
               image={señaletica}
-              make='Señaletica'
+              make='Señalética'
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -100,7 +100,7 @@ const Find = () => {
           <SwiperSlide>
             <Card
               image={altaDefinicion}
-              make='Impresión Alta Definición'
+              make='Impresión alta definción'
             />
           </SwiperSlide>
         </Swiper>
