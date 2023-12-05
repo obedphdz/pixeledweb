@@ -11,9 +11,6 @@ const Footer = () => (
           alt="pixeled"
           className="w-full md:w-[266px] h-auto object-contain mt-5 md:mr-40 mx-auto"
         />
-        <p className={`${styles.paragraph} mt-4 mr-36 max-w-[312px] mx-auto`}>
-          Una nueva forma de hacer los pagos fáciles, confiables y seguros.
-        </p>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10 mx-auto">

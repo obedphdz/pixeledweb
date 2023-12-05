@@ -85,9 +85,10 @@ const Login = () => {
 				if (res.data.status === 'Success') {
 					// Obtener el tipo de usuario
 					const userType = res.data.userType;
+					const userId = res.data.userId;
 					// Redireccionar al usuario
 					if (userType === 'Empleado-Administracion-Jefe') {
-						navigate('/ad', { userId: res.data.userId });
+						navigate('/ad', { state: userId});
 					} else if (userType === 'Empleado-Diseño-Jefe') {
 						navigate('/jd', { userId: res.data.userId });
 					} else if (userType === 'Diseñador') {
@@ -115,14 +116,14 @@ const Login = () => {
 					<video src={video} id='my-video' className='myVideo'></video>
 
 					<div className='textDivLogin'>
-						<h2 className='title'>Crea y vende productos extraordinarios. </h2>
-						<p>Adopt the peace of nature!</p>
+						<h2 className='title'>IMPRESIÓN A LA VISTA DE TODOS</h2>
+						
 					</div>
 
 					<div className='footerDiv flexH'>
-						<span className='text'>Aún no tienes una cuenta?</span>
+						<span className='text'>¿Aún no tienes una cuenta?</span>
 						<Link to='/register'>
-							<button className='btnSignUp'>Sign Up</button>
+							<button className='btnSignUp'>Registrarse</button>
 						</Link>
 					</div>
 				</div>
@@ -160,7 +161,7 @@ const Login = () => {
 									type='email'
 									onChange={handleInput}
 									id='email'
-									placeholder='Enter email'
+									placeholder='alguien@pixeled.com'
 									name='email'
 									required
 								/>
@@ -176,7 +177,7 @@ const Login = () => {
 								<input
 									type='password'
 									id='pass'
-									placeholder='Enter Password'
+									placeholder='Contraseña'
 									onChange={handleInput}
 									onKeyUp={(e) => {
 										e.preventDefault();
@@ -197,9 +198,9 @@ const Login = () => {
 							<MdOutlineLogin className='icon' />
 						</button>
 						<span className='forgotPassword'>
-							Olvidaste tu contraseña?{' '}
+							¿Olvidaste tu contraseña?{' '}
 							<a href='' className='clickHere'>
-								Click here
+								Click Aquí
 							</a>
 						</span>
 					</form>

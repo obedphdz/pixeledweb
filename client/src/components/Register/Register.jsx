@@ -91,14 +91,14 @@ const Register = () => {
 					<video src={video} id='my-video' className='myVideo'></video>
 
 					<div className='textDivRegister'>
-						<h2 className='title'>Crea y vende productos extraordinarios. </h2>
-						<p>Adopt the peace of nature!</p>
+						<h2 className='title'>¡Crea y vende productos extraordinarios!</h2>
+						
 					</div>
 
 					<div className='footerDiv flexH'>
 						<span className='text'>¿Ya tienes una cuenta?</span>
 						<Link to='/login'>
-							<button className='btnSignUp'>Login</button>
+							<button className='btnSignUp'>Iniciar Sesión</button>
 						</Link>
 					</div>
 				</div>

@@ -1,7 +1,6 @@
 import styles, { layout } from "../../../style";
 import img1 from '../../assets/img/img1.jpg'
-import stripe from '../../assets/img/servicios/stripe1.png'
-import paypal from '../../assets/img/servicios/pago2.png'
+
 
 
 const Billing = () => (
@@ -22,11 +21,6 @@ const Billing = () => (
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Imagína tu proyecto, y nosotros lo hacemos realidad. Además, ofrecemos la conveniencia de pago en línea para tus productos y servicios. ¡Hazlo posible hoy!
         </p>
-  
-        <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-          <img src={stripe} alt="google_play" className="w-[148.86px] h-[72.05px] object-contain mr-5 cursor-pointer" />
-          <img src={paypal} alt="google_play" className="w-[168.86px] h-[72.05px] object-contain cursor-pointer mt-3" />
-        </div>
       </div>
     </section>
   );
