@@ -28,11 +28,11 @@ export const navLinks = [
   },
   {
     id: "#contactanos",
-    title: "Contactanos",
+    title: "Contáctanos",
   },
   {
     id: '/login',
-    title: "Iniciar Sesion",
+    title: "Iniciar Sesión",
   },
 ];
 
@@ -117,11 +117,11 @@ export const footerLinks = [
         link: "#servicios",
       },
       {
-        name: "Contactanos",
+        name: "Contáctanos",
         link: "#contactanos",
       },
       {
-        name: "Iniciar Sesion ",
+        name: "Iniciar Sesión ",
         link: "/login",
       },
     ],

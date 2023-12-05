@@ -32,7 +32,7 @@ function PixHome() {
 					<Route path='/' element={<App />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<Register />} />
-					<Route path='/ad' element={<Admin />} />
+					<Route path='/ad' element={<Admin  />} />
 					<Route path='/ad/nueva-orden' element={<NuevaOrden />} />
 					<Route path='/ad/precios' element={<Precios />} />
 					<Route path='/ad/crear-cotiza' element={<CrearCotizaciones />} />
