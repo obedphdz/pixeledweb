@@ -17,10 +17,10 @@ const Billing = () => (
   
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
-          Imaginalo  <br className="sm:block hidden" /> y nosotros lo hacemos realidad
+          Imagínalo  <br className="sm:block hidden" /> y nosotros lo hacemos realidad
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Imagina tu proyecto, y nosotros lo hacemos realidad. Además, ofrecemos la conveniencia de pago en línea para tus productos y servicios. ¡Hazlo posible hoy!
+          Imagína tu proyecto, y nosotros lo hacemos realidad. Además, ofrecemos la conveniencia de pago en línea para tus productos y servicios. ¡Hazlo posible hoy!
         </p>
   
         <div className="flex flex-row flex-wrap sm:mt-10 mt-6">

@@ -385,4 +385,29 @@ root {
   .loginPage .container {
     width: 85%;
   }
-}/*# sourceMappingURL=Login.css.map */
+}
+/* @media screen and (min-width: 1700px) {
+	.loginPage {
+	  .container {
+		.formDivLogin {
+		  .formLogin {
+			margin-left: 60px; 
+			max-width: 700px; 
+		  }
+		}
+	  }
+	}
+
+	.loginPage{
+		.container{
+			.formDivLogin{
+				.headerDiv{
+					margin-left: 3rem;
+					h3{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+  } *//*# sourceMappingURL=Login.css.map */

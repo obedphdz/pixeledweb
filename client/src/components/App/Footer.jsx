@@ -3,7 +3,7 @@ import logo from "../../assets/svg/pixecol.svg";
 import { footerLinks, socialMedia } from "../../constantes/index";
 
 const Footer = () => (
-  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
+  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col xl:mx-auto xl:max-w-[1280px]`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full mt-40 mx-auto`}>
       <div className="flex-[1] flex flex-col justify-start mx-auto md:mr-10">
         <img
@@ -52,15 +52,14 @@ const Footer = () => (
             <img
               src={social.icon}
               alt={social.name}
-              className={`w-[21px] h-[21px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[22px] xl:h-[22px] object-contain cursor-pointer`}
+              className={`w-[21px] h-[21px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] object-contain cursor-pointer`}
             />
           </a>
         ))}
       </div>
-      
     </div>
 
-    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45] mx-auto">
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45] mx-auto xl:max-w-[1280px]">
       <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-black mx-auto">
         Copyright Ⓒ 2023 Pixeled. All Rights Reserved.
       </p>

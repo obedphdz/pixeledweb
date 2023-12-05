@@ -169,6 +169,7 @@ root {
 					font-size: 20px;
 					color: var(--blackColor);
 					font-weight: 600;
+					
 				}
 			}
 
@@ -368,3 +369,29 @@ root {
 		}
 	}
 }
+
+/* @media screen and (min-width: 1700px) {
+	.loginPage {
+	  .container {
+		.formDivLogin {
+		  .formLogin {
+			margin-left: 60px; 
+			max-width: 700px; 
+		  }
+		}
+	  }
+	}
+
+	.loginPage{
+		.container{
+			.formDivLogin{
+				.headerDiv{
+					margin-left: 3rem;
+					h3{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+  } */
