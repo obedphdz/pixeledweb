@@ -49,7 +49,7 @@ export const nosotros = [
     icon: shield,
     title: "Tu Visión, Nuestra Experiencia Artística",
     content:
-    "Cada proyecto es una colaboración entre tu visión y nuestra experiencia artística. Experimentamos con elementos visuales, teoría del color e impacto para dar vida a tus ideas.",
+    "Cada proyecto es una colaboración entre tu visión y nuestra experiencia artística. Experimentamos con elementos visuales e impacto para dar vida a tus ideas.",
   
   },
   {

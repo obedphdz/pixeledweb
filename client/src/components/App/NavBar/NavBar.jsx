@@ -5,6 +5,7 @@ import logoPix from "../../../assets/svg/logpixcol.svg"
 
 /* Imported icons */
 import {TiThMenu} from 'react-icons/ti'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -12,8 +13,9 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logoPix} alt="pixeled" className="w-[220px] h-[60px]" />
-
+      <Link to='/'>
+        <img src={logoPix} alt="pixeled" className="w-[220px] h-[60px]" />
+      </Link>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
@@ -32,9 +34,9 @@ const Navbar = () => {
         {/* Responsive styles */}
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
-      <div className="w-[18px] h-[18px] rounded-md p-2 cursor-pointer ">
-        <TiThMenu onClick={() => setToggle(!toggle)} className="w-[25px] h-[25px]" />
-      </div>
+        <div className="w-[18px] h-[18px] rounded-md p-2 cursor-pointer ">
+          <TiThMenu onClick={() => setToggle(!toggle)} className="w-[25px] h-[25px]" />
+        </div>
 
         <div
           className={`${

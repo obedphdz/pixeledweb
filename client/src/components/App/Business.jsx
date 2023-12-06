@@ -6,7 +6,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 	<div
 		className={`flex flex-row p-10 rounded-[20px] ${
 			index !== nosotros.length - 1 ? 'mb-6' : 'mb-0'
-		} feature-card`}
+		} feature-card cursor-pointer transition duration-300 ease-in-out transform hover:scale-105`}
 		style={{ background: 'linear-gradient(to left, #e62657, #280028)' }}
 	>
 		<div className={`w-[140px] h-[64px] rounded-full ${styles.flexCenter} `}>

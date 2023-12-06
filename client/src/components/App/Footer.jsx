@@ -9,11 +9,14 @@ const Footer = () => (
         <img
           src={logo}
           alt="pixeled"
-          className="w-full md:w-[266px] h-auto object-contain mt-5 md:mr-40 mx-auto"
+          className="w-full md:w-[266px] h-auto object-contain mt-5 md:ml-14 mx-auto"
         />
+        <p className={`${styles.paragraph3} mt-5 mr-36 max-w-[312px] mx-auto`}>
+            Transformando ideas en realidad con calidad y dedicación.
+        </p>
       </div>
 
-      <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10 mx-auto">
+      <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10 mr-30 mx-auto">
         {footerLinks.map((footerlink) => (
           <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4 min-w-[150px] mx-auto`}>
             <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white mx-auto">
@@ -23,7 +26,7 @@ const Footer = () => (
               {footerlink.links.map((link, index) => (
                 <li
                   key={link.name}
-                  className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                  className={`font-poppins font-normal text-[16px] leading-[24px] text-black hover:text-pixColor cursor-pointer ${
                     index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                   } mx-auto`}
                 >
@@ -35,7 +38,7 @@ const Footer = () => (
         ))}
       </div>
 
-      <div className="flex flex-row md:mt-20 mx-auto">
+      <div className="flex flex-row md:mt-20 mr-5 mx-auto">
         {socialMedia.map((social, index) => (
           <a
             key={social.name}
@@ -49,7 +52,7 @@ const Footer = () => (
             <img
               src={social.icon}
               alt={social.name}
-              className={`w-[21px] h-[21px] md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] object-contain cursor-pointer`}
+              className={`w-[21px] h-[21px] md:w-[20px] md:h-[20px] lg:w-[28px] lg:h-[28px] xl:w-[32px] xl:h-[32px] object-contain cursor-pointer`}
             />
           </a>
         ))}

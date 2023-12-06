@@ -124,7 +124,7 @@ root {
 .registerPage .containerRegi .videoDiv .textDivLogin .title,
 .registerPage .containerRegi .videoDiv .textDivRegister .title {
   color: var(--whiteColor);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
 }
 .loginPage .container .videoDiv .textDivLogin p,

@@ -116,8 +116,8 @@ const Login = () => {
 					<video src={video} id='my-video' className='myVideo'></video>
 
 					<div className='textDivLogin'>
-						<h2 className='title'>IMPRESIÓN A LA VISTA DE TODOS</h2>
-						
+						<h2 className='title'>Crea y vende productos extraordinarios.</h2>
+						<p>Transforma tus conceptos en realidades extraordinarias. ¡Descubre el poder de la impresión con Pixeled!</p>
 					</div>
 
 					<div className='footerDiv flexH'>

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 /* Register.jsx */
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import video from '../../assets/img/imgPixeled/videoImp3.mp4';
 import logo from '../../assets/img/imgPixeled/logoblack.svg';
@@ -91,8 +91,8 @@ const Register = () => {
 					<video src={video} id='my-video' className='myVideo'></video>
 
 					<div className='textDivRegister'>
-						<h2 className='title'>¡Crea y vende productos extraordinarios!</h2>
-						
+						<h2 className='title'>Desata tu creatividad y lleva tus ideas al siguiente nivel.</h2>
+						<p>Transforma tus conceptos en realidades extraordinarias. ¡Descubre el poder de la impresión con Pixeled!</p>
 					</div>
 
 					<div className='footerDiv flexH'>

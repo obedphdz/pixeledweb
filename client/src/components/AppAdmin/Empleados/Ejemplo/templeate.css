@@ -1,0 +1,19 @@
+.e-float-input.e-control-wrapper, .inputDialog{ 
+    color: black;
+    font-size: 25px;
+    width: 40rem ;
+    height: 5rem ;   
+}
+
+.e-float-input.e-control-wrapper, .miLabel{
+    font-size: 30px;
+    color: blue;
+}
+.form-row{
+    width: 100%;
+
+}
+
+.main{
+    width: 100%;
+}
