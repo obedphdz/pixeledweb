@@ -1,0 +1,41 @@
+.add-employee-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-employee-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+  
+  .add-employee-form input,
+  .add-employee-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 27px;
+  }
+  
+  .add-employee-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .e-float-input.e-control-wrapper{ 
+    color: black;
+    background-color: #4caf50;
+    width: 40rem ;
+    height: 5rem ;   
+}
+  

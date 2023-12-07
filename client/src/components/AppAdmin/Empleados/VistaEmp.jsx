@@ -1,7 +1,6 @@
 import Slidenew from "../Slidebar Section/Slidenew"
 import { sectionsForAdmin } from "../Slidebar Section/sectionsForSlide/sections"
-import App from "./Ejemplo/App"
-
+import Empleados from './Empleados'
 
 
 const VistaEmp = () => {
@@ -10,7 +9,7 @@ const VistaEmp = () => {
         <div className="mainContainer">
             <Slidenew sections={sectionsForAdmin} />
             <div className="bodyContainer">
-                <App/>
+                <Empleados/>
             </div>
         </div>
     </div>

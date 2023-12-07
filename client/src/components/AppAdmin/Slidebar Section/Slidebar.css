@@ -63,7 +63,7 @@
   outline: none;
   cursor: pointer;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 15px;
   margin-right: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
@@ -71,11 +71,12 @@
 }
 .sideBar .menuDiv .btnLogOut .icon, .sideBar .settingsDiv .btnLogOut .icon {
   margin-right: 5px;
-  margin-bottom: -3px;
+  margin-top: 3px;
 }
 .sideBar .menuDiv .btnLogOut:hover, .sideBar .settingsDiv .btnLogOut:hover {
-  background: #E50053;
-  color: white;
+  background: rgba(150, 220, 223, 0.651);
+  color: var(--blackColor);
+  font-weight: bolder;
 }
 .sideBar .menuDiv .menuLists .listItem, .sideBar .settingsDiv .menuLists .listItem {
   padding: 0.2rem 1.5rem;
@@ -101,6 +102,7 @@
 }
 .sideBar .menuDiv .menuLists .listItem .menuLink .icon, .sideBar .settingsDiv .menuLists .listItem .menuLink .icon {
   margin-right: 0.5rem;
+  margin-top: -2px;
 }
 .sideBar .menuDiv .menuLists .listItem:hover .menuLink, .sideBar .settingsDiv .menuLists .listItem:hover .menuLink {
   color: var(--blackColor);

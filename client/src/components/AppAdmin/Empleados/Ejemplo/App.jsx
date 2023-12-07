@@ -3,6 +3,7 @@ import { setValue } from '@syncfusion/ej2-base';
 import { ColumnDirective, ColumnsDirective, GridComponent, Edit, Inject, Toolbar } from '@syncfusion/ej2-react-grids';
 import { data } from './datasourse';
 import { DialogFormTemplate } from './template';
+
 function App() {
     let grid;
     const dialogTemplate = (props) => {
@@ -26,14 +27,6 @@ function App() {
             else if (args.requestType === 'add') {
                 args.form.elements.namedItem('OrderID').focus();
             }
-        }
-
-        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-            const dialog = args.dialog;
-            dialog.showCloseIcon = false;
-            dialog.height = 400;
-            // change the header of the dialog
-            dialog.header = args.requestType === 'beginEdit' ? 'Edit Record of ' + args.rowData.CustomerID : 'New Customer';
         }
     };
     const actionBegin = (args) => {

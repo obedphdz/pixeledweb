@@ -1,5 +1,3 @@
-
-
 /* Slidenew.jsx */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
@@ -81,33 +79,7 @@ const Slidenew  = ({ sections }) => {
           </motion.div>
         </motion.div>
       </div>
-  
-    {/*   <div className='menuDiv'>
-        <h3 className='divTile'>Pedidos</h3>
-        <ul className='menuLists grid' data-variants={menuListsVariants}>
-          <li>
-            <Link to='/nuevaCotiza'>
-              <ItemSlide icon={<MdOutlinePriceChange />} showName={open} name='Crear Cotización' />
-            </Link>
-          </li>
-          <li>
-            <Link to='/nueva'>
-              <ItemSlide icon={<BsFillClipboardPlusFill />} showName={open} name='Nueva Orden' />
-            </Link>
-          </li>
-          <li>
-            <Link to=''>
-             <ItemSlide icon={<HiOutlineClipboardList />} showName={open} name='Ordenes en Producción' />
-            </Link>
-          </li>
-          <li>
-            <Link to=''>
-              <ItemSlide icon={<BsClockHistory />} showName={open} name='Historial Pedidos' />
-            </Link>
-          </li>
-        </ul>
-      </div>
- */}
+
       <div className='menuDiv'>
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex}>

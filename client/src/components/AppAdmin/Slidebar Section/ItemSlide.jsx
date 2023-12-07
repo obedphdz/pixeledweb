@@ -5,8 +5,8 @@ import './Item.css';
 
 const ItemSlide = ({ icon, name, showName }) => {
   const subheadingVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: 'auto' },
+    hidden: { opacity: 0},
+    visible: { opacity: 1},
   };
 
   return (

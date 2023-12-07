@@ -1,15 +1,29 @@
-
-
 /* Item.css */
 
-.item{
+.listItem {
     display: flex;
-    padding: 6px 10px 6px 10px;
+    padding: 16px 10px 16px 10px;
     align-items: center;
     justify-content: flex-start;
-    border-radius: 10px;
-}
-.icon{
-    margin-right: 0.5rem;
-    margin-top: 6px
-}
+    margin-bottom: 8px; 
+    cursor: pointer;
+
+    .icon {
+      margin-right: 0.5rem;
+      margin-top: 1px;
+    }
+  
+    span {
+      margin-left: 0.5rem; 
+    }
+  }
+  
+  @media screen and (max-width: 390px) {
+    .listItem span {
+      display: none !important;
+    }
+    .listItem{
+        width: 1rem !important;
+    }
+  }
+  
