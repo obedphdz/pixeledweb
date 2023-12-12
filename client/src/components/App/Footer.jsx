@@ -9,9 +9,9 @@ const Footer = () => (
         <img
           src={logo}
           alt="pixeled"
-          className="w-full md:w-[266px] h-auto object-contain mt-5 md:ml-14 mx-auto"
-        />
-        <p className={`${styles.paragraph3} mt-5 mr-36 max-w-[312px] mx-auto`}>
+          className="w-full md:w-[266px] h-auto object-contain mt-5 md:ml-14 mx-auto sm:w-[380px] xs:w-[120px] ss:w-[130px] iphone14plus:w-[200px] iphone11:w-[100px]"
+          />
+        <p className={`${styles.paragraph} mt-5 mr-36 max-w-[312px] mx-auto`}>
             Transformando ideas en realidad con calidad y dedicación.
         </p>
       </div>

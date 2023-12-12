@@ -11,14 +11,16 @@ module.exports = {
         dimBlue: "#4d4d4d",
         pinkHover: '#ce0c46',
         dimPurple: 'hsla(290, 20%, 55%)',
-        pixPurple: '#91145dea',
+        pixPurple: '#4e0530ea',
         whiteColor: 'hsl(0, 0%, 100%)',
       },
     },
     screens: {
       /* Mobile screens */
+    'iphone14plus': '428px',
       xs: "480px",
       ss: "620px",
+      'iphone11': '750px',
       /* Tablets */
       sm: "768px",
       /* Laptops */

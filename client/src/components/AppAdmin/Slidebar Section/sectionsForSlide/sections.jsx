@@ -12,7 +12,13 @@ export const sectionsForAdmin = [
 		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ad/ordenes' },
 		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/ad/historial' },
 		],
-	  },
+	},/* 
+		{
+			title: 'Admin',
+			items: [
+			  { name: 'Precios', icon: <MdOutlinePriceChange />, link: '/precios' },
+			],
+		}, */
 ]
 
 /* Jefe Diseñador */
@@ -27,12 +33,6 @@ export const sectionsForJefeDi = [
 		{ name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/jd/historial' },
 	  ],
 	},
-	/* {
-	  title: 'Admin',
-	  items: [
-		{ name: 'Precios', icon: <MdPriceCheck />, link: '/precios' },
-	  ],
-	}, */
 ];
 
 /* Disenador */

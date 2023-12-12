@@ -22,20 +22,18 @@ const Navbar = () => {
             key={nav.id}
             className={`font-poppins font-bold cursor-pointer text-[16px] text-black hover:text-pixColor ${
               active === nav.title ? "text-pixColor font-bold" : ""
-            } ${index === navLinks.length - 1 ? "mr-10" : "mr-10"}`}
+            } ${index === navLinks.length - 1 ? "mr-6" : "mr-6"}`}
             onClick={() => setActive(nav.title)}
           >
-  
             <a href={`${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
 
-        {/* Responsive styles */}
-
+      {/* Responsive styles */}
       <div className="sm:hidden flex flex-1 justify-end items-center">
-        <div className="w-[18px] h-[18px] rounded-md p-2 cursor-pointer ">
-          <TiThMenu onClick={() => setToggle(!toggle)} className="w-[25px] h-[25px]" />
+        <div className="w-[25px] h-[25px] rounded-md p-2 cursor-pointer">
+          <TiThMenu onClick={() => setToggle(!toggle)} className="w-[25px] h-[25px] text-pixPurple" />
         </div>
 
         <div
@@ -52,13 +50,13 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-              <a href={`${nav.id}`}>{nav.title}</a>
+                <a href={`${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </nav> 
+    </nav>
   );
 };
 
