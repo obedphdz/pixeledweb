@@ -197,12 +197,6 @@ const Login = () => {
 							<span>Iniciar Sesión</span>
 							<MdOutlineLogin className='icon' />
 						</button>
-						<span className='forgotPassword'>
-							¿Olvidaste tu contraseña?{' '}
-							<a href='' className='clickHere'>
-								Click Aquí
-							</a>
-						</span>
 					</form>
 				</div>
 			</div>

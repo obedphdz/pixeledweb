@@ -17,7 +17,9 @@ module.exports = {
     },
     screens: {
       /* Mobile screens */
-    'iphone14plus': '428px',
+      'iphoneX':'375px',
+      'iphone12':'390px',
+      'iphone14plus': '428px',
       xs: "480px",
       ss: "620px",
       'iphone11': '750px',
@@ -28,6 +30,8 @@ module.exports = {
       lg: "1200px",
       /* PC's */
       xl: "1700px",
+      /* 21-inch screen */
+      '21inch': '2048px',
        /* 27-inch screen */
       '27inch': "2560px",
     },

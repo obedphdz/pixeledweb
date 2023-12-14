@@ -36,8 +36,7 @@ root {
 	}
 }
 
-.label,
-.forgotPassword {
+.label{
 	color: black;
 	font-weight: 700;
 }
@@ -100,7 +99,7 @@ root {
 
 				.title {
 					color: var(--whiteColor);
-					font-size: 28px;
+					font-size: 25px;
 					font-weight: 800;
 				}
 
@@ -161,7 +160,7 @@ root {
 
 				img {
 					width: 80px;
-					margin-left: 19px;
+					margin: auto;
 					padding-bottom: 0.5rem;
 				}
 
@@ -222,6 +221,7 @@ root {
 					.icon {
 						font-size: 20px;
 						transition: 0.3s ease;
+						margin-top: -4px;
 					}
 
 					&:hover {
@@ -231,20 +231,8 @@ root {
 						.icon {
 							color: var(--whiteColor);
 							transition: translateX(5px);
+							margin-left: 2rem;
 						}
-					}
-				}
-
-				.forgotPassword {
-					font-size: 13px;
-					color: var(--blackColor);
-					opacity: 0.7;
-					text-align: center;
-
-					a {
-						text-decoration: underline;
-						cursor: pointer;
-						opacity: 1;
 					}
 				}
 			}
@@ -253,6 +241,141 @@ root {
 }
 
 /* Queries for Login And Register page.  --------  */
+
+/* Agrega estilos específicos para pantallas más pequeñas, como iPads y móviles */
+@media screen and (max-width: 1024px) {
+	.loginPage {
+	  .container {
+		flex-direction: column;
+		padding: 1.5rem;
+  
+		.videoDiv {
+		  width: 100%;
+		  .textDivLogin {
+			.title {
+			  font-size: 20px;
+			}
+  
+			p {
+			  padding: 1rem;
+			}
+		  }
+  
+		  .footerDiv {
+			.text {
+			  font-size: 12px;
+			}
+  
+			.btn {
+			  padding: 0.4rem 1.5rem;
+			}
+		  }
+		}
+  
+		.formDivLogin {
+		  gap: 1rem;
+		  transform: translateY(-0.5rem);
+  
+		  .headerDiv {
+			padding: 1rem 0;
+  
+			img {
+			  width: 70px;
+			}
+  
+			h3 {
+			  font-size: 20px;
+			}
+		  }
+  
+		  form {
+			gap: 0.5rem;
+  
+			.inputDiv {
+				label {
+					font-size: 14px; /* Tamaño de fuente reducido para labels */
+					padding: 0.3rem 0;
+				  }
+				input {
+					font-size: 14px; /* Tamaño de fuente reducido para inputs */
+					width: 100%;
+					max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+				}
+			}
+		  }
+		}
+	  }
+	}
+}
+
+@media screen and (max-width: 927px) {
+	.loginPage {
+		.container {
+			width: 90%;
+		}
+	}
+}
+  
+@media screen and (max-width: 768px) {
+	.loginPage {
+	  .container {
+		.formDivLogin {
+		  .formLogin {
+			.btn {
+			  padding: 0.9rem 1.5rem;
+			}
+		  }
+		}
+	  }
+	}
+}
+
+@media screen and (max-width: 678px) {
+	.loginPage {
+		.container {
+			.videoDiv {
+				.textDivLogin {
+					.title {
+						font-size: 20px;
+					}
+
+					p {
+						padding: 1rem;
+					}
+				}
+
+				.footerDiv {
+					.text {
+						font-size: 12px;
+					}
+
+					.btn {
+						padding: 0.8rem 1.5rem;
+					}
+				}
+			}
+
+			.formDivLogin {
+				.headerDiv {
+					padding: 1rem 0;
+
+					h3 {
+						font-size: 20px;
+					}
+				}
+
+				.form {
+					.inputDiv {
+						input {
+							width: 100%;
+							max-width: 200px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 @media screen and (max-width: 602px) {
 	.loginPage {
@@ -314,84 +437,37 @@ root {
 		}
 	}
 }
-
-@media screen and (max-width: 678px) {
-	.loginPage {
-		.container {
-			.videoDiv {
-				.textDivLogin {
-					.title {
-						font-size: 20px;
-					}
-
-					p {
-						padding: 1rem;
-					}
-				}
-
-				.footerDiv {
-					.text {
-						font-size: 12px;
-					}
-
-					.btn {
-						padding: 0.8rem 1.5rem;
-					}
-				}
-			}
-
-			.formDivLogin {
-				.headerDiv {
-					padding: 1rem 0;
-
-					h3 {
-						font-size: 20px;
-					}
-				}
-
-				.form {
-					.inputDiv {
-						input {
-							width: 100%;
-							max-width: 200px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 927px) {
-	.loginPage {
-		.container {
-			width: 85%;
-		}
-	}
-}
-
-/* @media screen and (min-width: 1700px) {
+  
+@media screen and (max-width: 480px) {
 	.loginPage {
 	  .container {
 		.formDivLogin {
-		  .formLogin {
-			margin-left: 60px; 
-			max-width: 700px; 
+		  .headerDiv {
+			img {
+			  width: 50px;
+			}
+  
+			h3 {
+			  font-size: 18px;
+			}
+		  }
+  
+		  .form {
+			.inputDiv {
+				label {
+				  font-size: 12px; /* Tamaño de fuente aún más reducido para labels */
+				  padding: 0.2rem 0;
+				}
+	
+				input {
+				  font-size: 12px; /* Tamaño de fuente aún más reducido para inputs */
+				  width: 100%;
+				  max-width: 180px; /* Ajusta el ancho máximo según sea necesario */
+				}
+			  }
 		  }
 		}
 	  }
 	}
-
-	.loginPage{
-		.container{
-			.formDivLogin{
-				.headerDiv{
-					margin-left: 3rem;
-					h3{
-						font-size: 30px;
-					}
-				}
-			}
-		}
-	}
-  } */
+}
+  
