@@ -22,6 +22,7 @@ import HistorialDise from '../AppAdmin/AppDiseñador/HistorialDise';
 import HistorialJefeDise from '../AppAdmin/AppJefeDiseñador/HistorialPedidos/HistorialJefeDise';
 import VistaAsigPedi from '../AppAdmin/AppJefeDiseñador/AsignacionPedidos/VistaAsigPedi';
 import MisPedidos from '../AppAdmin/AppJefeDiseñador/Pedidos Asignados/MisPedidos';
+import Modal1 from '../AppAdmin/NuevaOrden/ModalOrder/Modal';
 
 function PixHome() {
 	return (
@@ -56,6 +57,7 @@ function PixHome() {
 
 					<Route path='/modal' element={<MiModal />} />
 					<Route path='/cliente' element={<Cliente />} />
+					<Route path='/prueba' element={<Modal1 />} />
 
 					<Route path='*' element={<ErrorPage />} />
 				</Routes>

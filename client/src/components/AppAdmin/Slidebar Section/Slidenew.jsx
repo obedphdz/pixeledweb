@@ -1,6 +1,5 @@
 /* Slidenew.jsx */
-/* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion'; 
 import './Slidenew.css';
 import ItemSlide from './ItemSlide';
@@ -10,17 +9,11 @@ import {Link} from 'react-router-dom'
 import logo1 from '../../../assets/svg/pixecol.svg';
 
 /* Imported icons */
-import { HiOutlineClipboardList } from 'react-icons/hi';
-import { MdOutlinePriceChange, MdPriceCheck } from 'react-icons/md';
-import {
-	BsPersonBoundingBox,
-	BsFillClipboardPlusFill,
-	BsClockHistory,
-} from 'react-icons/bs';
+import { MdPriceCheck } from 'react-icons/md';
+import { BsPersonBoundingBox } from 'react-icons/bs';
  import { BiSpreadsheet, BiLogOut } from 'react-icons/bi';
 import { FiUsers } from 'react-icons/fi';
-import {FaBars} from 'react-icons/fa'
-import { TbStatusChange, TbChartInfographic, TbArrowBarLeft } from 'react-icons/tb';
+import { TbChartInfographic, TbArrowBarLeft } from 'react-icons/tb';
 
 
 const Slidenew  = ({ sections }) => {

@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 
-import { UploaderComponent, FilesDirective, UploadedFilesDirective } from '@syncfusion/ej2-react-inputs';
+import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
 import { useRef } from 'react';
-const SubirArchivo = () => {
+
+const SubirArchivo = ({ id, value, onFileSelected }) => {
     // Uploader component
     const uploadObj = useRef(null);
-    let dropElement;
     let asyncSettings = null;
     let dropContainerRef = null;
     let dropContainerEle;
@@ -17,23 +17,34 @@ const SubirArchivo = () => {
         saveUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Save',
         removeUrl: 'https://services.syncfusion.com/react/production/api/FileUploader/Remove'
     };
+
     const rendereComplete = () => {
-        dropElement = dropContainerEle;
+        const dropElement = dropContainerRef.current;
         uploadObj.current.dropArea = dropElement;
         uploadObj.current.dataBind();
         uploadObj.current.element.setAttribute('name', 'UploadFiles');
-    };
+      };
+    
+      const handleFileSelected = (args) => {
+        // Llama a la función proporcionada desde NewOrder
+        onFileSelected(args.filesData.length > 0 ? args.filesData[0].fileUrl : '');
+      };
+    
     const onRemoveFile = (args) => {
         args.postRawFile = false;
     };
-    const clearButtonClick = () => {
-        uploadObj.current.clearAll();
-    };
+
     return (<div className='control-pane' ref={dropContainerRef}>
 			<div className='control-section uploadpreview'>
 				<div className='col-lg-9'>
 					<div className='validation_wrapper'>
-						<UploaderComponent id='validation' type='file' ref={uploadObj} asyncSettings={asyncSettings} removing={onRemoveFile.bind(this)}>
+						<UploaderComponent 
+                            id='validation' 
+                            type='file' 
+                            ref={uploadObj} 
+                            asyncSettings={asyncSettings} 
+                            removing={onRemoveFile.bind(this)}
+                            selected={handleFileSelected.bind(this)}>
 						</UploaderComponent>
 					</div>
 				</div>

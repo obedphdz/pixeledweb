@@ -60,7 +60,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-						<Link to='/crear-orden' className='menuLink flex'>
+						<Link to='/ad/nueva-orden' className='menuLink flex'>
 							<BsFillClipboardPlusFill className='icon' />
 							<span className='smallText'>Nueva Orden</span>
 						</Link>

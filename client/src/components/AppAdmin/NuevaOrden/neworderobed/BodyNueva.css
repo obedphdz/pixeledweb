@@ -2,7 +2,7 @@
   top: 50px;
   left: 700px;
   font-size: 2rem;
-  text-align: center;
+  text-align: start !important;
 }
 .tituloSeccion h1 {
   font-weight: bolder;
@@ -20,7 +20,7 @@
   padding: 3rem;
   /* PARA ACTIVAR EL SCROLL */
   overflow: auto;
-  margin-top: 0rem;
+  margin-top: -6rem;
 }
 .mainContentBodyNueva .bottomBodyNueva {
   margin-top: 2rem;
