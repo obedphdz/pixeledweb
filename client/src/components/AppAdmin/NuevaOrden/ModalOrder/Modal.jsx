@@ -1,17 +1,18 @@
-// Modal.jsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { DialogUtility } from '@syncfusion/ej2-react-popups';
+import './MiModal.css'
 
-const Modal = ({ showModal,orderSummary, handleContinueWithOrder, handleSendOrder}) => {
+const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrder }) => {
     const [statusText, setStatusText] = useState('');
-    let dialogObj;
+    const dialogObjRef = useRef(null);
 
     const promptOkAction = () => {
         handleContinueWithOrder();
+        dialogObjRef.current.hide();
     };
 
     const promptCancelAction = () => {
-        dialogObj.hide();
+        dialogObjRef.current.hide();
         setStatusText("The user canceled the prompt dialog");
         handleSendOrder();
     };
@@ -19,15 +20,50 @@ const Modal = ({ showModal,orderSummary, handleContinueWithOrder, handleSendOrde
     useEffect(() => {
         if (showModal) {
             setStatusText('');
-            dialogObj = DialogUtility.confirm({
+            dialogObjRef.current = DialogUtility.confirm({
                 title: 'Resumen del Pedido:',
-                width: '400px',
-                content: `<div><p>${JSON.stringify(orderSummary)}</p><button class="continue-button" onclick=${handleContinueWithOrder}>Continuar con Orden</button><button class="send-button" onclick=${handleSendOrder}>Enviar Pedido</button></div>`,
+                width: '400px',/* 
+                content: `<div><p>${JSON.stringify(orderSummary)}</p></div>`, */
+                content: `
+                    <div id="dialog-content">
+                        <p>
+                            <strong>Nombre:</strong> ${orderSummary.nombreCliente} <br />
+                            <strong>Apellido Paterno:</strong> ${orderSummary.apePatCliente} <br />
+                            <strong>Apellido Materno:</strong> ${orderSummary.apeMatCliente} <br />
+                            <strong>Contacto Tel:</strong> ${orderSummary.contactoCliente} <br />
+                            <strong>Instalación:</strong> ${orderSummary.instalacion ? 'Sí' : 'No'} <br />
+                            <strong>Barniz Antigrafitti:</strong> ${orderSummary.barniz ? 'Sí' : 'No'} <br />
+                            <strong>Cantidad:</strong> ${orderSummary.cantidad} <br />
+                            <strong>Base:</strong> ${orderSummary.base} <br />
+                            <strong>Altura:</strong> ${orderSummary.altura} <br />
+                            <strong>Importe:</strong> ${orderSummary.importe} <br />
+                            <strong>Material:</strong> ${orderSummary.material} <br />
+                            <strong>Acabado:</strong> ${orderSummary.acabado} <br />
+                            <strong>Tipo de Impresión:</strong> ${orderSummary.tipoImpresion} <br />
+                            <strong>Fecha de Envío:</strong> ${orderSummary.fechaEnvio} <br />
+                            <strong>Fecha de Entrega:</strong> ${orderSummary.fechaEntrega} <br />
+                            <strong>Archivo:</strong> ${orderSummary.archivo} <br />
+                            <strong>Notas:</strong> ${orderSummary.notas} <br />
+                        </p>
+                    </div>
+                `,
                 okButton: { text: 'Continuar Orden', click: promptOkAction },
                 cancelButton: { text: 'Enviar Orden', click: promptCancelAction },
+                showCloseIcon: true,
+                closeOnEscape: true
             });
         }
     }, [showModal]);
+
+    useEffect(() => {
+        return () => {
+            // Cleanup function, clear the dialog reference when the component unmounts
+            if (dialogObjRef.current) {
+                dialogObjRef.current.destroy();
+                dialogObjRef.current = null;
+            }
+        };
+    }, []);
 
     return (
         <div className="App" id='dialog-target'>

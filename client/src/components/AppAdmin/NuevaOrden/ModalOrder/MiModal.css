@@ -1,42 +1,55 @@
-.modal-container {
+.dialog-content {
+  padding: 20px;
   text-align: center;
-  margin-top: 50px;
+  background-color: aqua !important;
 }
 
-.open-button {
+.dialog-content p {
+  margin-bottom: 15px;
+}
+
+.continue-button,
+.send-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Agrega estilos según sea necesario */
+#dialog-target {
+  text-align: center;
+  padding: 20px;
+}
+
+#dialog-content {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#dialog-content strong {
+  color: #2e0b42;
+}
+
+#dialog-content p {
+  margin-bottom: 10px;
+}
+
+#dialog-content .continue-button,
+#dialog-content .send-button {
   background-color: #4caf50;
   color: white;
-  padding: 10px 15px;
-  font-size: 16px;
   border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: bisque;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 100%;
-  outline: none;
-}
-
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.close-button {
-  background-color: #ff5252;
-  color: white;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
-  border: none;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 15px;
+  margin-right: 10px;
 }
+
+#dialog-content .send-button {
+  background-color: #f44336;
+}
+

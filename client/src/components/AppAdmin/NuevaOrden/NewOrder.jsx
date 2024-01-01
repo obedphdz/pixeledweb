@@ -62,6 +62,8 @@ const NewOrder = (props) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
+    // Antes de mostrar el modal, nos aseguramos de que los datos estén guardados
+    handleCreateOrder();
     setShowModal(true);
   };
 
