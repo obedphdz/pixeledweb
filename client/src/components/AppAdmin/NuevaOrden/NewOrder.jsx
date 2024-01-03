@@ -229,7 +229,7 @@ const NewOrder = (props) => {
       console.log("Continue With Order clicked");
       setArchivo('');
     
-      // Reiniciamos los valores necesarios para el nuevo archivo
+      /* // Reiniciamos los valores necesarios para el nuevo archivo
       setCantidad(1);
       setBase(1);
       setAltura(1);
@@ -243,7 +243,7 @@ const NewOrder = (props) => {
       setFechaEnvio(new Date());
       setFechaEntrega(new Date());
       setFechaInstalacion(new Date());
-      setNotas('');
+      setNotas(''); */
     
       // También puedes limpiar el estado de formData si es necesario
       setFormData({
@@ -299,8 +299,8 @@ const NewOrder = (props) => {
           // Manejar errores de la solicitud al backend
           console.error('Error al enviar pedido al backend:', error);
         }); */
-
-        // Reiniciamos los valores necesarios para el nuevo archivo
+/* 
+       Reiniciamos los valores necesarios para el nuevo archivo
        setnombreCliente('');
        setapePatCliente('');
        setapeMatCliente('');
@@ -318,7 +318,7 @@ const NewOrder = (props) => {
        setFechaEnvio(new Date());
        setFechaEntrega(new Date());
        setFechaInstalacion(new Date());
-       setNotas('');
+       setNotas(''); */
 
        // Recargar la página
       navigate('/ad/nueva-orden');
@@ -589,6 +589,7 @@ const NewOrder = (props) => {
           </button>
         </div>
 
+  
       <Modal
         showModal={showModal}
         orderSummary={orderSummary}
