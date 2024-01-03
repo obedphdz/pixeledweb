@@ -1,5 +1,6 @@
 import '../Admin.css'
-import Slidebar from '../Slidebar Section/Slidebar';
+import Slidenew from '../Slidebar Section/Slidenew';
+import { sectionsForAdmin } from '../Slidebar Section/sectionsForSlide/sections';
 import PreciosLista from './PreciosLista';
 
 export default function Precios() {
@@ -7,7 +8,7 @@ export default function Precios() {
 		<>
 			<div className='app-body'>
 				<div className='containerAdmin'>
-					<Slidebar />
+					<Slidenew sections={sectionsForAdmin}/>
 					<PreciosLista />
 				</div>
 			</div>

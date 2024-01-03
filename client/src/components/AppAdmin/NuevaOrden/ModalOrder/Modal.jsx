@@ -6,12 +6,12 @@ const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrd
     const [statusText, setStatusText] = useState('');
     const dialogObjRef = useRef(null);
 
-    const promptOkAction = () => {
+    const promptContinueAction = () => {
         handleContinueWithOrder();
         dialogObjRef.current.hide();
     };
 
-    const promptCancelAction = () => {
+    const promptSendAction = () => {
         dialogObjRef.current.hide();
         setStatusText("The user canceled the prompt dialog");
         handleSendOrder();
@@ -22,8 +22,7 @@ const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrd
             setStatusText('');
             dialogObjRef.current = DialogUtility.confirm({
                 title: 'Resumen del Pedido:',
-                width: '400px',/* 
-                content: `<div><p>${JSON.stringify(orderSummary)}</p></div>`, */
+                width: '400px',
                 content: `
                     <div id="dialog-content">
                         <p>
@@ -42,13 +41,14 @@ const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrd
                             <strong>Tipo de Impresión:</strong> ${orderSummary.tipoImpresion} <br />
                             <strong>Fecha de Envío:</strong> ${orderSummary.fechaEnvio} <br />
                             <strong>Fecha de Entrega:</strong> ${orderSummary.fechaEntrega} <br />
+                            <strong>Fecha Instalación:</strong> ${orderSummary.fechaInstalacion} <br />
                             <strong>Archivo:</strong> ${orderSummary.archivo} <br />
                             <strong>Notas:</strong> ${orderSummary.notas} <br />
                         </p>
                     </div>
                 `,
-                okButton: { text: 'Continuar Orden', click: promptOkAction },
-                cancelButton: { text: 'Enviar Orden', click: promptCancelAction },
+                okButton: { text: 'Continuar Orden', click: promptContinueAction },
+                cancelButton: { text: 'Enviar Orden', click: promptSendAction },
                 showCloseIcon: true,
                 closeOnEscape: true
             });

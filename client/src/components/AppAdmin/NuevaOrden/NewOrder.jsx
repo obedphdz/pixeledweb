@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 /* NewOrder.jsx */
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useRef} from 'react';
 import { TextBoxComponent, NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
@@ -12,10 +12,14 @@ import Modal from './ModalOrder/Modal'
 import {materialData, acabadosData, tipoImpresionData} from './MaterialData/materialData.json';
 import './NewOrder.css';
 import { useLocalStorage } from "./useLocalStorage"
+import { useNavigate } from 'react-router-dom';
+
 
 const NewOrder = (props) => {
 
   const dateValue = new Date();
+  const navigate = useNavigate();
+
 
   /* Guardamos en el LocalStorage los datos personales del cliente */
   const [nombreCliente, setnombreCliente] = useLocalStorage('nombreCliente', '');
@@ -29,12 +33,13 @@ const NewOrder = (props) => {
   const [cantidad, setCantidad] = useLocalStorage('cantidad', 1);
   const [base, setBase] = useLocalStorage('base', 1);
   const [altura, setAltura] = useLocalStorage('altura', 1);
-  const [importe, setImporte] = useLocalStorage('importe', 100);
+  const [precioUnitario, setprecioUnitario] = useLocalStorage('precioUnitario', 100);
   const [material, setMaterial] = useLocalStorage('material', null);
   const [acabado, setAcabado] = useLocalStorage('acabado', null);
   const [tipoImpresion, setTipoImpresion] = useLocalStorage('tipoImpresion', null);
   const [fechaEnvio, setFechaEnvio] = useLocalStorage('fechaEnvio', dateValue);
   const [fechaEntrega, setFechaEntrega] = useLocalStorage('fechaEntrega', dateValue);
+  const [fechaInstalacion, setFechaInstalacion] = useLocalStorage('fechaInstalacion', dateValue);
   const [archivo, setArchivo] = useLocalStorage('archivo', '');
   const [notas, setNotas] = useLocalStorage('notas', '');
 
@@ -48,17 +53,18 @@ const NewOrder = (props) => {
     cantidad: 1,
     base: 1,
     altura: 1,
-    importe: 100,
+    precioUnitario: 100,
     material: null,
     acabado: null,
     tipoImpresion: null,
     fechaEnvio: dateValue,
     fechaEntrega: dateValue,
+    fechaInstalacion: dateValue,
     archivo: '',
     notas: '',
   });
 
-  
+  /* Mostrar Modal */
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
@@ -70,6 +76,7 @@ const NewOrder = (props) => {
     /* Material Data */
     const localFields = { text: 'name', value: 'name' };
 
+   /* Objeto que sirve para dar un resumen de los datos en el modal */ 
     const orderSummary = {
       nombreCliente: nombreCliente,
       apePatCliente: apePatCliente,
@@ -80,12 +87,13 @@ const NewOrder = (props) => {
       cantidad: cantidad,
       base: base,
       altura: altura,
-      importe: importe,
+      precioUnitario: precioUnitario,
       material: material,
       acabado: acabado,
       tipoImpresion: tipoImpresion,
       fechaEnvio: fechaEnvio,
       fechaEntrega: fechaEntrega,
+      fechaInstalacion:  fechaInstalacion,
       archivo: archivo,
       notas: notas,
     };
@@ -109,12 +117,13 @@ const NewOrder = (props) => {
         cantidad,
         base,
         altura,
-        importe,
+        precioUnitario,
         material,
         acabado,
         tipoImpresion,
         fechaEnvio,
         fechaEntrega,
+        fechaInstalacion,
         archivo,
         notas
       };
@@ -133,12 +142,13 @@ const NewOrder = (props) => {
         cantidad: 1,
         base: 1,
         altura: 1,
-        importe: 100,
+        precioUnitario: 100,
         material: null,
         acabado: null,
         tipoImpresion: null,
         fechaEnvio: dateValue,
         fechaEntrega: dateValue,
+        fechaInstalacion: dateValue,
         archivo: '',
         notas: '',
       });
@@ -179,8 +189,8 @@ const NewOrder = (props) => {
         case "altura":
           setAltura(value);
           break;
-        case "importe":
-          setImporte(value);
+        case "precioUnitario":
+          setprecioUnitario(value);
           break;
         case "material":
           setMaterial(value);
@@ -197,6 +207,9 @@ const NewOrder = (props) => {
         case "fechaEntrega":
           setFechaEntrega(value);
           break;
+        case "fechaInstalacion":
+          setFechaInstalacion(value);
+          break;
         case "archivo":
           // If value is a file, you might want to handle it differently
           // For simplicity, assuming it's the file URL for now
@@ -211,20 +224,105 @@ const NewOrder = (props) => {
     };
   
     const handleContinueWithOrder = () => {
-      console.log("Continue with order clicked .. ");
-      // Aquí puedes implementar la lógica para continuar con otro archivo
-      // Puedes realizar alguna acción o simplemente limpiar el estado actual y permitir al usuario agregar más archivos
+      // Esta función se llama cuando el usuario elige continuar con otro archivo
+      // Limpiamos los datos del archivo actual
+      console.log("Continue With Order clicked");
+      setArchivo('');
+    
+      // Reiniciamos los valores necesarios para el nuevo archivo
+      setCantidad(1);
+      setBase(1);
+      setAltura(1);
+      setprecioUnitario(100);
+      setMaterial(null);
+      setAcabado(null);
+      setInstalacion(null);
+      setBarniz(null);
+      setTipoImpresion(null);
+      setArchivo(null);
+      setFechaEnvio(new Date());
+      setFechaEntrega(new Date());
+      setFechaInstalacion(new Date());
+      setNotas('');
+    
+      // También puedes limpiar el estado de formData si es necesario
       setFormData({
-        ...formData,
-        archivo: '', // Limpiar el campo de archivo
+        nombreCliente: '',
+        apePatCliente: '',
+        apeMatCliente: '',
+        contactoCliente,
+        instalacion: false,
+        barniz: false,
+        cantidad: 1,
+        base: 1,
+        altura: 1,
+        precioUnitario: 100,
+        material: null,
+        acabado: null,
+        tipoImpresion: null,
+        fechaEnvio: new Date(),
+        fechaEntrega: new Date(),
+        fechaInstalacion: new Date(),
+        archivo: '',
+        notas: '',
       });
+
+      // Recargar la página
+      navigate('/ad/nueva-orden');
     };
+    
   
     const handleSendOrder = () => {
        // Guardar datos del pedido
-       console.log('Datos del pedido enviados: (Send Order clicked ... )', formData);
+      console.log("handleSendOrder clicked");
+      // Esta función se llama cuando el usuario elige enviar el pedido
+      handleCreateOrder(); 
 
-  };
+
+      // Aquí podrías realizar alguna acción adicional antes de enviar el pedido, si es necesario
+      // Luego, puedes enviar los datos al backend para almacenarlos en la base de datos
+
+      /*   Ejemplo de cómo podrías hacer una solicitud al backend usando fetch
+      fetch('http://tu-backend.com/api/guardarPedido', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Puedes ajustar los datos que envías según tu API
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Aquí puedes manejar la respuesta del backend, si es necesario
+          console.log('Respuesta del backend:', data);
+        })
+        .catch(error => {
+          // Manejar errores de la solicitud al backend
+          console.error('Error al enviar pedido al backend:', error);
+        }); */
+
+        // Reiniciamos los valores necesarios para el nuevo archivo
+       setnombreCliente('');
+       setapePatCliente('');
+       setapeMatCliente('');
+       setcontactoCliente('');
+       setCantidad(1);
+       setBase(1);
+       setAltura(1);
+       setprecioUnitario(100);
+       setMaterial(null);
+       setAcabado(null);
+       setTipoImpresion(null);
+       setArchivo('');
+       setInstalacion(null);
+       setBarniz(null);
+       setFechaEnvio(new Date());
+       setFechaEntrega(new Date());
+       setFechaInstalacion(new Date());
+       setNotas('');
+
+       // Recargar la página
+      navigate('/ad/nueva-orden');
+};
 
     return (
         <div className='control-pane'>
@@ -320,15 +418,15 @@ const NewOrder = (props) => {
                       value={altura} 
                       input={(args) => handleInputChange('altura', args.value)}>
                     </NumericTextBoxComponent>
-                    <div className="control-label">Importe</div>
+                    <div className="control-label">Precio Unitario</div>
                     <NumericTextBoxComponent  
-                      id='importe' 
+                      id='precioUnitario' 
                       format='c3' 
                       decimals={3} 
                       validateDecimalOnType={true} 
-                      onChange={(e) => setImporte(e.value)}
-                      value={importe} 
-                      input={(args) => handleInputChange('importe', args.value)}>
+                      onChange={(e) => setprecioUnitario(e.value)}
+                      value={precioUnitario} 
+                      input={(args) => handleInputChange('precioUnitario', args.value)}>
                     </NumericTextBoxComponent>
             </div>
           </div>
@@ -395,6 +493,7 @@ const NewOrder = (props) => {
                     </DatePickerComponent>
                 </div>
             </div>
+            {/* Fecha Estimada de entrega */}
             <div className='control-pane'>
               Fecha Estimada de Entrega
                 <div className='control-section'>
@@ -408,6 +507,24 @@ const NewOrder = (props) => {
                   </div>
                 </div>
             </div>
+
+          {/* Fecha Instalacion: solo mostrarse en caso de que activaron el switchComponent de 'instalacion' */}
+          {instalacion && (
+            <div className='control-pane'>
+              Fecha de Instalación
+              <div className='control-section'>
+                <div className='datepicker-control-section'>
+                  <DatePickerComponent 
+                    id="fechaInstalacion" 
+                    value={fechaInstalacion}
+                    change={(e) => setFechaInstalacion(e.value)}
+                    input={(args) => handleInputChange('fechaInstalacion', args.value)}>
+                  </DatePickerComponent>
+                </div>
+              </div>
+            </div>
+          )}
+
           </div>
 
         {/* Switch Instalacion/Barniz */}
@@ -467,7 +584,7 @@ const NewOrder = (props) => {
           <button className='hvr-shutter-out-horizontal' type='button' onClick={handleShowModal} id='agregarArchivo'>
             Agregar otro archivo
           </button>
-          <button className='hvr-shutter-out-horizontal' type='submit'  onClick={handleCreateOrder} id='crearPedido'>
+          <button className='hvr-shutter-out-horizontal' type='submit'  onClick={handleSendOrder} id='crearPedido'>
             Crear Pedido
           </button>
         </div>

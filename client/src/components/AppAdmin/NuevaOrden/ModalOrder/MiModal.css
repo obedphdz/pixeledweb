@@ -1,7 +1,6 @@
 .dialog-content {
   padding: 20px;
   text-align: center;
-  background-color: aqua !important;
 }
 
 .dialog-content p {
@@ -28,7 +27,7 @@
 }
 
 #dialog-content strong {
-  color: #2e0b42;
+  color: #122564;
 }
 
 #dialog-content p {

@@ -13,7 +13,6 @@ import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenD
 import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
 import VistaEmp from '../AppAdmin/Empleados/VistaEmp';
 import VistaDetallesOrd from '../AppAdmin/Orders/VistaDetallesOrd';
-import MiModal from '../AppAdmin/NuevaOrden/ModalOrder/MiModal';
 import VistaClientes from '../AppAdmin/Clientes/VistaClientes';
 import VistaHistorial from '../AppAdmin/HistorialPedidos/VistaHistorial';
 import Disenador from '../AppAdmin/AppDiseñador/Disenador';
@@ -55,7 +54,6 @@ function PixHome() {
 					<Route path='/di/historial' element={<HistorialDise />} />
 					<Route path='/di/mis-pedidos' element={<MisPedidos />} />
 
-					<Route path='/modal' element={<MiModal />} />
 					<Route path='/cliente' element={<Cliente />} />
 					<Route path='/prueba' element={<Modal1 />} />
 
