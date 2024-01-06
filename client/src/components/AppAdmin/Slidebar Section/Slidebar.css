@@ -59,24 +59,41 @@
   margin-bottom: 12px;
 }
 .sideBar .menuDiv .btnLogOut, .sideBar .settingsDiv .btnLogOut {
+  position: relative;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
   margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   color: black;
+  transition: 0.3s, color 0.3s, font-weight 0.3s;
+  overflow: hidden;
 }
 .sideBar .menuDiv .btnLogOut .icon, .sideBar .settingsDiv .btnLogOut .icon {
+  font-size: 15px;
   margin-right: 5px;
-  margin-top: 3px;
+  margin-top: 0px;
+  position: relative;
+  left: 0;
+  transition: transform 0.3s;
+}
+.sideBar .menuDiv .btnLogOut .icon,
+.sideBar .menuDiv .btnLogOut span, .sideBar .settingsDiv .btnLogOut .icon,
+.sideBar .settingsDiv .btnLogOut span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .sideBar .menuDiv .btnLogOut:hover, .sideBar .settingsDiv .btnLogOut:hover {
   background: rgba(150, 220, 223, 0.651);
   color: var(--blackColor);
   font-weight: bolder;
+}
+.sideBar .menuDiv .btnLogOut:hover .icon, .sideBar .settingsDiv .btnLogOut:hover .icon {
+  transform: translateX(-50%);
 }
 .sideBar .menuDiv .menuLists .listItem, .sideBar .settingsDiv .menuLists .listItem {
   padding: 0.2rem 1.5rem;

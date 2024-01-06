@@ -1,7 +1,7 @@
 .sideArchivo-container {
     position: fixed;
     top: 24px;
-    right: 10px;
+    right: 15px;
     height: auto; 
     max-height: 80vh;
     overflow-y: auto;
@@ -18,7 +18,7 @@
 .h3side {
     font-weight: 600;
     margin-bottom: 18px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
   
   .archivoDiv {
@@ -40,27 +40,26 @@
   }
   
   .btnFinalizarOrden {
-    background-color: rgb(124, 124, 175);
+    background-color: rgb(220, 190, 228);
     width: 100%;
     border-radius: 6px;
-    color: aliceblue;
+    color: rgb(35, 36, 37);
     padding: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
   
     &:hover {
-      background-color: rgb(220, 190, 228);
-      color: rgb(40, 40, 53);
+      background-color: rgb(124, 124, 175);
+      color: white
     }
   }
   
   .addIcon {
     width: 98%;
     height: 20px;
-    margin-top: -10px; 
+    margin-top: -7px; 
     margin-left: -5px;
     color: rgb(36, 35, 35);
-    background-color: rgb(197, 197, 228);
     border-radius: 6px;
     cursor: pointer;
     transition: color 0.3s ease;

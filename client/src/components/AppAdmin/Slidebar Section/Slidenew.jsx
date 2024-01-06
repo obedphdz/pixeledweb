@@ -106,8 +106,9 @@ const Slidenew  = ({ sections }) => {
               <li>
                 <Link to='/'>
                   <button className={`btnLogOut ${!open ? 'hidden' : ''}`}>
-                    <BiLogOut className='icon' />
-                    <span style={{ display: open ? 'inline' : 'none' }}>Cerrar Sesión</span>
+                  <span style={{ display: open ? 'inline' : 'none' }} className='spanLogOut'>
+                  <BiLogOut className='iconLogOut' />
+                    Cerrar Sesión</span>
                   </button>
                 </Link>
               </li>

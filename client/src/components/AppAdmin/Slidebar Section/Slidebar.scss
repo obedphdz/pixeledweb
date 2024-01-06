@@ -64,29 +64,46 @@
             margin-bottom: 12px;
         }
 
-        .btnLogOut{
-                border: none;
-                outline: none;
-                cursor: pointer;
-                border-radius: 8px;
-                padding: 15px;
-                margin-right: 2rem;
-                margin-left: 2rem;
-                margin-bottom: 3rem;
-                color: black;
-        }
-
-        .btnLogOut .icon{
+        .btnLogOut {
+            position: relative;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 10px;
+            margin-right: 2rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            color: black;
+            transition: 0.3s, color 0.3s, font-weight 0.3s;
+            overflow: hidden; 
+          }
+          
+          .btnLogOut .icon {
+            font-size: 15px;
             margin-right: 5px;
-            margin-top: 3px;
-          }        
-        
-        .btnLogOut:hover{
+            margin-top: 0px;
+            position: relative; 
+            left: 0; 
+            transition: transform 0.3s;
+          }
+          
+          .btnLogOut .icon,
+          .btnLogOut span {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          
+          .btnLogOut:hover {
             background: rgba(150, 220, 223, 0.651);
             color: var(--blackColor);
             font-weight: bolder;
           }
-
+          
+          .btnLogOut:hover .icon {
+            transform: translateX(-50%);
+          }
         .menuLists{
             .listItem{
                 padding: .2rem 1.5rem;

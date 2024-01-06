@@ -79,7 +79,7 @@ return (
           <div className="textDiv">
             <h1>Crear un pedido</h1>
            
-            <Link to='/nueva-orden'>
+            <Link to='/ad/nueva-orden'>
               <span className="flex link">
                 Ir a Crear Pedido <BsArrowRightShort className='icon'/>
               </span>
