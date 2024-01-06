@@ -6,7 +6,6 @@ import NuevaOrden from '../AppAdmin/NuevaOrden/NuevaOrden';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from '../App/App';
 import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
-import Precios from '../AppAdmin/PreciosLista/Precios';
 import Cliente from '../AppCliente/Cliente';
 import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
 import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
@@ -34,7 +33,6 @@ function PixHome() {
 					<Route path='/register' element={<Register />} />
 					<Route path='/ad' element={<Admin  />} />
 					<Route path='/ad/nueva-orden' element={<NuevaOrden />} />
-					<Route path='/ad/precios' element={<Precios />} />
 					<Route path='/ad/crear-cotiza' element={<CrearCotizaciones />} />
 					<Route path='/ad/ordenes' element={<VistaOrdenes />} />
 					<Route path='/ad/ordenes/detalles-ord' element={<VistaDetallesOrd />}/>

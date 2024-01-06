@@ -9,11 +9,10 @@ import {Link} from 'react-router-dom'
 import logo1 from '../../../assets/svg/pixecol.svg';
 
 /* Imported icons */
-import { MdPriceCheck } from 'react-icons/md';
 import { BsPersonBoundingBox } from 'react-icons/bs';
- import { BiSpreadsheet, BiLogOut } from 'react-icons/bi';
+ import { BiLogOut } from 'react-icons/bi';
 import { FiUsers } from 'react-icons/fi';
-import { TbChartInfographic, TbArrowBarLeft } from 'react-icons/tb';
+import {TbArrowBarLeft } from 'react-icons/tb';
 
 
 const Slidenew  = ({ sections }) => {
@@ -94,28 +93,8 @@ const Slidenew  = ({ sections }) => {
             <h3 className='divTile'>Admin</h3>
             <ul className='menuLists grid'>
               <li>
-                <Link to='/'>
-                  <ItemSlide icon={<MdPriceCheck />} showName={open} name='Precios' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<MdPriceCheck />} showName={open} name='Proveedores' />
-                </Link>
-              </li>
-              <li>
                 <Link to='/ad/clientes'>
                   <ItemSlide icon={<FiUsers />} showName={open} name='Clientes' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<BiSpreadsheet />} showName={open} name='Solicitud de Material' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<TbChartInfographic />} showName={open} name='Comisiones' />
                 </Link>
               </li>
               <li>

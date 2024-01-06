@@ -28,7 +28,6 @@ export const sectionsForJefeDi = [
 	  items: [
 		{ name: 'Crear Pedido', icon: <MdOutlinePriceChange />, link: '/jd/crear-orden-dise' },
 		{ name: 'Asignacion de Pedidos', icon: <BsFillClipboardPlusFill />, link: '/jd/asignar' },
-		{ name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/jd/material' },
 		{ name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/jd/pedidos' },
 		{ name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/jd/historial' },
 	  ],
@@ -42,7 +41,6 @@ export const sectionsForDisenador = [
 		items: [
 		  { name: 'Pedidos Asignados', icon: <MdOutlinePriceChange />, link: '/ad' },
 		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/di/historial' },
-		  { name: 'Solicitar Material', icon: <HiOutlineClipboardList />, link: '/ad' }
 		],
 	  },
 ]

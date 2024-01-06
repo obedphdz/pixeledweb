@@ -37,10 +37,10 @@
         { "id": "aca5", "name": "Depilar y empapelar"}
     ],
 
-    "tipoImpresionData": [
-        { "id": "imp1", "name": "Alta Definición"},
-        { "id": "imp2", "name": "Letras 3D"},
-        { "id": "imp3", "name": "Taller"},
-        { "id": "imp4", "name": "Bastidor"}
+    "tipoTrabajoData": [
+        { "id": "tra1", "name": "Alta Definición"},
+        { "id": "tra2", "name": "Letras 3D"},
+        { "id": "tra3", "name": "Taller"},
+        { "id": "tra4", "name": "Bastidor"}
     ]
 }
