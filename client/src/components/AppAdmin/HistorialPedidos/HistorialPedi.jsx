@@ -3,6 +3,7 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Page, Sort, Inject, F
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import  Header  from '../MainBody/Header/Header';
 import { historialOrdersData } from '../../../data/dummy';
+import '../Orders/Orders.css'
 
 
 function HistorialPedi() {
@@ -25,7 +26,7 @@ function HistorialPedi() {
     }
     ;
     return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl historialDiv">
     <Header category="Admin" title="Historial Pedidos" />
     <div className='control-pane'>
             <div className='control-section'>

@@ -67,7 +67,7 @@ const Slidenew  = ({ sections }) => {
             }}
             onClick={handleToggle}
           >
-            <TbArrowBarLeft style={{ fontSize: '15px' }}/>
+            <TbArrowBarLeft style={{ fontSize: '15px' }} className='iconArrowBar'/>
           </motion.div>
         </motion.div>
       </div>

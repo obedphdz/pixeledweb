@@ -7,13 +7,13 @@ const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrd
     const dialogObjRef = useRef(null);
 
     const promptContinueAction = () => {
-        handleContinueWithOrder();
         dialogObjRef.current.hide();
+        handleContinueWithOrder();
     };
 
     const promptSendAction = () => {
         dialogObjRef.current.hide();
-        setStatusText("The user canceled the prompt dialog");
+        setStatusText("Orden Enviada al servidor. ");
         handleSendOrder();
     };
 
@@ -35,10 +35,10 @@ const Modal = ({ showModal, orderSummary, handleContinueWithOrder, handleSendOrd
                             <strong>Cantidad:</strong> ${orderSummary.cantidad} <br />
                             <strong>Base:</strong> ${orderSummary.base} <br />
                             <strong>Altura:</strong> ${orderSummary.altura} <br />
-                            <strong>Importe:</strong> ${orderSummary.importe} <br />
+                            <strong>Precio Unitario: $</strong> ${orderSummary.precioUnitario} <br />
                             <strong>Material:</strong> ${orderSummary.material} <br />
                             <strong>Acabado:</strong> ${orderSummary.acabado} <br />
-                            <strong>Tipo de Impresión:</strong> ${orderSummary.tipoImpresion} <br />
+                            <strong>Tipo de Impresión:</strong> ${orderSummary.tipoTrabajo} <br />
                             <strong>Fecha de Envío:</strong> ${orderSummary.fechaEnvio} <br />
                             <strong>Fecha de Entrega:</strong> ${orderSummary.fechaEntrega} <br />
                             <strong>Fecha Instalación:</strong> ${orderSummary.fechaInstalacion} <br />

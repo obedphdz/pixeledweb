@@ -19,8 +19,8 @@ const NewOrder = (props) => {
 
   const dateValue = new Date();
   const navigate = useNavigate();
-
   const [pedidos, setPedidos] = useState([]);
+  const [datosGuardados, setDatosGuardados] = useState(false);
 
   /* Guardamos en el LocalStorage los datos personales del cliente */
   const [nombreCliente, setnombreCliente] = useLocalStorage('nombreCliente', '');
@@ -67,20 +67,6 @@ const NewOrder = (props) => {
 
   /* Mostrar Modal */
   const [showModal, setShowModal] = useState(false);
-
-  /* Mostrar SideArchivo */
-  const [showSideAr, setShowSideAr] = useState(false);
-
-  const handleAddCard = () => {
-    // Por ahora, simplemente muestra SideAr cuando se agrega una nueva tarjeta
-    setShowSideAr(true);
-  };
-
-  const handleShowModal = () => {
-    // Antes de mostrar el modal, nos aseguramos de que los datos estén guardados
-    handleCreateOrder();
-    setShowModal(true);
-  };
 
     /* Material Data */
     const localFields = { text: 'name', value: 'name' };
@@ -158,33 +144,13 @@ const NewOrder = (props) => {
   
       // Almacena el nuevo pedido en el estado "pedidos"
       setPedidos([...pedidos, nuevaOrden]);
-   
-      // Limpia el estado del formulario después de enviar los datos
-      setFormData({
-        nombreCliente: '',
-        apePatCliente: '',
-        apeMatCliente: '',
-        contactoCliente,
-        instalacion: false,
-        barniz: false,
-        cantidad: 1,
-        base: 1,
-        altura: 1,
-        precioUnitario: 100,
-        material: null,
-        acabado: null,
-        tipoTrabajo: null,
-        fechaEnvio: dateValue,
-        fechaEntrega: dateValue,
-        fechaInstalacion: dateValue,
-        archivo: '',
-        notas: '',
-      });
 
       setShowModal(false);
 
       console.log('Órdenes almacenadas:', nuevaOrden);
       
+      // Marca los datos como guardados
+      setDatosGuardados(true);
     };
     
     const handleInputChange = (name, value) => {
@@ -256,30 +222,13 @@ const NewOrder = (props) => {
       // Limpiamos los datos del archivo actual
       console.log("Continue With Order clicked");
 
-      // También puedes limpiar el estado de formData si es necesario
-      setFormData({
-        nombreCliente: '',
-        apePatCliente: '',
-        apeMatCliente: '',
-        contactoCliente,
-        instalacion: false,
-        barniz: false,
-        cantidad: 1,
-        base: 1,
-        altura: 1,
-        precioUnitario: 100,
-        material: null,
-        acabado: null,
-        tipoTrabajo: null,
-        fechaEnvio: new Date(),
-        fechaEntrega: new Date(),
-        fechaInstalacion: new Date(),
-        archivo: '',
-        notas: '',
-      });
+/*       handleResetOrder(true) */
+
+      setDatosGuardados(true);
 
       // Recargar la página
       navigate('/ad/nueva-orden');
+      
     };
     
     const handleSendOrder = () => {
@@ -288,6 +237,7 @@ const NewOrder = (props) => {
       // Esta función se llama cuando el usuario elige enviar el pedido
       handleCreateOrder(); 
 
+      setDatosGuardados(true);
 
       // Aquí podrías realizar alguna acción adicional antes de enviar el pedido, si es necesario
       // Luego, puedes enviar los datos al backend para almacenarlos en la base de datos
@@ -331,6 +281,11 @@ const NewOrder = (props) => {
        setNotas(''); */
     };
 
+    const handleShowModal = () => {
+      handleCreateOrder();
+      setShowModal(true);
+  }
+
     // Función para manejar la selección de archivos desde SideAr
   const handleFileSelected = (selectedFile) => {
     // Aquí puedes manejar la lógica para mostrar el formulario correspondiente al archivo seleccionado
@@ -363,7 +318,6 @@ const NewOrder = (props) => {
                   required={true}
                   floatLabelType="Auto" 
                   id='nombreCliente' 
-                  /* value={formData.nombreCliente} */
                   input={(args) => handleInputChange('nombreCliente', args.value)}/>
               </div>
               <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
@@ -403,7 +357,7 @@ const NewOrder = (props) => {
   </div>
           {/* Tu Pedido */}
           <div className="row custom-margin tuPedido">
-          <div className='control-sectionPedido'>
+            <div className='control-sectionPedido'>
           <p className='tituloPedido'>Tú Pedido.</p>
             <div className="content-wrapper format-wrapper sample-numeric">
                     <div className="control-label">Cantidad</div>
@@ -607,7 +561,7 @@ const NewOrder = (props) => {
       </div>
 
         {/* Componente lateral donde contienen los archivos si es que se desea agregar mas */}
-        <SideAr onFileSelected={handleFileSelected} onFinalizarOrden={handleFinalizarOrden} />
+        <SideAr onFileSelected={handleFileSelected} onFinalizarOrden={handleFinalizarOrden} setDatosGuardados={setDatosGuardados} />
 
         <Modal
           showModal={showModal}

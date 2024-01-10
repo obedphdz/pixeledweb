@@ -2,8 +2,6 @@ import { sectionsForAdmin } from "../Slidebar Section/sectionsForSlide/sections"
 import Slidenew from "../Slidebar Section/Slidenew"
 import OrdersInProduction from "./OrdersInProduction"
 
-
-
 const VistaOrdenes = () => {
   return (
     <div className="body-app">

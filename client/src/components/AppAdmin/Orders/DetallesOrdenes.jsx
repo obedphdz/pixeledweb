@@ -1,7 +1,9 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Aggregate, Edit, Toolbar, Group, AggregateColumnsDirective, AggregateColumnDirective, AggregateDirective, AggregatesDirective } from '@syncfusion/ej2-react-grids';
+import { MdArrowBackIos } from "react-icons/md";
 import { detallesOrdersData } from '../../../data/dummy';
+import {Link} from 'react-router-dom';
 import Header from '../MainBody/Header/Header';
-
+import './Orders.css'
 
 function DetallesOrdenes() {
     function footerSum(props) {
@@ -21,8 +23,11 @@ function DetallesOrdenes() {
 
     return (
     
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
-        <Header category="Page" title="Detalles Orden" />
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl detallesDiv">
+       <Link to='/ad/ordenes'>
+        <MdArrowBackIos className='backIcon' title="Volver a Ordenes"/>
+        </Link>
+        <Header category="Admin" title="Detalles Orden" />
         <div className='control-pane'>
             <div className='control-section'>
                 <GridComponent dataSource={detallesOrdersData} allowPaging={true} pageSettings={pageSettings} toolbar={toolbarOptions} editSettings={editSettings} allowGrouping={true} groupSettings={groupSettings}>

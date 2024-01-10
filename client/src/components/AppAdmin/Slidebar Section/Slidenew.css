@@ -57,6 +57,7 @@
 
   .menuLists {
     color: var(--textColor);
+    font-size: 12px;
     font-weight: 600;
     flex-direction: column;
   }
@@ -164,7 +165,7 @@
 @media screen and (max-width: 390px) {
   .containerSlide {
     width: 100%;
-    padding-top: 3rem; /* Ajusté el valor del padding-top para un espacio equilibrado */
+    padding-top: 3rem; 
   }
 
   .containerSlide .logoDiv {
@@ -173,7 +174,7 @@
   }
 
   .containerSlide .logoDiv img {
-    max-width: 60px; /* Ajusté el tamaño de la imagen para un tamaño más pequeño en pantallas muy pequeñas */
+    max-width: 60px; 
     margin: 0;
     border-radius: 10px;
     padding: 0.5rem;
@@ -191,7 +192,7 @@
 
   .containerSlide .menuDiv .menuLists .listItem,
   .containerSlide .settingsDiv .menuLists .listItem {
-    padding: 0.5rem 1rem; /* Aumenté el espacio alrededor de los elementos de la lista */
+    padding: 0.5rem 1rem; 
   }
 
   .containerSlide .menuDiv .menuLists .listItem .menuLink,
@@ -200,21 +201,20 @@
   }
 
   .containerSlide .settingsDiv .btnLogOut {
-    margin-left: 0; /* Ajusté el margen izquierdo del botón de cierre de sesión */
+    margin-left: 0; 
   }
 }
-/*# sourceMappingURL=Slidebar.css.map */
 
 @media screen and (max-width: 1200px) {
   .containerSlide {
-    width: 15%; /* Puedes ajustar este valor según tus necesidades */
+    width: 15%; 
   }
 }
 
 @media screen and (max-width: 768px) {
   .containerSlide {
     width: 100%;
-    padding-top: 5rem; /* Ajusté el valor del padding-top para que sea más equilibrado */
+    padding-top: 5rem; 
   }
 
   .containerSlide .logoDiv {
@@ -225,7 +225,7 @@
   }
 
   .containerSlide .logoDiv img {
-    max-width: 80px; /* Ajusté el tamaño de la imagen para que sea más adecuado en pantallas pequeñas */
+    max-width: 80px; 
     margin: 0;
     border-radius: 10px;
     padding: 0.5rem;
@@ -243,7 +243,7 @@
 
   .containerSlide .menuDiv .menuLists .listItem,
   .containerSlide .settingsDiv .menuLists .listItem {
-    padding: 0.5rem 1rem; /* Aumenté el espacio alrededor de los elementos de la lista */
+    padding: 0.5rem 1rem; 
   }
 
   .containerSlide .menuDiv .menuLists .listItem .menuLink,
@@ -257,7 +257,7 @@
   }
 
   .containerSlide .settingsDiv .btnLogOut {
-    margin-left: 0; /* Ajusté el margen izquierdo del botón de cierre de sesión */
+    margin-left: 0; 
   }
 }
 
@@ -301,38 +301,98 @@
 
 @media screen and (max-width: 776px) {
   .containerSlide {
-    width: 100%; /* Ajusta este valor a tu preferencia */
+    width: 100%; 
   }
 
   .containerSlide .logoDiv {
-    display: none; /* Oculta el logo para pantallas pequeñas */
+    display: none; 
   }
 
   .containerSlide .menuDiv {
-    margin-left: 0; /* Elimina el margen para que el menú se ajuste al borde de la pantalla */
+    margin-left: 0; 
   }
 
   .containerSlide .settingsDiv {
-    margin-left: 0; /* Elimina el margen para que la sección de ajustes se ajuste al borde de la pantalla */
+    margin-left: 0; 
   }
 
   .containerSlide .menuDiv .divTile,
   .containerSlide .settingsDiv .divTile {
-    font-size: var(--h3FontSize); /* Reduce el tamaño de la fuente para los títulos de sección */
+    font-size: var(--h3FontSize); 
   }
 
   .containerSlide .menuDiv .menuLists .listItem,
   .containerSlide .settingsDiv .menuLists .listItem {
-    padding: 0.2rem 0.5rem; /* Reduce el padding de los elementos de menú para un mejor ajuste */
+    padding: 0.2rem 0.5rem; 
   }
 
   .containerSlide .menuDiv .menuLists .listItem .menuLink,
   .containerSlide .settingsDiv .menuLists .listItem .menuLink {
-    justify-content: center; /* Centra el texto y el icono en los elementos de menú */
+    justify-content: center;
   }
 
   .containerSlide .menuDiv .menuLists .listItem .menuLink .icon,
   .containerSlide .settingsDiv .menuLists .listItem .menuLink .icon {
-    font-size: var(--h2FontSize); /* Aumenta el tamaño del icono para una mejor visibilidad */
+    font-size: var(--h2FontSize); 
   }
+}
+
+/* Ajustes para pantallas grandes de PC */
+@media screen and (min-width: 1700px) {
+  .containerSlide {
+    width: 20%;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .containerSlide .logoDiv img {
+    max-width: 170px;
+  }
+
+  .settingsDiv{
+    margin-bottom: 10rem
+  }
+
+  .containerSlide .menuDiv .menuLists .listItem,
+  .containerSlide .settingsDiv .menuLists .listItem {
+    padding: auto;
+  }
+
+  .containerSlide .menuDiv .menuLists .listItem .menuLink .icon,
+  .containerSlide .settingsDiv .menuLists .listItem .menuLink .icon {
+    font-size: 1.5rem; 
+  }
+
+}
+
+@media screen and (min-width: 2048px) {
+  .containerSlide {
+    width: 20%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .containerSlide .logoDiv img {
+    max-width: 180px;
+  }
+
+  .containerSlide .logoDiv .sidebar .iconArrowBar{
+    font-size: 17px;
+    width: 100%;
+    height: 80%;
+    margin: 10px;
+  }
+
+  .containerSlide .settingsDiv .btnLogOut {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .containerSlide {
+    width: 25%;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+  }
+
 }

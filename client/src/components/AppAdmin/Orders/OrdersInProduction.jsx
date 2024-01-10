@@ -31,7 +31,7 @@ const OrdersInProduction = () => {
   
 
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl ordersInProdDiv">
       <Header category="Admin" title="Ordenes en Producción" />
       <GridComponent
         id="gridcomp"
@@ -43,6 +43,7 @@ const OrdersInProduction = () => {
         contextMenuItems={contextMenuItems}
         editSettings={editing}
         actionComplete={actionCompleteHandler}
+        className='tablaOrders'
       >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => {
@@ -53,6 +54,7 @@ const OrdersInProduction = () => {
                   key={index}
                   headerText={item.headerText}
                   width={item.width}
+                  className="hpla"
                   template={(props) => (
                    /*  <Link to={detailsButtonClick(props.rowData)}> */
                    <Link to='./detalles-ord'>
