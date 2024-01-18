@@ -133,6 +133,18 @@
   color: black;
 }
 
+.iconoDown {
+  font-size: 20px; /* Tamaño del ícono */
+  color: #eb79a87c; /* Color del ícono (puedes cambiarlo) */
+  cursor: pointer;
+  margin-left: -20px;
+  transition: color 0.3s ease; /* Transición suave del color al hacer hover */
+}
+
+.iconoDown:hover {
+  color: #af0f4c; /* Cambia el color al hacer hover */
+}
+
 /* Estilos Botones */
 
 .controlBtn{

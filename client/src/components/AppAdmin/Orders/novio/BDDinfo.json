@@ -1,0 +1,558 @@
+[
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Completado",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cancelado",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Pendiente",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Pendiente",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"En Proceso",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cancelado",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Cotizacion",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"En Proceso",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    },
+    {
+        "estatus_general":"Completado",
+        "id_cliente":10039,
+        "id_pedido":134,
+        "nombre":"brian Obed",
+        "ape_pat":"PEREZ",
+        "ape_mat":"hernandez",
+        "id_vendedor": 2,
+        "archivos": [
+        {
+            "id_material": 1,
+            "piezas": 5,
+            "base": 10.5,
+            "altura": 20.0,
+            "precio_unitario": 15.0,
+            "ruta_archivo": "ruta/al/archivo1.jpg",
+            "estatus_archivo": "C",
+            "trabajo": "Diseño",
+            "descripcion": "Archivo de diseño"
+        },
+        {
+            "id_material": 2,
+            "id_piezas": 3,
+            "base": 8.0,
+            "altura": 15.5,
+            "precio_unitario": 12.0,
+            "ruta_archivo": "ruta/al/archivo2.jpg",
+            "estatus_archivo": "C",
+            "area_trabajo": "Producción",
+            "descripcion": "Archivo de producción"
+        }
+        ],
+        "precio_total": 200.0,
+        "fecha_solicitud": "2023-12-18",
+        "fecha_entrega": "2023-12-25",
+        "fecha_instala": "2023-12-30"
+    }
+
+]

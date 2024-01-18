@@ -2,22 +2,18 @@ import { useState } from 'react';
 import { MdAddCard } from 'react-icons/md';
 import './SideAr.css';
 
-const SideAr = ({ onFileSelected, onFinalizarOrden, setDatosGuardados }) => {
+const SideAr = ({ onFileSelected, onFinalizarOrden, isDataSaved }) => {
   const [archivos, setArchivos] = useState([]);
 
   const agregarArchivo = () => {
-
-    if (!setDatosGuardados) {
-      console.log("Debes guardar los datos antes de agregar otro archivo.");
-      alert("Debes guardar los datos antes de agregar otro archivo.");
-      return;
-    }
-
-    const nuevoArchivo = { id: archivos.length + 1, name: `Archivo ${archivos.length + 1}` };
-    setArchivos([...archivos, nuevoArchivo]);
-
+    if (isDataSaved === false) {
+      const nuevoArchivo = { id: archivos.length + 1, name: `Archivo ${archivos.length + 1}` };
+      setArchivos([...archivos, nuevoArchivo]);
     // Callback para informar al componente principal sobre el nuevo archivo
-    onFileSelected(nuevoArchivo);
+      onFileSelected(nuevoArchivo);
+    }else{
+      alert("Debes guardar los datos antes de agregar otro archivo.");
+    } 
   };
 
   return (
