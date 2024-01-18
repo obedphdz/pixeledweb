@@ -3,7 +3,6 @@
 import './Login.css';
 import { useEffect, useState, Fragment } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Validation from './LoginValidation';
 import axios from 'axios';
 
 import video from '../../assets/img/imgPixeled/videoImp2.mp4';
@@ -13,9 +12,6 @@ import logo from '../../assets/img/imgPixeled/logoblack.svg';
 import { FaUserShield } from 'react-icons/fa';
 import { BsFillShieldLockFill } from 'react-icons/bs';
 import { MdOutlineLogin } from 'react-icons/md';
-
-// Tailwind Modal Components
-import { Dialog, Transition } from '@headlessui/react';
 
 const Login = () => {
 	// Reproduce video
@@ -116,8 +112,8 @@ const Login = () => {
 					<video src={video} id='my-video' className='myVideo'></video>
 
 					<div className='textDivLogin'>
-						<h2 className='title'>IMPRESIÓN A LA VISTA DE TODOS</h2>
-						
+						<h2 className='title'>Crea y vende productos extraordinarios.</h2>
+						<p>Transforma tus conceptos en realidades extraordinarias. ¡Descubre el poder de la impresión con Pixeled!</p>
 					</div>
 
 					<div className='footerDiv flexH'>
@@ -197,12 +193,6 @@ const Login = () => {
 							<span>Iniciar Sesión</span>
 							<MdOutlineLogin className='icon' />
 						</button>
-						<span className='forgotPassword'>
-							¿Olvidaste tu contraseña?{' '}
-							<a href='' className='clickHere'>
-								Click Aquí
-							</a>
-						</span>
 					</form>
 				</div>
 			</div>

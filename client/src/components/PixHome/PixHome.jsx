@@ -6,14 +6,12 @@ import NuevaOrden from '../AppAdmin/NuevaOrden/NuevaOrden';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from '../App/App';
 import CrearCotizaciones from '../AppAdmin/CrearCotizaciones/CrearCotizaciones';
-import Precios from '../AppAdmin/PreciosLista/Precios';
 import Cliente from '../AppCliente/Cliente';
 import JefeDise from '../AppAdmin/AppJefeDiseñador/JefeDise';
 import CrearOrdenDi from '../AppAdmin/AppJefeDiseñador/CrearOrdenDi/CrearOrdenDi';
 import VistaOrdenes from '../AppAdmin/Orders/VistaOrdenes';
 import VistaEmp from '../AppAdmin/Empleados/VistaEmp';
 import VistaDetallesOrd from '../AppAdmin/Orders/VistaDetallesOrd';
-import MiModal from '../AppAdmin/NuevaOrden/ModalOrder/MiModal';
 import VistaClientes from '../AppAdmin/Clientes/VistaClientes';
 import VistaHistorial from '../AppAdmin/HistorialPedidos/VistaHistorial';
 import Disenador from '../AppAdmin/AppDiseñador/Disenador';
@@ -22,6 +20,7 @@ import HistorialDise from '../AppAdmin/AppDiseñador/HistorialDise';
 import HistorialJefeDise from '../AppAdmin/AppJefeDiseñador/HistorialPedidos/HistorialJefeDise';
 import VistaAsigPedi from '../AppAdmin/AppJefeDiseñador/AsignacionPedidos/VistaAsigPedi';
 import MisPedidos from '../AppAdmin/AppJefeDiseñador/Pedidos Asignados/MisPedidos';
+import Modal1 from '../AppAdmin/NuevaOrden/ModalOrder/Modal';
 
 function PixHome() {
 	return (
@@ -34,7 +33,6 @@ function PixHome() {
 					<Route path='/register' element={<Register />} />
 					<Route path='/ad' element={<Admin  />} />
 					<Route path='/ad/nueva-orden' element={<NuevaOrden />} />
-					<Route path='/ad/precios' element={<Precios />} />
 					<Route path='/ad/crear-cotiza' element={<CrearCotizaciones />} />
 					<Route path='/ad/ordenes' element={<VistaOrdenes />} />
 					<Route path='/ad/ordenes/detalles-ord' element={<VistaDetallesOrd />}/>
@@ -54,8 +52,8 @@ function PixHome() {
 					<Route path='/di/historial' element={<HistorialDise />} />
 					<Route path='/di/mis-pedidos' element={<MisPedidos />} />
 
-					<Route path='/modal' element={<MiModal />} />
 					<Route path='/cliente' element={<Cliente />} />
+					<Route path='/prueba' element={<Modal1 />} />
 
 					<Route path='*' element={<ErrorPage />} />
 				</Routes>

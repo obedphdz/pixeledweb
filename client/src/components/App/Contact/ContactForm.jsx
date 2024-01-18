@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 
 const FormStyle = styled.form`
-	width: 100% !important;
+	width: 100%;
 	.form-group {
-		width: 100% !important;
-		margin-bottom: 2rem !important;
-		margin-right: 12rem !important;
-		margin-top: 3rem !important;
+		width: 100%;
+		margin-bottom: 2rem;
+		margin-right: 12rem;
+		margin-top: 3rem;
 	}
 	label {
 		font-size: 1.8rem;
@@ -16,7 +16,7 @@ const FormStyle = styled.form`
 	input,
 	textarea {
 		width: 95%;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		padding: 1.2rem;
 		color: black;
 		background-color: hsl(330, 12%, 97%);
@@ -32,10 +32,12 @@ const FormStyle = styled.form`
 	button[type='submit'] {
 		background-color: #e62657;
 		color: var(--black);
-		font-size: 2rem;
+		font-size: 1.8rem;
 		display: inline-block;
 		outline: none;
 		border: none;
+		text-align: center;
+		align-items: center;
 		padding: 0.6rem 9rem;
 		margin-top: 2rem;
 		margin-bottom: 1.9rem;
@@ -46,6 +48,74 @@ const FormStyle = styled.form`
 		background-color: #280028;
 		color: white;
 	}
+	@media only screen and (max-width: 428px) {
+		.form-group {
+		  margin-right: 0;
+		  text-align: center;
+		}
+
+		label {
+			font-size: 20px;
+		}
+
+		input,
+		textarea {
+		  width: 86%;
+		  font-size: 12px;
+		}
+	
+		button[type='submit'] {
+		  padding: 0.6rem 8rem;
+		  font-size: 12px;
+		  margin-left: 4rem;
+		}
+	  }
+	
+	  @media only screen and (max-width: 390px) {
+		.form-group {
+		  margin-right: 0;
+		  text-align: center;
+		}
+
+		label {
+			font-size: 17px;
+		}
+	
+		input,
+		textarea {
+		  width: 85%;
+		  font-size: 7px;
+		}
+	
+		button[type='submit'] {
+			padding: 0.6rem 8rem;
+			font-size: 12px;
+			margin-left: 4rem;
+		}
+	  }
+	
+	  @media only screen and (max-width: 375px) {
+		.form-group {
+		  margin-right: 0;
+		  text-align: center;
+		}
+
+		label {
+			font-size: 16px;
+		}
+	
+		input,
+		textarea {
+		  width: 85%;
+		  font-size: 7px;
+		}
+	
+		button[type='submit'] {
+		  padding: 0.6rem 8rem;
+		  font-size: 12px
+		  margin-left: 3rem;
+		}
+	  }
 `;
 
 export default function ContactForm() {
@@ -82,7 +152,7 @@ export default function ContactForm() {
 		<FormStyle ref={form} onSubmit={sendEmail}>
 			<div className='form-group'>
 				<label htmlFor='name'>
-					Tu Nombre
+					Nombre Completo:
 					<input
 						type='text'
 						id='user_name'
@@ -94,7 +164,7 @@ export default function ContactForm() {
 			</div>
 			<div className='form-group'>
 				<label htmlFor='email'>
-					Tu Correo
+					Correo electrónico:
 					<input
 						type='email'
 						id='user_email'
@@ -106,7 +176,7 @@ export default function ContactForm() {
 			</div>
 			<div className='form-group'>
 				<label htmlFor='message'>
-					Tu Mensaje
+					Tu Mensaje:
 					<textarea
 						type='text'
 						id='message'

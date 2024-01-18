@@ -7,7 +7,7 @@ const VistaClientes = () => {
     <div className="body-app">
         <div className="mainContainer">
             <Slidenew sections={sectionsForAdmin} />
-            <div className="bodyContainer">
+            <div className="bodyContainerEmpCli">
                 <Clientes/>
             </div>
         </div>

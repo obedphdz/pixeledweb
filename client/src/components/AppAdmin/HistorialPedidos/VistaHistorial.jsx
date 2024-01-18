@@ -7,7 +7,7 @@ const VistaHistorial = () => {
     <div className="body-app">
         <div className="mainContainer">
             <Slidenew sections={sectionsForAdmin} />
-            <div className="bodyContainer">
+            <div className="bodyContainerHistorial">
                 <HistorialPedi/>
             </div>
         </div>

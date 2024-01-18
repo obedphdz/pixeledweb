@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { ScheduleComponent, ResourcesDirective, ResourceDirective, ViewsDirective, ViewDirective, Inject, TimelineViews, Resize, DragAndDrop, TimelineMonth } from '@syncfusion/ej2-react-schedule';
 import { extend, closest, remove, addClass } from '@syncfusion/ej2-base';
 import * as dataSource from './data.json';
-
+import  Header  from '../../MainBody/Header/Header';
 
 const Asignacion = () => {
     const scheduleObj = useRef(null);
@@ -23,7 +23,7 @@ const Asignacion = () => {
         { Text: 'Montserrat', Id: 3, GroupId: 1, Color: '#bbdc00', Designation: 'Jefe Diseño' },
         { Text: 'Milton', Id: 4, GroupId: 2, Color: '#9e5fff', Designation: 'Impresion' },
         { Text: 'Laura', Id: 5, GroupId: 2, Color: '#bbdc00', Designation: 'Impresion' },
-        { Text: 'Margaret', Id: 6, GroupId: 2, Color: '#9e5fff', Designation: 'Diseño' }
+        { Text: 'German', Id: 6, GroupId: 1, Color: '#9e5fff', Designation: 'Diseño' }
     ];
     const getConsultantName = (value) => {
         return value.resourceData[value.resource.textField];
@@ -111,14 +111,12 @@ const Asignacion = () => {
     const onTreeDragStart = () => {
         document.body.classList.add('e-disble-not-allowed');
     };
+
     return (
-        <div className="schedule-container" style={{ marginTop: '-3rem' }}>
-            <div className=" mb-10">
-                    <p className="text-3xl font-extrabold tracking-tight text-slate-900">
-                            Asignación de Pedidos.
-                    </p>
-            </div>
-                <ScheduleComponent ref={scheduleObj} cssClass='schedule-drag-drop' width='100%' height='550px' selectedDate={new Date(2023, 10, 27)} currentView='TimelineDay' resourceHeaderTemplate={resourceHeaderTemplate} eventSettings={{ dataSource: data, fields: { subject: { title: 'Patient Name', name: 'Name' }, startTime: { title: "From", name: "StartTime" }, endTime: { title: "To", name: "EndTime" }, description: { title: 'Reason', name: 'Description' } } }} group={{ enableCompactView: false, resources: ['Departments', 'Consultants'] }} actionBegin={onActionBegin}>
+    <div className="m-2 md:m-0 mt-2 p-2 md:p-6 bg-white rounded-3xl">
+        <Header category="Jefe Diseñador" title="Asignación de Pedidos." />
+        <div className="schedule-container" style={{ marginTop: '1.5rem' }}>
+                <ScheduleComponent ref={scheduleObj} cssClass='schedule-drag-drop' width='100%' height='580px' selectedDate={new Date(2023, 10, 27)} currentView='TimelineDay' resourceHeaderTemplate={resourceHeaderTemplate} eventSettings={{ dataSource: data, fields: { subject: { title: 'Nombre Cliente', name: 'Name' }, startTime: { title: "Fecha de Envio", name: "StartTime" }, endTime: { title: "Fecha de Entrega", name: "EndTime" }, description: { title: 'Reason', name: 'Description' } } }} group={{ enableCompactView: false, resources: ['Departments', 'Consultants'] }} actionBegin={onActionBegin}>
                 <ResourcesDirective>
                     <ResourceDirective field='DepartmentID' title='Department' name='Departments' allowMultiple={false} dataSource={departmentData} textField='Text' idField='Id' colorField='Color'/>
                     <ResourceDirective field='ConsultantID' title='Consultant' name='Consultants' allowMultiple={false} dataSource={consultantData} textField='Text' idField='Id' groupIDField="GroupId" colorField='Color'/>
@@ -129,8 +127,8 @@ const Asignacion = () => {
                 </ViewsDirective>
                 <Inject services={[TimelineViews, TimelineMonth, Resize, DragAndDrop]}/>
                 </ScheduleComponent>
-            </div>
-    
+        </div>
+    </div>
     );
 };
 export default Asignacion;

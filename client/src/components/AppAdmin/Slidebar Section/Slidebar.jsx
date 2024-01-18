@@ -8,15 +8,14 @@ import logoResp from '../../../assets/svg/logoPixBco.svg'
 
 /* Imported icons */
 import { HiOutlineClipboardList } from 'react-icons/hi';
-import { MdOutlinePriceChange, MdPriceCheck } from 'react-icons/md';
+import { MdOutlinePriceChange} from 'react-icons/md';
 import {
 	BsPersonBoundingBox,
 	BsFillClipboardPlusFill,
 	BsClockHistory,
 } from 'react-icons/bs';
- import { BiSpreadsheet, BiLogOut } from 'react-icons/bi';
+ import { BiLogOut } from 'react-icons/bi';
 import { FiUsers } from 'react-icons/fi';
-import { TbChartInfographic } from 'react-icons/tb';
 
 const Slidebar = () => {
 
@@ -60,7 +59,7 @@ const Slidebar = () => {
 					</li>
 
 					<li className='listItem'>
-						<Link to='/crear-orden' className='menuLink flex'>
+						<Link to='/ad/nueva-orden' className='menuLink flex'>
 							<BsFillClipboardPlusFill className='icon' />
 							<span className='smallText'>Nueva Orden</span>
 						</Link>
@@ -87,36 +86,9 @@ const Slidebar = () => {
 
 				<ul className='menuLists grid'>
 					<li className='listItem'>
-							<Link to='/precios' className='menuLink flex'>
-								<MdPriceCheck className='icon' />
-								<span className='smallText'>Precios</span>
-							</Link>
-					</li>
-					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
-								<MdPriceCheck className='icon' />
-								<span className='smallText'>Proveedores</span>
-							</Link>
-					</li>
-
-					<li className='listItem'>
 							<Link to='/ad/clientes' className='menuLink flex'>
 								<FiUsers className='icon' />
 								<span className='smallText'>Clientes</span>
-							</Link>
-					</li>
-
-					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
-								<BiSpreadsheet className='icon' />
-								<span className='smallText'>Solicitud de Material</span>
-							</Link>
-					</li>
-
-					<li className='listItem'>
-							<Link to='' className='menuLink flex'>
-								<TbChartInfographic className='icon' />
-								<span className='smallText'>Comisiones</span>
 							</Link>
 					</li>
 

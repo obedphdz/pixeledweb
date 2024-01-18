@@ -49,7 +49,7 @@ export const nosotros = [
     icon: shield,
     title: "Tu Visión, Nuestra Experiencia Artística",
     content:
-    "Cada proyecto es una colaboración entre tu visión y nuestra experiencia artística. Experimentamos con elementos visuales, teoría del color e impacto para dar vida a tus ideas.",
+    "Cada proyecto es una colaboración entre tu visión y nuestra experiencia artística. Experimentamos con elementos visuales e impacto para dar vida a tus ideas.",
   
   },
   {
@@ -92,6 +92,40 @@ export const stats = [
   },
 ];
 
+/* Imagenes de los servicios para la parte Responsive */
+export const stats1 = [
+  {
+    id: "servicio-1",
+    img: pantallasLed,
+  },
+  {
+    id: "servicio-2",
+    img: rotulacion,
+  },
+  {
+    id: "servicio-3",
+    img: señaletica,
+  },
+];
+export const stats2 = [
+  
+  {
+    id: "servicio-7",
+    img: impHD,
+  },
+  {
+    id: "servicio-5",
+    img: impGranFormato,
+  },
+  {
+    id: "servicio-6",
+    img: anuncios,
+  },
+  {
+    id: "servicio-4",
+    img: letras3d,
+  },
+];
 export const footerLinks = [
   {
     title: "Useful Links",

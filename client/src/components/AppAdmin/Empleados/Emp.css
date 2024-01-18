@@ -4,3 +4,28 @@
     padding: 10px 40px;
     width:110%;
 }
+.dialog-content {
+    padding: 20px;
+  }
+  
+  .dialog-label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .dialog-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .dialog-btn {
+    margin-left: 8px;
+    padding: 8px 16px;
+  }
+  

@@ -1,33 +1,25 @@
-import '../MainBody/MainBody.css'
-import BodyNueva from "../NuevaOrden/neworderobed/BodyNueva";
-import Slidenew from '../Slidebar Section/Slidenew';
-import {MdOutlinePriceChange } from 'react-icons/md'
-import {BsFillClipboardPlusFill, BsClockHistory} from 'react-icons/bs'
-import {HiOutlineClipboardList} from 'react-icons/hi'
 
-const sectionsForAdmin = [
-	{
-		title: 'Pedidos',
-		items: [
-		  { name: 'Crear Cotización', icon: <MdOutlinePriceChange />, link: '/ad/crear-cotiza' },
-		  { name: 'Nueva Orden', icon: <BsFillClipboardPlusFill />, link: '/ad/nueva-orden' },
-		  { name: 'Ordenes en Producción', icon: <HiOutlineClipboardList />, link: '/ad/ordenes' },
-		  { name: 'Historial de Pedidos', icon: <BsClockHistory />, link: '/' },
-		],
-	  },
-]
+/* CrearCotizaciones.jsx */
+import '../MainBody/MainBody.css'
+import { sectionsForAdmin } from '../Slidebar Section/sectionsForSlide/sections';
+import Slidenew from '../Slidebar Section/Slidenew';
+import NewOrder from "../NuevaOrden/NewOrder"
+import Header from '../MainBody/Header/Header';
 
 export default function Cotizaciones() {
   return (
-		<div className="body-app">
+	<div className='body-app'>
 		<div className="mainContainer">
-			<Slidenew sections={sectionsForAdmin} />
-			<BodyNueva
-							h1texto='Crear Cotizacion'
-							ptexto='Ingresa los datos a Cotizar'
-							btnaccion='Cotizacion'
-				/>
-		  </div>
+				<Slidenew sections={sectionsForAdmin}  />
+			<div className="inputbodyContainer">
+				<div className="m-2 md:m-0 mt-2 p-2 md:p-6 bg-white rounded-3xl crearOrdenDiv">
+				<Header category='Admin' title="Crea tu Cotización." />
+					<NewOrder 
+						ptexto='Ingresa los datos de tu pedido'
+						btnaccion='Pedido'/>
+				</div>
+			</div>
 		</div>
+	</div>
 	);
 }

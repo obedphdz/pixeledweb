@@ -5,20 +5,130 @@
   flex: 1; 
   padding: 5.5rem;
   overflow: auto;
-  margin-top: 0rem;
+  margin-top: 12rem;
+  overflow-x: auto;
+}
+
+.bodyContainerHistorial {
+  flex: 1; 
+  padding: 5.5rem;
+  overflow: auto;
+  margin-top: 6rem;
+  overflow-x: auto;
+}
+
+.bodyContainerEmpCli {
+  flex: 1; 
+  padding: 2.5rem;
+  overflow: auto;
+  margin-top: 7rem;
   overflow-x: auto;
   height: 64rem;
+  margin-left: 3rem;
+}
+
+.bodyContainerDetalles{
+  flex: 1; 
+  position: relative;
+  padding: 0rem;
+  margin-top: 0rem;
+  overflow: auto;
+  overflow-x: auto;
+  margin: 2.5rem 5.5rem;
+  height: 100%;
+}
+
+.detallesDiv{
+  height: 100% !important;
+}
+
+.backIcon {
+  font-size: 1.4rem;
+  color: #333; /* Color de icono */
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .inputbodyContainer {
   flex: 1; 
   overflow: auto;
-  margin-top: 10rem;
-  height: 64rem;
+  background-color: rgba(255, 255, 255, 0.815);
+  margin-top: 0rem;
 } 
+
+/* Not a good coding practice but meh im desperate .-. */
+.crearOrdenDiv{
+  width: 112% !important;
+  margin-top: -16px !important;
+  margin-left: 3px !important;
+  background-color: rgba(255, 255, 255, 0.815) !important;
+}
+
+.ordersInProdDiv{
+  position:  relative !important;
+  margin-top: 2.5rem !important;
+  width: 100% !important;
+  margin: 2.5rem 2rem 2.5rem 2.3% !important;
+}
+
+.historialDiv{
+  margin-top: -4rem !important;
+}
 
 #dropdownbutton-control {
   position: absolute;
   top: 10px; /* Ajusta la posición superior según sea necesario */
   right: 10px; /* Ajusta la posición derecha según sea necesario */
+}
+
+/* Estilos para pantallas grandes de PC */
+@media screen and (min-width: 1700px) {
+  .bodyContainer {
+    padding: 7.5rem; 
+    margin-top: 12rem;
+    overflow-x: auto;
+  }
+
+  .crearOrdenDiv {
+    width: 100% !important;
+    margin-top: 0rem !important;
+    margin-left: 0 !important;
+    background-color: rgba(255, 255, 255, 0.815) !important;
+  }
+  
+  .inputbodyContainer{
+    height: 100% !important;
+  }
+}
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 1699px) and (min-width: 1024px) {
+  .bodyContainer {
+    padding: 6rem; 
+    margin-top: 12rem;
+    overflow-x: auto;
+  }
+
+  .crearOrdenDiv {
+    width: 110% !important; 
+    margin-top: 0rem !important;
+    margin-left: -3px !important;
+    background-color: rgba(255, 255, 255, 0.815)!important;
+  }
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 1023px) {
+  .bodyContainer {
+    padding: 2.5rem !important;
+    margin-top: 7rem;
+    overflow-x: auto;
+    margin-left: 0;
+  }
+
+  .crearOrdenDiv {
+    width: 100% !important;
+    margin-top: 0rem !important;
+    margin-left: 0 !important;
+    background-color: rgba(255, 255, 255, 0.815);
+  }
 }

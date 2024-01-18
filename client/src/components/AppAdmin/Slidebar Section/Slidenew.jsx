@@ -1,8 +1,5 @@
-
-
 /* Slidenew.jsx */
-/* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion'; 
 import './Slidenew.css';
 import ItemSlide from './ItemSlide';
@@ -12,17 +9,10 @@ import {Link} from 'react-router-dom'
 import logo1 from '../../../assets/svg/pixecol.svg';
 
 /* Imported icons */
-import { HiOutlineClipboardList } from 'react-icons/hi';
-import { MdOutlinePriceChange, MdPriceCheck } from 'react-icons/md';
-import {
-	BsPersonBoundingBox,
-	BsFillClipboardPlusFill,
-	BsClockHistory,
-} from 'react-icons/bs';
- import { BiSpreadsheet, BiLogOut } from 'react-icons/bi';
+import { BsPersonBoundingBox } from 'react-icons/bs';
+ import { BiLogOut } from 'react-icons/bi';
 import { FiUsers } from 'react-icons/fi';
-import {FaBars} from 'react-icons/fa'
-import { TbStatusChange, TbChartInfographic, TbArrowBarLeft } from 'react-icons/tb';
+import {TbArrowBarLeft } from 'react-icons/tb';
 
 
 const Slidenew  = ({ sections }) => {
@@ -77,37 +67,11 @@ const Slidenew  = ({ sections }) => {
             }}
             onClick={handleToggle}
           >
-            <TbArrowBarLeft style={{ fontSize: '15px' }}/>
+            <TbArrowBarLeft style={{ fontSize: '15px' }} className='iconArrowBar'/>
           </motion.div>
         </motion.div>
       </div>
-  
-    {/*   <div className='menuDiv'>
-        <h3 className='divTile'>Pedidos</h3>
-        <ul className='menuLists grid' data-variants={menuListsVariants}>
-          <li>
-            <Link to='/nuevaCotiza'>
-              <ItemSlide icon={<MdOutlinePriceChange />} showName={open} name='Crear Cotización' />
-            </Link>
-          </li>
-          <li>
-            <Link to='/nueva'>
-              <ItemSlide icon={<BsFillClipboardPlusFill />} showName={open} name='Nueva Orden' />
-            </Link>
-          </li>
-          <li>
-            <Link to=''>
-             <ItemSlide icon={<HiOutlineClipboardList />} showName={open} name='Ordenes en Producción' />
-            </Link>
-          </li>
-          <li>
-            <Link to=''>
-              <ItemSlide icon={<BsClockHistory />} showName={open} name='Historial Pedidos' />
-            </Link>
-          </li>
-        </ul>
-      </div>
- */}
+
       <div className='menuDiv'>
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex}>
@@ -129,28 +93,8 @@ const Slidenew  = ({ sections }) => {
             <h3 className='divTile'>Admin</h3>
             <ul className='menuLists grid'>
               <li>
-                <Link to='/'>
-                  <ItemSlide icon={<MdPriceCheck />} showName={open} name='Precios' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<MdPriceCheck />} showName={open} name='Proveedores' />
-                </Link>
-              </li>
-              <li>
                 <Link to='/ad/clientes'>
                   <ItemSlide icon={<FiUsers />} showName={open} name='Clientes' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<BiSpreadsheet />} showName={open} name='Solicitud de Material' />
-                </Link>
-              </li>
-              <li>
-                <Link to='/'>
-                  <ItemSlide icon={<TbChartInfographic />} showName={open} name='Comisiones' />
                 </Link>
               </li>
               <li>
@@ -162,8 +106,9 @@ const Slidenew  = ({ sections }) => {
               <li>
                 <Link to='/'>
                   <button className={`btnLogOut ${!open ? 'hidden' : ''}`}>
-                    <BiLogOut className='icon' />
-                    <span style={{ display: open ? 'inline' : 'none' }}>Cerrar Sesión</span>
+                  <span style={{ display: open ? 'inline' : 'none' }} className='spanLogOut'>
+                  <BiLogOut className='iconLogOut' />
+                    Cerrar Sesión</span>
                   </button>
                 </Link>
               </li>
