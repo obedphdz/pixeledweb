@@ -1,0 +1,40 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+/* Orders.css */
+
+.bodyContainer {
+  flex: 1; 
+  padding: 5.5rem;
+  overflow: auto;
+  margin-top: 0rem;
+  overflow-x: auto;
+  height: 64rem;
+}
+
+.inputbodyContainer {
+  flex: 1; 
+  overflow: auto;
+  margin-top: 10rem;
+  height: 64rem;
+} 
+
+#dropdownbutton-control {
+  position: absolute;
+  top: 10px; /* Ajusta la posición superior según sea necesario */
+  right: 10px; /* Ajusta la posición derecha según sea necesario */
+}
+
+.canceladoColor{
+  background-color: palevioletred;
+}
+
+.cotizacionColor{
+  background-color: #8ae0db;
+}
+
+.procesoColor{
+  background-color: #a3ceef;
+}
+
+.completadoColor{
+  background-color: lightgreen;
+}

@@ -2,33 +2,38 @@
 /* eslint-disable no-unused-vars */
 
 /* NewOrder.jsx */
+import './NewOrder.css';
+import { useLocalStorage } from "../useLocalStorage"
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef} from 'react';
-import { TextBoxComponent, NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import Modal from '../ModalOrder/Modal'
+import SideAr from '../SideArchivos/SideAr';
+import SubirArchivo from '../Archivo/subirArchivo';
+import { useOrderContext, OrderContextProvider  } from '../Orders Context/OrderContext'; 
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import { FaChevronCircleDown } from "react-icons/fa";
+import { IoIosArrowDropdown } from "react-icons/io";
+import { FaCircleChevronDown } from "react-icons/fa6";
 import { SwitchComponent } from '@syncfusion/ej2-react-buttons';
-import SubirArchivo from './Archivo/subirArchivo';
-import Modal from './ModalOrder/Modal'
-import {materialData, acabadosData, tipoTrabajoData} from './MaterialData/materialData.json';
-import './NewOrder.css';
-import { useLocalStorage } from "./useLocalStorage"
-import { useNavigate } from 'react-router-dom';
-import SideAr from './SideArchivos/SideAr';
+import { TextBoxComponent, NumericTextBoxComponent } from '@syncfusion/ej2-react-inputs';
+import {materialData, acabadosData, tipoTrabajoData} from '../MaterialData/materialData.json';
+
 
 const NewOrder = (props) => {
 
   const dateValue = new Date();
   const navigate = useNavigate();
   const [pedidos, setPedidos] = useState([]);
-  const [datosGuardados, setDatosGuardados] = useState(false);
-
+  const { orders, addOrder, clearOrders, isDataSaved, setDatosGuardados } = useOrderContext();
+  
   /* Guardamos en el LocalStorage los datos personales del cliente */
   const [nombreCliente, setnombreCliente] = useLocalStorage('nombreCliente', '');
   const [apePatCliente, setapePatCliente] = useLocalStorage('apePatCliente', '');
   const [apeMatCliente, setapeMatCliente] = useLocalStorage('apeMatCliente', '');
   const [contactoCliente, setcontactoCliente] = useLocalStorage('contactoCliente', '');
 
-  /* Otros valores */
+  /*  Guardamos en el LocalStorage los demas valores */
   const [instalacion, setInstalacion] = useLocalStorage('instalacion', false);
   const [barniz, setBarniz] = useLocalStorage('barniz', false);
   const [cantidad, setCantidad] = useLocalStorage('cantidad', 1);
@@ -43,27 +48,6 @@ const NewOrder = (props) => {
   const [fechaInstalacion, setFechaInstalacion] = useLocalStorage('fechaInstalacion', dateValue);
   const [archivo, setArchivo] = useLocalStorage('archivo', '');
   const [notas, setNotas] = useLocalStorage('notas', '');
-
-  const [formData, setFormData] = useState({
-    nombreCliente: '',
-    apePatCliente: '',
-    apeMatCliente: '',
-    contactoCliente,
-    instalacion: false,
-    barniz: false,
-    cantidad: 1,
-    base: 1,
-    altura: 1,
-    precioUnitario: 100,
-    material: null,
-    acabado: null,
-    tipoTrabajo: null,
-    fechaEnvio: dateValue,
-    fechaEntrega: dateValue,
-    fechaInstalacion: dateValue,
-    archivo: '',
-    notas: '',
-  });
 
   /* Mostrar Modal */
   const [showModal, setShowModal] = useState(false);
@@ -116,7 +100,7 @@ const NewOrder = (props) => {
       // Validar que los campos requeridos estén completos antes de crear el pedido
       if (!nombreCliente || !apePatCliente || !apeMatCliente) {
         // Muestra un mensaje de error o realiza alguna acción
-        console.log("No se han llenado los datos personales del usuario. ");
+        alert("No se han llenado los datos personales del usuario. ");
         return;
       }
   
@@ -145,12 +129,22 @@ const NewOrder = (props) => {
       // Almacena el nuevo pedido en el estado "pedidos"
       setPedidos([...pedidos, nuevaOrden]);
 
-      setShowModal(false);
+      // Almacena el nuevo pedido utilizando la función proporcionada por el contexto
+      addOrder(nuevaOrden);
+
+      setShowModal(true);
 
       console.log('Órdenes almacenadas:', nuevaOrden);
       
       // Marca los datos como guardados
       setDatosGuardados(true);
+
+       // Marca los datos como guardados usando isDataSaved del contexto
+      isDataSaved(true);
+
+      handleResetOrder();
+
+      navigate('/ad/nueva-orden');
     };
     
     const handleInputChange = (name, value) => {
@@ -221,64 +215,39 @@ const NewOrder = (props) => {
       // Esta función se llama cuando el usuario elige continuar con otro archivo
       // Limpiamos los datos del archivo actual
       console.log("Continue With Order clicked");
-
-/*       handleResetOrder(true) */
-
       setDatosGuardados(true);
-
+      
+      isDataSaved(true);
+  
       // Recargar la página
       navigate('/ad/nueva-orden');
       
     };
     
-    const handleSendOrder = () => {
-       // Guardar datos del pedido
-      console.log("handleSendOrder clicked");
+  const handleSendOrder = () => {
+  /*         // Obtener la lista de archivos seleccionados del componente SideAr
+      const selectedFiles = this.state.selectedFiles;
+
+      // Obtener los datos de la orden del componente MainAr
+      const orderData = this.props.orderData;
+
+      // Enviar la orden a un servidor
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "/api/orders");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(JSON.stringify({
+        selectedFiles,
+        orderData
+      }));
+ */
+      // Mostrar un mensaje de confirmación
+      alert("La orden se ha enviado correctamente");
       // Esta función se llama cuando el usuario elige enviar el pedido
-      handleCreateOrder(); 
-
+      handleCreateOrder();
       setDatosGuardados(true);
-
-      // Aquí podrías realizar alguna acción adicional antes de enviar el pedido, si es necesario
-      // Luego, puedes enviar los datos al backend para almacenarlos en la base de datos
-
-      /*   Ejemplo de cómo podrías hacer una solicitud al backend usando fetch
-      fetch('http://tu-backend.com/api/guardarPedido', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData), // Puedes ajustar los datos que envías según tu API
-      })
-        .then(response => response.json())
-        .then(data => {
-          // Aquí puedes manejar la respuesta del backend, si es necesario
-          console.log('Respuesta del backend:', data);
-        })
-        .catch(error => {
-          // Manejar errores de la solicitud al backend
-          console.error('Error al enviar pedido al backend:', error);
-        }); */
-/* 
-       Reiniciamos los valores necesarios para el nuevo archivo
-       setnombreCliente('');
-       setapePatCliente('');
-       setapeMatCliente('');
-       setcontactoCliente('');
-       setCantidad(1);
-       setBase(1);
-       setAltura(1);
-       setprecioUnitario(100);
-       setMaterial(null);
-       setAcabado(null);
-       setTipoTrabajo(null);
-       setArchivo('');
-       setInstalacion(null);
-       setBarniz(null);
-       setFechaEnvio(new Date());
-       setFechaEntrega(new Date());
-       setFechaInstalacion(new Date());
-       setNotas(''); */
+      isDataSaved(true);
+      
+      handleResetOrder(true);
     };
 
     const handleShowModal = () => {
@@ -290,76 +259,99 @@ const NewOrder = (props) => {
   const handleFileSelected = (selectedFile) => {
     // Aquí puedes manejar la lógica para mostrar el formulario correspondiente al archivo seleccionado
     console.log('Archivo seleccionado:', selectedFile);
+
+/*       // Obtener el archivo seleccionado del componente SideAr
+    const file = selectedFile.file;
+
+    // Agregar el archivo seleccionado a la lista de archivos seleccionados del componente MainAr
+    this.setState({
+      selectedFiles: [...this.state.selectedFiles, file]
+    });
+
+    // Actualizar el estado del componente MainAr
+    this.forceUpdate(); */
+
+    handleResetOrder();
   };
 
   // Función para manejar el evento de finalizar la orden desde SideAr
   const handleFinalizarOrden = () => {
     // Aquí puedes manejar la lógica para finalizar la orden
-    console.log('Finalizar Orden');
+    alert('Finalizar Orden');
   };
+
+  /* Visibilidad componente datosCliente */
+  const [datosClientesVisible, setDatosClientesVisible] = useState(true);
+
 
     return (
         <div className='control-pane principalDiv'>
           <div className='tituloNew'>
               <p  className='tituloNew'>{props.ptexto}</p>
           </div>
+          <FaCircleChevronDown
+              className="iconoDown"
+              onClick={() => setDatosClientesVisible(!datosClientesVisible)}
+          />
           <div className='control-section input-content-wrapper'>
             {/* Datos Personales Cliente */}
-            <div className="datosClientes">
-                <p className='miP'>Datos Personales Cliente.</p>
+            {datosClientesVisible && (
+              <div className="datosClientes">
+                  <p className='miP'>Datos Personales Cliente.</p>
 
-            <div className="row custom-margin custom-padding-5 material inputDatos">
-              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
-                <TextBoxComponent 
-                  placeholder="Nombre" 
-                  cssClass="e-outline" 
-                  onChange={(e) => setnombreCliente(e.target.value)}
-                  value={nombreCliente}
-                  required={true}
-                  floatLabelType="Auto" 
-                  id='nombreCliente' 
-                  input={(args) => handleInputChange('nombreCliente', args.value)}/>
+                  <div className="row custom-margin custom-padding-5 material inputDatos">
+                    <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
+                      <TextBoxComponent 
+                        placeholder="Nombre" 
+                        cssClass="e-outline" 
+                        onChange={(e) => setnombreCliente(e.target.value)}
+                        value={nombreCliente}
+                        required={true}
+                        floatLabelType="Auto" 
+                        id='nombreCliente' 
+                        input={(args) => handleInputChange('nombreCliente', args.value)}/>
+                    </div>
+                    <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
+                      <TextBoxComponent 
+                        placeholder="Apellido Paterno" 
+                        onChange={(e) => setapePatCliente(e.target.value)}
+                        value={apePatCliente}
+                        cssClass="e-outline" 
+                        required={true}
+                        floatLabelType="Auto" 
+                        id='apePatCliente'
+                        input={(args) => handleInputChange('apePatCliente', args.value)} />
+                    </div>
+                    <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat ">
+                      <TextBoxComponent 
+                        placeholder="Apellido Materno" 
+                        onChange={(e) => setapeMatCliente(e.target.value)}
+                        value={apeMatCliente}
+                        cssClass="e-outline" 
+                        required={true}
+                        floatLabelType="Auto" 
+                        id='apeMatCliente'
+                        input={(args) => handleInputChange('apeMatCliente', args.value)} />
+                    </div>
+                    <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
+                      <TextBoxComponent 
+                        placeholder="Contacto tel" 
+                        onChange={(e) => setcontactoCliente(e.target.value)}
+                        value={contactoCliente}
+                        cssClass="e-outline" 
+                        floatLabelType="Auto"
+                        required={true} 
+                        id='contactoCliente' 
+                        input={(args) => handleInputChange('contactoCliente', args.value)} />
+                    </div>
+                  </div>
               </div>
-              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
-                <TextBoxComponent 
-                  placeholder="Apellido Paterno" 
-                  onChange={(e) => setapePatCliente(e.target.value)}
-                  value={apePatCliente}
-                  cssClass="e-outline" 
-                  required={true}
-                  floatLabelType="Auto" 
-                  id='apePatCliente'
-                  input={(args) => handleInputChange('apePatCliente', args.value)} />
-              </div>
-              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat ">
-                <TextBoxComponent 
-                  placeholder="Apellido Materno" 
-                  onChange={(e) => setapeMatCliente(e.target.value)}
-                  value={apeMatCliente}
-                  cssClass="e-outline" 
-                  required={true}
-                  floatLabelType="Auto" 
-                  id='apeMatCliente'
-                  input={(args) => handleInputChange('apeMatCliente', args.value)} />
-              </div>
-              <div className="col-xs-12 col-sm-6 col-lg-6 col-md-6 inputDat">
-                <TextBoxComponent 
-                  placeholder="Contacto tel" 
-                  onChange={(e) => setcontactoCliente(e.target.value)}
-                  value={contactoCliente}
-                  cssClass="e-outline" 
-                  floatLabelType="Auto"
-                  required={true} 
-                  id='contactoCliente' 
-                  input={(args) => handleInputChange('contactoCliente', args.value)} />
-              </div>
-            </div>
-  </div>
+            )}
           {/* Tu Pedido */}
           <div className="row custom-margin tuPedido">
             <div className='control-sectionPedido'>
-          <p className='tituloPedido'>Tú Pedido.</p>
-            <div className="content-wrapper format-wrapper sample-numeric">
+              <p className='tituloPedido'>Tú Pedido.</p>
+                <div className="content-wrapper format-wrapper sample-numeric">
                     <div className="control-label">Cantidad</div>
                     <NumericTextBoxComponent 
                       id='cantidad' 
@@ -561,8 +553,14 @@ const NewOrder = (props) => {
       </div>
 
         {/* Componente lateral donde contienen los archivos si es que se desea agregar mas */}
-        <SideAr onFileSelected={handleFileSelected} onFinalizarOrden={handleFinalizarOrden} setDatosGuardados={setDatosGuardados} />
+        <SideAr 
+          onFileSelected={handleFileSelected} 
+          onFinalizarOrden={handleFinalizarOrden} 
+          setDatosGuardados={setDatosGuardados} 
+          isDataSaved={isDataSaved}
+        />
 
+        {/* Modal que muestra un resumen de lo llenado en el form */}
         <Modal
           showModal={showModal}
           orderSummary={orderSummary}

@@ -1,7 +1,7 @@
-import { sectionsForAdmin } from "../Slidebar Section/sectionsForSlide/sections"
-import Slidenew from "../Slidebar Section/Slidenew"
+import { sectionsForAdmin } from "../../Slidebar Section/sectionsForSlide/sections"
+import Slidenew from "../../Slidebar Section/Slidenew"
 import DetallesOrdenes from "./DetallesOrdenes"
-import './Orders.css'
+import '../Orders.css'
 
 const VistaDetallesOrd = () => {
   return (

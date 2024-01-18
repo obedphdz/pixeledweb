@@ -1,6 +1,6 @@
 import {sectionsForDisenador } from "../Slidebar Section/sectionsForSlide/sections"
 import Slidenew from "../Slidebar Section/Slidenew"
-import DetallesOrdenes from "../Orders/DetallesOrdenes"
+import DetallesOrdenes from "../Orders/Detalles Orders/DetallesOrdenes"
 
 const VistaDetallesDise = () => {
   return (
